@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @task.title %>
+</h1>
+
+<h4>
+  <%= @task.description %>
+</h4>
+
+
+<h5>
+  <%= @task.status %>
+</h5>
+
+<h5>
+  <%= @task.created_at.strftime('%d %b %y, %H:%M') %>
+</h5>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %>

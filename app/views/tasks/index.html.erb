@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tasks</h1>
+
+<div class="row">
+  <div class="large-4 columns">
+    <% @tasks.each do |task| %>
+      <h3><%= link_to task.title, task, data: task , remote: true %></h3>
+    <% end %>
+  </div>
+
+  <div class="large-4 columns">
+    <div class="task-info">
+      <div id="task-view" class="text-left" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
