@@ -1,0 +1,4 @@
+json.array!(@posts) do |post|
+  json.extract! task, :id, :title, :body
+  json.url task_url(task, format: :json)
+end

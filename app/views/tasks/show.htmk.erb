@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <h1 class="text-center">
+    <%= @task.title %>
+    <% if current_user.id == @task.user.id %>
+      <small><%= link_to 'Edit', edit_task_path(@post) %></small>
+    <% end %>
+  </h1>
+</div>
+
+<br><br><br>
+
+<div class="row">
+  <div class="small-10 large-8 columns">
+    <h6>
+      <i class="fa fa-calendar-o"> <span><%= @post.created_at.strftime('%d %b %Y') %></span></i>&nbsp; &nbsp;
+      <i class="fa fa-user"> <span><%= User.user_name(@task.user) %></span></i>&nbsp; &nbsp;
+      <i class="fa fa-tags"> <span><%= @task.category %></span></i>
+    </h6>
+  </div>
+  <div class="large-4 columns text-right">
+      <h6 class="text-right">share on social media</h6>
+  </div>
+</div>
+<br>
+<%=@post.body%>
+
+
+
+<div class="row">
+    <h4>Comments</h4>
+    <% @task.comments.each do |comment| %>
+      <hr>
+      <div class="row">
+        <div class="small-10 large-8 columns">
+          <h6>
+            <i class="fa fa-user"> <span><%= User.user_name(comment.user) %></span></i>
+            <i class="fa fa-calendar-o"> <span><%= comment.created_at.strftime('%d %b %Y') %></span></i>
+          </h6>
+        </div>
+      </div>
+      <%= comment.body %>
+    <% end %>
+</div>
+
+<br><br>
+
+<div class="row">
+  <h3>Add a comment:</h3>
+  <%= form_for([@task, @task.comments.build]) do |f| %>
+      <%= f.text_area :body %>
+      <%= f.submit %>
+  <% end %>
+</div>

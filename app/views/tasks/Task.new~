@@ -1,0 +1,53 @@
+<h1>New Task</h1>
+<%= form_for :article do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :Description %><br>
+    <%= f.text_area :Description %>
+  </p>
+
+ <p>
+    <%= f.label :Tags %><br>
+    <%= f.text_area :Tags %>
+  </p>
+
+ <p>
+    <%= f.label :Story points %><br>
+    <%= f.text_area :Story points %>
+  </p>
+ <p>
+    <%= f.label :priority %><br>
+    <%= f.text_area :priority %>
+  </p>
+ <p>
+    <%= f.label :Deadline %><br>
+    <%= f.text_area :Deadline %>
+  </p>
+ <p>
+    <%= f.label :Assigned members %><br>
+    <%= f.text_area :Assigned members %>
+  </p>
+ <p>
+    <%= f.label :Comments %><br>
+    <%= f.text_area :Comments %>
+  </p>
+ <p>
+    <%= f.label :Status %><br>
+    <%= f.text_area :Status %>
+  </p>
+
+
+
+
+
+
+
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

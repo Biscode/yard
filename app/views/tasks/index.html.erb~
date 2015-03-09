@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tasks</h1>
+
+<div class="right">
+  <%= link_to 'New Task', new_Tost_path, class: 'button small' %>
+</div>
+
+<div class="row">
+  <%= link_to "All tasks", Tasks_path %>
+  <% Task.Task_categories.each do |c| %>
+    <%= link_to c, Tasks_path(category: c) %>
+  <% end %>
+</div>
+
+
+<% @Task.each do |post| %>
+  <h4><small><i class="fa fa-calendar"></i> <%= post.created_at.strftime('%d %b %Y') %></small></h4>
+  <h1><%= link_to Task.title, Task_path(task) %></h1>
+<% end %>
