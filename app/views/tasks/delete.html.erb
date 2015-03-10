@@ -1,0 +1,22 @@
+<% if !flash[:notice].blank? %>
+	<div>
+		<%= flash[:notice] %>
+	</div>
+	<% end %>
+
+<div>
+<h2>Delete Project</h2>
+
+<%= form_for(:task, :url => {:action => 'destroy', :id => @task.id}) do |f| %>
+
+<p>Are you sure you want to delete this project ?</p>
+	
+	<p><%= @task.title %></p>
+
+<div>
+	<%= submit_tag("delete task") %>
+</div>
+
+<%end%>
+
+</div>

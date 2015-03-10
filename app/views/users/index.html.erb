@@ -1,0 +1,29 @@
+<% if !flash[:notice].blank? %>
+	<div>
+		<p><%= flash[:notice] %></p>
+	</div>
+	<% end %>
+<div>
+
+<h2>User List</h2>
+<table summary="listing all the users">
+	<tr>
+		<th>first name</th>
+		<th>last name</th>
+		<th>gender</th>
+		<th>Navigate</th>
+	</tr>
+	<% @user.each do |p| %>
+		<tr>
+			<td><%= p.first_name %></td>
+			<td><%= p.last_name %></td>
+			<td><%= p.gender %></td>
+			<td>
+				<%= link_to("Show", {:action => 'show' , :id => p.id}) %>
+				<%= link_to("Edit", {:action => 'edit' , :id => p.id}) %>
+				<%= link_to("Delete", {:action => 'delete' , :id => p.id}) %>
+			</td>
+		</tr>
+	<%end%>
+</table>
+</div>

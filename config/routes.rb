@@ -1,4 +1,48 @@
 Rails.application.routes.draw do
+
+  #get 'tasks/index'
+
+  #get 'tasks/show'
+
+  #get 'tasks/new'
+
+  #get 'tasks/edit'
+
+ # get 'tasks/delete'
+
+#
+#  get 'teams/index'
+
+# get 'teams/show'
+
+#  get 'teams/new'
+
+#  get 'teams/edit'
+
+#  get 'teams/delete'
+
+#  get 'users/index'
+
+#  get 'users/show'
+
+#  get 'users/new'
+
+#  get 'users/edit'
+
+#  get 'users/delete'
+
+#  get 'projects/index'
+
+#  get 'projects/show'
+
+#  get 'projects/new'
+
+#  get 'projects/edit'
+
+#  get 'projects/delete'
+
+match ':controller(/:action(/:id))', :via => [:get, :post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,38 @@
+
+<div>
+
+<%=link_to("create a project", {:controller => 'projects' , :action => 'new'})%>
+
+<h2>user That you selected</h2>
+<table summary="showing this one">
+	
+	<tr>
+		<th>Title</th>
+		<td><%= @user.first_name %></td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td><%= @user.last_name %></td>
+	</tr>
+	<tr>
+		<th>Deadline</th>
+		<td><%= @user.gender %></td>
+	</tr>
+	<tr>
+		<th>Created at</th>
+		<td><%= @user.created_at %></td>
+	</tr>
+	<tr>
+		<th>Updated at</th>
+		<td><%= @user.updated_at %></td>
+	</tr>
+
+</table>
+
+
+</div>
+
+<div>
+	<%= link_to("View my Tasks", {:controller => 'users', :action => 'showTask'}) %>
+	
+</div>

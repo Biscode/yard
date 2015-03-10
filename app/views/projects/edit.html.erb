@@ -1,0 +1,28 @@
+
+<div>
+<h2>Edit Project</h2>
+
+<%= form_for(:project, :url => {:action => 'update', :id => @project.id}) do |f| %>
+<table summary="edit">
+	<tr>
+		<th>Title</th>
+		<td><%= f.text_field(:title)%></td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td><%= f.text_area(:description, :size =>"40x5") %></td>
+	</tr>
+	<tr>
+		<th>Deadline</th>
+		<td><%= f.text_field(:deadline) %></td>
+	</tr>
+	
+</table>
+
+<div>
+	<%= submit_tag("update Project") %>
+</div>
+
+<%end%>
+
+</div>

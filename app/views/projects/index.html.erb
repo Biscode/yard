@@ -1,0 +1,29 @@
+<% if !flash[:notice].blank? %>
+	<div>
+		<p><%= flash[:notice] %></p>
+	</div>
+	<% end %>
+<div>
+
+<h2>Project List</h2>
+<table summary="listing all the projects">
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+		<th>Deadline</th>
+		<th>Navigate</th>
+	</tr>
+	<% @project.each do |p| %>
+		<tr>
+			<td><%= p.title %></td>
+			<td><%= p.description %></td>
+			<td><%= p.deadline %></td>
+			<td>
+				<%= link_to("Show", {:action => 'show' , :id => p.id}) %>
+				<%= link_to("Edit", {:action => 'edit' , :id => p.id}) %>
+				<%= link_to("Delete", {:action => 'delete' , :id => p.id}) %>
+			</td>
+		</tr>
+	<%end%>
+</table>
+</div>

@@ -1,0 +1,29 @@
+
+
+<div>
+<h2>New user</h2>
+
+<%= form_for(:user, :url => {:action => 'create'}) do |f| %>
+<table summary="putting a form in a table">
+	<tr>
+		<th>name</th>
+		<td><%= f.text_field(:first_name)%></td>
+	</tr>
+	<tr>
+		<th>last</th>
+		<td><%= f.text_field(:last_name) %></td>
+	</tr>
+	<tr>
+		<th>M/F</th>
+		<td><%= f.text_field(:gender) %></td>
+	</tr>
+	
+</table>
+
+<div>
+	<%= submit_tag("Create user") %>
+</div>
+
+<%end%>
+
+</div>
