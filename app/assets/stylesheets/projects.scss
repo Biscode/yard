@@ -1,0 +1,32 @@
+.project h1 {
+  text-shadow: 4px 4px 2px rgba(147, 156, 255, 1);
+}
+
+.project ul {
+  font: 20px "Helvetica Neue", Helvetica;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project a {
+  background: #395870;
+  background: linear-gradient(#49708f, #293f50);
+  border-right: 1px solid rgba(0, 0, 0, .3);
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.project a:hover {
+  color: #111;
+  background: #FFEFD5;
+  box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+div {
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin: 50px;
+}
