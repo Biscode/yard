@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-
+  root 'projects#index'
+  
   resources :users
 
-  resources :tasks
-
-  resources :projects
-
-  root 'projects#index'
+  resources :projects do
+    resources :tasks
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

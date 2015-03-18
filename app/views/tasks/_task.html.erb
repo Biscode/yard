@@ -2,32 +2,30 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @task.title %>
+  <%= task.title %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @task.description %>
+  <%= task.description %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @task.status %>
+  <%= task.status %>
 </p>
 
 <p>
   <strong>Priority:</strong>
-  <%= @task.priority %>
+  <%= task.priority %>
 </p>
 
 <p>
   <strong>Story points:</strong>
-  <%= @task.story_points %>
+  <%= task.story_points %>
 </p>
 
 <p>
   <strong>Deadline:</strong>
-  <%= @task.deadline %>
+  <%= task.deadline %>
 </p>
-
-<%= link_to 'Edit', edit_project_task_path(@project, @task) %>
