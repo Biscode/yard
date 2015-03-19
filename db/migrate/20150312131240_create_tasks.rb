@@ -9,6 +9,7 @@ class CreateTasks < ActiveRecord::Migration
       t.date :deadline
 
       t.timestamps null: false
+ 
     end
   end
 end
