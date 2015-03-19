@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
 
-#  validates :title, presence: true
-#  validates :decription
+  validates :title, presence: true
+#  validates :description
 
 end

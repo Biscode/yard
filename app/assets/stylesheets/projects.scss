@@ -1,7 +1,3 @@
-.project h1 {
-  text-shadow: 4px 4px 2px rgba(147, 156, 255, 1);
-}
-
 .project ul {
   font: 20px "Helvetica Neue", Helvetica;
   margin: 0;
@@ -10,12 +6,13 @@
 }
 
 .project a {
-  background: #395870;
-  background: linear-gradient(#49708f, #293f50);
-  border-right: 1px solid rgba(0, 0, 0, .3);
+  background: #0080FF;
   color: #fff;
   padding: 10px;
   display: block;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
 }
 
 .project a:hover {
@@ -28,5 +25,5 @@ div {
     width: 500px;
     height: 500px;
     padding: 10px;
-    margin: 50px;
+    margin: 10px;
 }
