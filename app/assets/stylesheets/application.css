@@ -15,3 +15,11 @@
  *= require foundation_and_overrides
  *= require font-awesome
  */
+.body {
+	background-color:#666699
+}
+
+a:hover {
+	color: 	#fff !important ;
+	background:	#0B0B2F !important;
+}

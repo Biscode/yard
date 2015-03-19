@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @task.title %>
+</h1>
+
+<h6>
+  <%= @task.description %>
+</h6>
+
+<h6>
+  <i class="fa fa-circle-o-notch"></i> <%= @task.status %>
+</h6>
+
+<h6>
+  <i class="fa fa-calendar"></i> <%= @task.created_at.strftime('%d %B, %Y, %I:%M %p') %>
+</h6>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %>
