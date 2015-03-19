@@ -16,3 +16,23 @@
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %>
+
+<div class="row">
+  <div class="large-4 columns">
+    <ul>
+      <% @project.tasks.each do |task| %>
+        <li>
+          <%= link_to task.title, project_task_path(@project, task), data: task , remote: true  %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="large-4 columns">
+    <div class="">
+      <div id="task-view" class="text-left" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+<br>
+<%= render 'tasks/new' %>
