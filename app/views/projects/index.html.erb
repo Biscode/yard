@@ -11,4 +11,21 @@
 
 <br>
 
+  <tbody>
+    <% if @criticaltasks != nil %>
+    <% @criticaltasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.status %></td>
+        <td><%= task.priority %></td>
+        <td><%= task.story_points %></td>
+        <td><%= task.deadline %></td>
+      </tr>
+      <% end %>
+      <% else %>
+      <%= @sentence %>
+    <% end %>
+  </tbody>
+<br>
 <%= link_to 'New Project', new_project_path %>

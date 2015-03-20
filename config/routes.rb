@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'projects#index'
 
   resources :users
-
+  resources :tasks
   resources :projects do
     resources :tasks
   end

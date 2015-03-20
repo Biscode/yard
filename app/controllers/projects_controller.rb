@@ -3,9 +3,23 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   # GET /projects.json
+  #No users yet ,so sorting is done project wises
   def index
     @projects = Project.all
+    @criticaltasks = []
+    if @projects != nil
+      @projects.each do |project|
+     tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }
+      @criticaltasks += tempproject if tempproject  
+    end
+    @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
+else
+  @sentence = "Yaaay you have no critical tasks"
+    # tasks = tasks.sort_by &:deadline
   end
+end
+
+
 
   # GET /projects/1
   # GET /projects/1.json
