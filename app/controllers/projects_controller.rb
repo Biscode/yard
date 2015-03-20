@@ -3,26 +3,39 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   # GET /projects.json
+  # You retrieve All the the projects, so the 'Index' view can use them.
   def index
     @projects = Project.all
   end
 
+#--------------------------------------------------------------------------------------------------------------------
+
   # GET /projects/1
   # GET /projects/1.json
+  # veiws a single project that was clicked on.
   def show
   end
 
+#--------------------------------------------------------------------------------------------------------------------
+
   # GET /projects/new
+  # you create a new project
   def new
     @project = Project.new
   end
 
+#--------------------------------------------------------------------------------------------------------------------
+
   # GET /projects/1/edit
+  # you edit the project that you clicked on.
   def edit
   end
 
+#--------------------------------------------------------------------------------------------------------------------
+
   # POST /projects
   # POST /projects.json
+  # takes the information that you wrote on the form and uses it to create a project and saves it in the Database.
   def create
     @project = Project.new(project_params)
 
@@ -37,8 +50,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+#--------------------------------------------------------------------------------------------------------------------
+
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
+  # you update the form that you filled after you created the project.
   def update
     respond_to do |format|
       if @project.update(project_params)
@@ -51,8 +67,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+#--------------------------------------------------------------------------------------------------------------------
+
   # DELETE /projects/1
   # DELETE /projects/1.json
+  # you delete the project from the Database.
   def destroy
     @project.destroy
     respond_to do |format|
@@ -60,6 +79,8 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+#--------------------------------------------------------------------------------------------------------------------
 
   private
     # Use callbacks to share common setup or constraints between actions.
