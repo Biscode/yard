@@ -1,4 +1,4 @@
-#Show the projects one after another, each in its own block.
+#Show the projects each in its own block
 <div class="project">
   <h1>Projects</h1>
   <% @projects.each do |c| %>
