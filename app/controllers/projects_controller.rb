@@ -67,7 +67,7 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # those parameters are the ones that the user can enter.
     def project_params
       params.require(:project).permit(:title, :description, :deadline)
     end
