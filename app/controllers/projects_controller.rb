@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   #No users yet ,so sorting is done project wises
+  #First a sort of all the critical tasks is done in the project individually "tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }"
+  #then they are all appended in a list *of critical tasks* to be sorted according to deadline
   def index
     @projects = Project.all
     @criticaltasks = []
@@ -15,7 +17,6 @@ class ProjectsController < ApplicationController
     @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
 else
   @sentence = "Yaaay you have no critical tasks"
-    # tasks = tasks.sort_by &:deadline
   end
 end
 
