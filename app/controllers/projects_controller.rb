@@ -3,16 +3,18 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   # GET /projects.json
+
   #No users yet ,so sorting is done project wises
   #First a sort of all the critical tasks is done in the project individually "tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }"
   #then they are all appended in a list *of critical tasks* to be sorted according to deadline
+  # You retrieve All the the projects, so the 'Index' view can use them.
   def index
     @projects = Project.all
     @criticaltasks = []
     if @projects != nil
       @projects.each do |project|
      tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }
-      @criticaltasks += tempproject if tempproject  
+      @criticaltasks += tempproject if tempproject
     end
     @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
 else
@@ -20,24 +22,26 @@ else
   end
 end
 
-
-
   # GET /projects/1
   # GET /projects/1.json
+  # veiws a single project that was clicked on.
   def show
   end
 
   # GET /projects/new
+  # you create a new project
   def new
     @project = Project.new
   end
 
   # GET /projects/1/edit
+  # you edit the project that you clicked on.
   def edit
   end
 
   # POST /projects
   # POST /projects.json
+  # takes the information that you wrote on the form and uses it to create a project and saves it in the Database.
   def create
     @project = Project.new(project_params)
 
@@ -54,6 +58,7 @@ end
 
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
+  # you update the form that you filled after you created the project.
   def update
     respond_to do |format|
       if @project.update(project_params)
@@ -68,6 +73,7 @@ end
 
   # DELETE /projects/1
   # DELETE /projects/1.json
+  # you delete the project from the Database.
   def destroy
     @project.destroy
     respond_to do |format|
@@ -82,7 +88,7 @@ end
       @project = Project.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # those parameters are the ones that the user can enter.
     def project_params
       params.require(:project).permit(:title, :description, :deadline)
     end
