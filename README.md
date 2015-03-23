@@ -1,6 +1,18 @@
 # Yard
 The Project Management System that applies the Scrum Process.
 
+### How to contribute
+- Create a New Branch.
+- Create an Issue for your task.
+- Use Labels.
+- Write tests.
+- Do NOT push before testing that your code works.
+- Commit Changes with the Issue Number in the commit message e.g.
+```
+  git commit -m "resolved listing projects #15"
+```
+- Create a Pull Request.
+
 ### Code Conventions
 - Stick to [Ruby on Rails](https://github.com/bbatsov/rails-style-guide) Code conventions.
 - Use expressive method and variable names e.g.
