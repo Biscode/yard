@@ -4,7 +4,42 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY CASE status
+                                                            WHEN '' THEN 1 
+                                                            WHEN 'in progress' THEN 2
+                                                            WHEN 'reviewing' THEN 3
+                                                            WHEN 'done' THEN 4 END")
+    @sortType = params[:sort]
+
+    if @sortType == "title"
+    @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY title ASC")
+     end
+
+    if @sortType == "status"
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY LENGTH(status) DESC")
+    end
+
+    if @sortType == "description"
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY description ASC")
+    end
+
+    if @sortType == "deadline"
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY deadline ASC")
+    end
+
+
+    if @sortType == "story_points"
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY story_points ASC")
+    end
+
+    if @sortType == "priority"
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY CASE priority
+                                                              WHEN '' THEN 1 
+                                                              WHEN 'high' THEN 2
+                                                              WHEN 'medium' THEN 3
+                                                              WHEN 'low' THEN 4 END")
+    end
+
   end
 
   # GET /tasks/1
