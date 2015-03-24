@@ -3,6 +3,9 @@ class TasksController < ApplicationController
 
   # GET /tasks
   # GET /tasks.json
+  
+  # tasks are sorted by their status by default.
+  # added some extra sorting features, you can sort by title, priority.....etc
   def index
     @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY CASE status
                                                             WHEN '' THEN 1 

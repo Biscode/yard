@@ -3,6 +3,4 @@ class Task < ActiveRecord::Base
 
 #default_scope { where(status: 'in progress') }
 
-
-
 end
