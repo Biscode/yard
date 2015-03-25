@@ -59,6 +59,8 @@ GEM
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    email_validator (1.5.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.4.0)
     factory_girl (4.5.0)
@@ -190,6 +192,7 @@ DEPENDENCIES
   bcrypt-ruby
   byebug
   coffee-rails (~> 4.1.0)
+  email_validator
   factory_girl
   font-awesome-rails
   foundation-rails
