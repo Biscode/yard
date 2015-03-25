@@ -2,5 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+<style>
+#header {
+    background-color:blue;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
 
