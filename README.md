@@ -1,6 +1,8 @@
 # Yard
 The Project Management System that applies the Scrum Process.
 
+## Long Live the Process
+
 ### How to contribute
 - Create a New Branch.
 - Create an Issue for your task.
@@ -12,6 +14,17 @@ The Project Management System that applies the Scrum Process.
   git commit -m "resolved listing projects #15"
 ```
 - Create a Pull Request.
+
+### Documentation
+- Write comments on methods when you think it's needed
+- use the form:
+  ```
+  # YOUR NAME
+  # DESCRIBE YOUR METHOD BRIEFLY
+  def method_name
+  ...
+  end
+  ```
 
 ### Code Conventions
 - Stick to [Ruby on Rails](https://github.com/bbatsov/rails-style-guide) Code conventions.
