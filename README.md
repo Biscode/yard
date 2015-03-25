@@ -18,11 +18,12 @@ The Project Management System that applies the Scrum Process.
 ### Documentation
 - Write comments on methods when you think it's needed
 - use the form:
+
   ```
   # YOUR NAME
   # DESCRIBE YOUR METHOD BRIEFLY
   def method_name
-  ...
+    ... code ...
   end
   ```
 
