@@ -1,8 +1,14 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
 
 
 
+=======
+  def user_params
+      params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    end
+>>>>>>> e463d7fa3dcca0f56e59cb91c0b75f09ceef19ed
   # GET /users
   # GET /users.json
   def index
@@ -19,6 +25,7 @@ class UsersController < ApplicationController
   def edit
   end
 
+<<<<<<< HEAD
   
 
 def new
@@ -35,6 +42,21 @@ def create
 end
 
 
+=======
+  # POST /users
+  # POST /users.json
+  def create
+    @user = User.new(user_params)
+    if @user.save
+        redirect_to @user, notice: 'User was successfully created.' 
+       
+      else
+        render  action: "new" 
+        
+      end
+    end
+  
+>>>>>>> e463d7fa3dcca0f56e59cb91c0b75f09ceef19ed
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
