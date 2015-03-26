@@ -1,24 +1,54 @@
  <!DOCTYPE html>
+	<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+	<head>
+	<style>
+	.page {
+	float: right;
+	margin: 5px;
+	padding: 15px;
+	width: 500px;
+	height: 200px;
+	border: 1px solid white;
+	}
+	</style>
+	</head>
     <body>
-            <h1><a href="/"><%= image_tag('yard.png', width:'400', height:'700') %> </a></h1>
-          </li>
+
+        <h1><a href="/"><%= image_tag('yard.png', width:'400', height:'700') %> </a></h1>
+       </li>
 	
-	 <section>
-	<h1>About</h1>
-		<p>This website acts like a scrum master for projects and tasks showing statistics for the progress and sprints</p>
-	<section>
-	<h1>Team</h1>
-	<p>
-	Ahmed Saleh Abdelwahab,
-	Omar omar soliman,
-	Mohamed Ihab,
-	sherif,
-	Heba salama,
-	Martin Nabil,
-	nohaelshourbagy
-	</p>
+	<div class="page">
+	<h1 style="color:blue;margin-left:20px;font-family:verdana;">About</h1>
+		<p title= About>
+		This website acts like a scrum master for projects and tasks showing statistics for the progress and sprints
+		</p>
+	</div>
+
+	<div class="page">
+	<h1 style="color:blue;margin-left:20px;font-family:verdana;">Team</h1>
+		<p title= Team>
+		Ahmed Saleh Abdelwahab,
+		Omar Omar,
+		Mohamed Ihab,
+		Sherif,
+		Heba salama,
+		Martin Nabil,
+		Noha elshourbagy
+		</p>
 		 
         </ul>
+</html>
 
 
 
