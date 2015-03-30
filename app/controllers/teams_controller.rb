@@ -3,6 +3,7 @@ class TeamsController < ApplicationController
 
   # GET /teams
   # GET /teams.json
+  # lists all the teams and finds the project by id.
   def index
     @teams = Team.all
     @project = Project.find(params[:project_id])
@@ -10,6 +11,7 @@ class TeamsController < ApplicationController
 
   # GET /teams/1
   # GET /teams/1.json
+  # lists all the users registered.
   def show
     @users = User.all
   end
@@ -25,6 +27,7 @@ class TeamsController < ApplicationController
 
   # POST /teams
   # POST /teams.json
+  # creates a team for the project.
   def create
     @project = Project.find(params[:project_id])
     @team = @project.teams.new(team_params)
@@ -43,6 +46,7 @@ class TeamsController < ApplicationController
 
   # PATCH/PUT /teams/1
   # PATCH/PUT /teams/1.json
+  # updates the team.
   def update
     respond_to do |format|
       if @team.update(team_params)
@@ -57,6 +61,7 @@ class TeamsController < ApplicationController
 
   # DELETE /teams/1
   # DELETE /teams/1.json
+  # Delete the team.
   def destroy
     @team.destroy
     respond_to do |format|
