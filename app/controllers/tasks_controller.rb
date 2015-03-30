@@ -4,12 +4,19 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
+    @sprint = Sprint.find(params[:sprint_id])
+    if params[:sprint_id]
+    @tasks = Task.where(sprint_id: params[:sprint_id]).order("deadline ASC")
+  else
     @tasks = Task.all
+  end
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @sprint = Sprint.find(params[:sprint_id])
+    @project = Project.find(params[:project_id])
   end
 
   # GET /tasks/new
@@ -24,12 +31,13 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
+    @sprint = Sprint.find(params[:sprint_id])
     @project = Project.find(params[:project_id])
-    @task = @project.tasks.new(task_params)
+    @task = @sprint.tasks.new(task_params)
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to project_path(@project), notice: 'Task was successfully created.' }
+        format.html { redirect_to project_sprint_tasks_path(@project, @sprint), notice: 'Task was successfully created.' }
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new }
@@ -66,7 +74,7 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_task
       @task = Task.find(params[:id])
-      @project = Project.find(params[:project_id])
+      @sprint = Sprint.find(params[:sprint_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
