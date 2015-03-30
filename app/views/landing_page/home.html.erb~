@@ -51,8 +51,8 @@
 		<input type="text" name="Password">
 	 <button type="submit">Sign in</button><br>
 	</form>
-	<p style="text-align:left;color:blue;margin-left:20px;font-family:verdana;">Sign up</p>
-	<p style="text-align:left;color:blue;margin-left:20px;font-family:verdana;">Forgot your password?</p>
+	<p style="text-align:left;color:blue;margin-left:20px;font-family:verdana;"> <button type="submit">Sign up</button><br></p>
+	<p style="text-align:left;color:blue;margin-left:20px;font-family:verdana;"><a href="">Forgot your password?</a></p>
 	
 	</div>
 	<div class="page">
