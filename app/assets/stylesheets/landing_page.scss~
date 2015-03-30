@@ -1,0 +1,12 @@
+// Place all the styles related to the landing_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.about ul {
+  font: 20px "Helvetica Neue", Helvetica;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
