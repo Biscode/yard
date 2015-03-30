@@ -1,29 +1,22 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /users
+# GET /users
   # GET /users.json
   def index
     @users = User.all
   end
-
   # GET /users/1
   # GET /users/1.json
   def show
   end
-
-  # GET /users/new
- 
-  def edit
+# GET /users/new
+def edit
   end
-
-
-  
-
+#to make a new user 
 def new
   @user = User.new
-end
-
+    end
+# create a user based on specefic params
 def create
 @user = User.new(user_params)
   if @user.save
@@ -32,10 +25,6 @@ def create
     render "new"
   end
 end
-
-
-
-
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
