@@ -2,11 +2,11 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
 #validatios for email and password the email uses gem 
-validates :email, :email => true
+  validates :email, :email => true
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
 #it authenticate if the email and password are in the data base or not after signing up
-def self.authenticate(email, password)
+ def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
