@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  resources :teams
+
   root 'projects#index'
 
   resources :users
   resources :tasks
   resources :projects do
     resources :tasks
+    resources :teams
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

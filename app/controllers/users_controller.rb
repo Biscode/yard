@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+      @users = User.order("created_at DESC")
+    end
   end
 
   # GET /users/1
@@ -59,6 +63,10 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    @users = User.search params[:search]
   end
 
   private
