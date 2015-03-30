@@ -4,10 +4,17 @@ Rails.application.routes.draw do
   root 'projects#index'
 
   resources :users
+
   resources :tasks
   resources :projects do
     resources :tasks
-    resources :teams
+    resources :teams do
+      resources :users do
+        member do
+          get 'add_user_to_team'
+        end
+      end
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -69,6 +69,18 @@ class UsersController < ApplicationController
     @users = User.search params[:search]
   end
 
+  def add_user_to_team
+    team_id = params[:team_id]
+    user_id = params[:id]
+
+    @team = Team.find(team_id)
+    @user = User.find(user_id)
+
+    @team.users << @user  
+
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

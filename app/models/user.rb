@@ -6,4 +6,8 @@ def self.search(query)
     # where(:email, query) -> This would return an exact match of the query
     where("email like ?", "%#{query}%") 
 end
+
+def add_to_team(user,team)
+	team.users << user
+end
 end

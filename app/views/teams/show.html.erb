@@ -6,7 +6,9 @@
   <%= @team.name %>
 </p>
 
-
+<% @team.users.each do |user|%>
+  <p><%= user.email %></p>
+<% end %>
   <!-- When submit the form, the view rendered will be the index view of our articles resource -->
   <%= form_tag(users_path, :method => "get", class: "navbar-form", id: "search-form") do %>
     <div class="input-append">
@@ -17,7 +19,10 @@
     </div>
   <% end %>
 
-<%= render template: 'users/index' %>
+<% @users.each do |user| %>
+  <p><%= link_to user.email, add_user_to_team_project_team_user_path(params[:project_id], @team, user) %></p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
