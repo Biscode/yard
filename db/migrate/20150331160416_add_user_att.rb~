@@ -1,0 +1,4 @@
+class AddUserAtt < ActiveRecord::Migration
+  def change
+  end
+end
