@@ -1,11 +1,9 @@
 class AddAttributeTocreateUsers < ActiveRecord::Migration
   def change
-add_column :users, :fname , :string 
-add_column :users, :lname , :string
-add_column :users, :birthday , :date 
-add_column :users, :country , :string 
-add_column :users, :projects , :string 
-add_column :users, :achievments , :string 
-add_column :users, :gender , :inclusion
+	add_column :users, :fname , :string 
+	add_column :users, :lname , :string
+	add_column :users, :birthday , :date 
+	add_column :users, :country , :string 
+	add_column :users, :gender , :inclusion
   end
 end

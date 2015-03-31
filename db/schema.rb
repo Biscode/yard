@@ -35,11 +35,7 @@ ActiveRecord::Schema.define(version: 20150330132300) do
 
   add_index "tasks", ["project_id"], name: "index_tasks_on_project_id"
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "fname"
-  end
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end
