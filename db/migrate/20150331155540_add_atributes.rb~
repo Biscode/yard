@@ -1,0 +1,4 @@
+class AddAtributes < ActiveRecord::Migration
+  def change
+  end
+end
