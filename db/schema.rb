@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150330110844) do
+ActiveRecord::Schema.define(version: 20150330130638) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -27,8 +26,6 @@ ActiveRecord::Schema.define(version: 20150330110844) do
     t.date     "deadline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "references"
-    t.string   "Project"
     t.integer  "project_id"
   end
 
@@ -44,12 +41,30 @@ ActiveRecord::Schema.define(version: 20150330110844) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "project_id"
-    t.integer  "sprint"
     t.integer  "sprint_id"
   end
 
   add_index "tasks", ["project_id"], name: "index_tasks_on_project_id"
   add_index "tasks", ["sprint_id"], name: "index_tasks_on_sprint_id"
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "teams", ["project_id"], name: "index_teams_on_project_id"
+
+  create_table "user_team_relationships", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_team_relationships", ["team_id"], name: "index_user_team_relationships_on_team_id"
+  add_index "user_team_relationships", ["user_id"], name: "index_user_team_relationships_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
