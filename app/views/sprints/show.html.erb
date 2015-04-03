@@ -1,6 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @sprint.number %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @sprint.deadline %>
+</p>
+
+<%= link_to 'Edit', edit_sprint_path(@sprint) %> |
+<%= link_to 'Back', sprints_path %>
+
+<%= render @sprint.tasks %> 
+
 <h4>New Task</h4>
 
-<%= form_for([@sprint, @sprint.tasks.build]) do |f| %>
+<%= form_for([@sprint.project, @sprint, @sprint.tasks.new]) do |f| %>
 
 <div class="field">
   <%= f.label :title %><br>
