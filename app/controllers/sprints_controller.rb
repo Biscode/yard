@@ -7,12 +7,12 @@ class SprintsController < ApplicationController
    def index
     @project = Project.find(params[:project_id])
    @sprints = @project.sprints
-  end
+   end
 
   # GET /sprints/1
   # GET /sprints/1.json
    def show
-  end
+   end
 
   # GET /sprints/new
    def new
@@ -21,7 +21,7 @@ class SprintsController < ApplicationController
 
   # GET /sprints/1/edit
    def edit
-  end
+   end
 
   # POST /sprints
   # POST /sprints.json
@@ -38,8 +38,8 @@ class SprintsController < ApplicationController
         format.html { render :new }
         format.json { render json: @sprint.errors, status: :unprocessable_entity }
       end
-    end
-  end
+     end
+   end
 
   # PATCH/PUT /sprints/1
   # PATCH/PUT /sprints/1.json
@@ -53,8 +53,8 @@ class SprintsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @sprint.errors, status: :unprocessable_entity }
       end
-    end
-  end
+     end
+   end
 
   # DELETE /sprints/1
   # DELETE /sprints/1.json
@@ -64,22 +64,22 @@ class SprintsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to sprints_url, notice: 'Sprint was successfully destroyed.' }
       format.json { head :no_content }
-    end
-  end
+     end
+   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
    def set_sprint
     @sprint = Sprint.find(params[:id])
-  end
+   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     # Only input the parameters of the sprint which are its number and deadline.
    def sprint_params
     params.require(:sprint).permit(:number, :deadline)
-  end
+   end
     # List all the sprints in a project.
-   def list_project_sprintss
+  def list_project_sprintss
    @project_sprints = Project.find(params[:id]).sprints
+   end
   end
-end
