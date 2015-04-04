@@ -15,6 +15,7 @@
  *= require foundation_and_overrides
  *= require font-awesome
  */
+ /*
 .body {
 	background-color:#666699
 }
@@ -22,4 +23,57 @@
 a:hover {
 	color: 	#fff !important ;
 	background:	#0B0B2F !important;
+}
+*/
+
+.name {
+  h1 {
+    font-family: 'Raleway', sans-serif;
+  }
+  a:hover {
+		background: #fff !important;
+	}
+}
+
+body {
+	background:  #33041D ;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  h4,h3,h2,h1,h5,p{color: #fff;} 
+}
+
+
+a:hover {
+	color: #33041D !important ;
+	background: #fff !important;
+}
+
+header {
+  margin-top: 5px;
+  border-bottom: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+hr {
+  border:0;
+  height:1px;
+  background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  opacity:0.8;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+.div {
+  background-color: #fff !important;
+}
 }

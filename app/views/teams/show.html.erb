@@ -1,11 +1,13 @@
 <!--displays the project that you clicked and dislplays its information-->
 <p id="notice"><%= notice %></p>
-
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Name:</strong>
   <%= @team.name %>
 </p>
-
+</div>
+</div>
 <% @team.users.each do |user|%>
   <p><%= user.email %></p>
 <% end %>
