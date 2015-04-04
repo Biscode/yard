@@ -3,6 +3,7 @@ class SprintsController < ApplicationController
 
   # GET /sprints
   # GET /sprints.json
+  # Get the sprints of a specific project.
   def index
     @project = Project.find(params[:project_id])
    @sprints = @project.sprints
@@ -24,6 +25,7 @@ class SprintsController < ApplicationController
 
   # POST /sprints
   # POST /sprints.json
+  # Create a new sprint inside a specific project.
   def create
     @project = Project.find(params[:project_id])
     @sprint = @project.sprints.new(sprint_params)
@@ -41,6 +43,7 @@ class SprintsController < ApplicationController
 
   # PATCH/PUT /sprints/1
   # PATCH/PUT /sprints/1.json
+  # Update the attributes of the sprint.
   def update
     respond_to do |format|
       if @sprint.update(sprint_params)
@@ -55,6 +58,7 @@ class SprintsController < ApplicationController
 
   # DELETE /sprints/1
   # DELETE /sprints/1.json
+  # Delete an unwanted sprint.
   def destroy
     @sprint.destroy
     respond_to do |format|
@@ -65,16 +69,17 @@ class SprintsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_sprint
-      @sprint = Sprint.find(params[:id])
-    end
+  def set_sprint
+    @sprint = Sprint.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def sprint_params
-      params.require(:sprint).permit(:number, :deadline)
-    end
-
-    def list_project_sprintss
+    # Only input the parameters of the sprint which are its number and deadline.
+  def sprint_params
+    params.require(:sprint).permit(:number, :deadline)
+  end
+    # List all the sprints in a project.
+  def list_project_sprintss
    @project_sprints = Project.find(params[:id]).sprints
-end
+  end
 end

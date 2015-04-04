@@ -19,9 +19,17 @@
 <%= link_to 'Edit', edit_project_path(@project) %>
 
 <div class="row">
-  <% @project.sprints.each do |sprint| %>
-      <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
-        <% end %>
+  <div class="sprint">
+    <ul>
+      <% @project.sprints.each do |sprint| %>
+        <li>
+          <a>
+            <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
 <%= render 'sprints/new' %>
