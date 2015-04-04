@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330110844) do
+ActiveRecord::Schema.define(version: 20150404160545) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20150330110844) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "references"
-    t.string   "Project"
     t.integer  "project_id"
   end
 
@@ -43,7 +42,6 @@ ActiveRecord::Schema.define(version: 20150330110844) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "project_id"
-    t.integer  "sprint"
     t.integer  "sprint_id"
   end
 
