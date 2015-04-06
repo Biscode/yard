@@ -38,7 +38,7 @@ def self.search(query)
 end
 
 ## Ahmed Saleh
-## takes a user_id and return the user email
+## takes a user_id and returns the user email
 def self.find_user(user_id)
     User.find(user_id).email
 end
