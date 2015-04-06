@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   include PublicActivity::Model
   tracked owner: Proc.new { |controller, model| controller.current_user }
-  tracked subject: Proc.new { |controller, model| controller.current_user }
 
   attr_accessor :password
   before_save :encrypt_password

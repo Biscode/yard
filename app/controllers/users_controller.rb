@@ -78,7 +78,7 @@ end
 
     @team.users << @user
 
-    @user.create_activity :create, owner: current_user
+    @user.create_activity :create, owner: current_user, parameters: {subject_id: team_id}
 
     redirect_to :back
   end
