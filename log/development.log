@@ -28049,3 +28049,1483 @@ Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for
 
 
 Started GET "/assets/application-feaa4b479a855b4f93d0d33dd9e673c8.css?body=1" for 127.0.0.1 at 2015-04-04 14:57:20 +0200
+
+
+Started GET "/projects/1/sprints/5" for 127.0.0.1 at 2015-04-06 11:59:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"5"}
+  [1m[35mSprint Load (0.1ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?[0m  [["sprint_id", 5]]
+  Rendered collection (0.0ms)
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (124.2ms)
+Completed 200 OK in 763ms (Views: 724.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/foundation_and_overrides-55b952df661a8aa52cf6c70b4b91c82f.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/application-feaa4b479a855b4f93d0d33dd9e673c8.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 11:59:02 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 11:59:27 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 154ms (Views: 149.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-06 12:00:08 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.2ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (3.6ms)
+  Rendered projects/show.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 226ms (Views: 224.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:03:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 820ms (Views: 771.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 149ms (Views: 146.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation_and_overrides-55b952df661a8aa52cf6c70b4b91c82f.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/application-feaa4b479a855b4f93d0d33dd9e673c8.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:41 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:03:42 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:03:44 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 140ms (Views: 137.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-04-06 12:03:46 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSprint Load (0.1ms)[0m  SELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?  [["project_id", 2]]
+  Rendered sprints/_new.html.erb (4.4ms)
+  Rendered projects/show.html.erb within layouts/application (220.7ms)
+Completed 200 OK in 416ms (Views: 371.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:03:49 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 141ms (Views: 136.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2015-04-06 12:04:06 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 182ms (Views: 181.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2015-04-06 12:05:15 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2461ms (Views: 2460.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides-8365ff460574bf76d4fc9a205ecd0b86.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/application-453d2ba0d1a24ef52c80c1ffe2923976.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:17 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:05:18 +0200
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-06 12:05:30 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nuk4v6zklxxiRSO6G0A23b+GbrTb1fg7+V8Hc/oqJ4lbT/WICUfOFnbRnWVz39gveEZB0NLrlm4WNa7xHa+Vlw==", "email"=>"nohaelshourbagyy@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "nohaelshourbagyy@gmail.com"]]
+  Rendered projects/new.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 219ms
+
+ActionView::Template::Error (Missing partial sessions/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/nohee/yard/app/views"
+  * "/home/nohee/.rvm/gems/ruby-2.1.5/gems/foundation-rails-5.5.1.0/app/views"
+):
+    1: <h1>New Project</h1>
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', projects_path %>
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb___3230095565318951415_70248703488720'
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.2ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (9.5ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/nohee/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (20.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:05:34 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 141ms (Views: 139.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-06 12:05:38 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (1.7ms)
+  Rendered projects/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 177ms (Views: 176.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (2.1ms)
+  Rendered projects/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation_and_overrides-8365ff460574bf76d4fc9a205ecd0b86.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/application-6924ef6fa2f2e02b30a8f0589c018107.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:12 +0200
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-06 12:06:34 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.2ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (3.6ms)
+  Rendered projects/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 239ms (Views: 237.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides-8365ff460574bf76d4fc9a205ecd0b86.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/application-09287a82b1b30c9723f67cbcfcd22b1f.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:06:35 +0200
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-06 12:07:06 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (1.9ms)
+  Rendered projects/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 2066ms (Views: 2065.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation_and_overrides-a3bc6a70a8f927a2fcf83a1bc5f2f06c.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/application-07b82eabf539c56ed8d1f49512329268.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:08 +0200
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-06 12:07:54 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (1.8ms)
+  Rendered projects/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 2108ms (Views: 2107.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation_and_overrides-800268cd3af3328cf7e8b0152842cf0f.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/application-71d92c2ac98e17ca6aa5ab83962e4632.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:07:56 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:08:03 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 158ms (Views: 155.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:08:42 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 259ms (Views: 256.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/projects-734a6f3f9dde1e6b9645aaab1ed9dc0e.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/application-8539ce82e94907abe2bf8b222b587e38.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/assets/foundation_and_overrides-800268cd3af3328cf7e8b0152842cf0f.css?body=1" for 127.0.0.1 at 2015-04-06 12:08:43 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 12:09:13 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 186ms (Views: 183.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation_and_overrides-800268cd3af3328cf7e8b0152842cf0f.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/projects-8c21e007dc7481ecf34ec274fae1857b.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/application-c5655130b1a485f389fa76f3a5af2b54.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:09:14 +0200
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-04-06 12:09:21 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (31.0ms)
+  Rendered projects/new.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 289ms (Views: 288.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-04-06 12:09:30 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 128ms (Views: 126.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-04-06 12:09:32 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered sprints/_new.html.erb (1.8ms)
+  Rendered projects/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 128ms (Views: 127.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/sprints/1" for 127.0.0.1 at 2015-04-06 12:09:34 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mSprint Load (0.2ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?[0m  [["sprint_id", 1]]
+  Rendered collection (0.0ms)
+  [1m[35mProject Load (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered sprints/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 239ms (Views: 237.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sprints/1/edit" for 127.0.0.1 at 2015-04-06 12:09:45 +0200
+Processing by SprintsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sprints/_form.html.erb (3.6ms)
+  Rendered sprints/edit.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 150ms (Views: 149.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 148ms (Views: 146.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation_and_overrides-800268cd3af3328cf7e8b0152842cf0f.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/projects-8c21e007dc7481ecf34ec274fae1857b.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/application-2cdb7bd9ba78a88157f93aec05f8042b.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:10:43 +0200
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 145ms (Views: 142.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation_and_overrides-800268cd3af3328cf7e8b0152842cf0f.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/projects-8c21e007dc7481ecf34ec274fae1857b.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/scaffolds-24c23876e5097b637f26627064f28339.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/sprints-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/application-fbae10ad4a641b3c410ae0dec485c5a7.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
+
+
+Started GET "/assets/application-106196c16fc93666baae5b6557ee4bf4.js?body=1" for 127.0.0.1 at 2015-04-06 12:11:21 +0200
