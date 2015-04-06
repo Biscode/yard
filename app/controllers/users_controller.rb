@@ -78,6 +78,9 @@ end
 
     @team.users << @user
 
+    ## Ahmed Saleh
+    ## Here we create an activity/notification everytime a user is added to a team
+    ## and we set a special parameter :subject_id to team_id
     @user.create_activity :create, owner: current_user, parameters: {subject_id: team_id}
 
     redirect_to :back

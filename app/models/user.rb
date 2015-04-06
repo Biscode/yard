@@ -37,6 +37,8 @@ def self.search(query)
     where("email like ?", "%#{query}%")
 end
 
+## Ahmed Saleh
+## takes a user_id and return the user email
 def self.find_user(user_id)
     User.find(user_id).email
 end

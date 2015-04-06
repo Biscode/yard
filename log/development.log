@@ -24306,3 +24306,26 @@ Processing by NotificationsController#index as HTML
   [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 1]]
   Rendered notifications/index.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 249ms (Views: 248.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 23:41:23 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 266ms (Views: 262.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2015-04-06 23:41:27 +0200
+Processing by NotificationsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" = 4  ORDER BY created_at desc[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered notifications/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 249ms (Views: 246.7ms | ActiveRecord: 0.6ms)
