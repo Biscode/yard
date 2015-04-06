@@ -17,12 +17,12 @@ class UsersController < ApplicationController
   end
 
   # GET /users/new
- 
+
   def edit
   end
 
 
-  
+
 
 def new
   @user = User.new
@@ -76,7 +76,9 @@ end
     @team = Team.find(team_id)
     @user = User.find(user_id)
 
-    @team.users << @user  
+    @team.users << @user
+
+    @user.create_activity :create, owner: current_user
 
     redirect_to :back
   end

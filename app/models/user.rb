@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked owner: Proc.new { |controller, model| controller.current_user }
+  tracked subject: Proc.new { |controller, model| controller.current_user }
+
   attr_accessor :password
   before_save :encrypt_password
 
@@ -34,7 +38,8 @@ def self.search(query)
     where("email like ?", "%#{query}%")
 end
 
-def add_to_team(user,team)
-	team.users << user
+def self.find_user(user_id)
+    User.find(user_id).email
 end
+
 end

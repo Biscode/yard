@@ -1,34 +1,30 @@
 Rails.application.routes.draw do
 
-  resources :sprints
+root 'projects#index'
 
-  root 'projects#index'
-
-
- # root 'projects#index'
-get 'projects/index'
 get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
 
 resources :users
 resources :sessions
-
 resources :teams
+resources :sprints
+resources :notifications
 
-  resources :tasks
-  resources :projects do
-    resources :sprints do
-      resources :tasks
-    end
-    resources :teams do
-      resources :users do
-        member do
-          get 'add_user_to_team'
-        end
+resources :tasks
+resources :projects do
+  resources :sprints do
+    resources :tasks
+  end
+  resources :teams do
+    resources :users do
+      member do
+        get 'add_user_to_team'
       end
     end
   end
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

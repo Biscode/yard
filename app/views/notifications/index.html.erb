@@ -1,0 +1,8 @@
+<h1>Notifications#index</h1>
+
+<% @notifications.each do |notification| %>
+  <p>
+    <%= User.find_user(notification.owner_id) %> added you <%= User.find_user(notification.trackable_id) %> to team
+  </p>
+  <%= notification.inspect %>
+<% end %>
