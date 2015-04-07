@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
-
+  has_many :tasks
+    
 
 #email_regex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+)\z/i
 
@@ -22,6 +23,15 @@ validates :email, :email => true
     end
   end
 
+def self.search(search)
+  if search
+      find(:all, :conditions => ['name LIKE?', "%#{:search}%"])
+    else
+      find(:all).order("created_at DESC")
+    end
+  end
+
+  
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
@@ -37,4 +47,5 @@ end
 def add_to_team(user,team)
 	team.users << user
 end
+
 end
