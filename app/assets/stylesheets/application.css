@@ -26,7 +26,7 @@ a:hover {
 }
 */
 
-.name {
+name {
   h1 {
     font-family: 'Raleway', sans-serif;
   }
@@ -44,13 +44,13 @@ body {
 
 
 a:hover {
-	color:  #7575A3 !important ;
+	color: #7575A3 !important ;
 	background: #fff !important;
 }
 
 header {
   margin-top: 5px;
-  border-bottom: 4px solid  #FFC2E0;
+  border-bottom: 4px solid #FFC2E0;
   margin-bottom: 20px;
 }
 
@@ -72,8 +72,7 @@ hr {
   -ms-border-radius: $radius;
   -o-border-radius: $radius;
 }
-
-.div {
+div {
   background-color: #fff !important;
 }
 }
