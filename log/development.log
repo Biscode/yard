@@ -12431,3 +12431,426 @@ Processing by UsersController#index as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
   Rendered users/index.html.erb within layouts/application (4.7ms)
 Completed 200 OK in 436ms (Views: 434.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-07 21:45:47 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (19.9ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 843ms (Views: 725.7ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-07 21:45:50 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSprint Load (0.3ms)[0m  SELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (6.5ms)
+  Rendered projects/show.html.erb within layouts/application (153.7ms)
+Completed 200 OK in 550ms (Views: 546.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/1/sprints/2" for ::1 at 2015-04-07 21:45:53 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"2"}
+  [1m[36mSprint Load (0.2ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?  [["sprint_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 404ms (Views: 401.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects/1/sprints/2/tasks" for ::1 at 2015-04-07 21:45:58 +0200
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/1Bg+FXM6z08UmLkHNTWvchqM5zD2XI7SzCHVDtT2nzuPogtEBHM0D06XQWdIEr6PH4sSoAMJq/Oy4zg/WioZA==", "task"=>{"title"=>"", "description"=>"", "status"=>"", "priority"=>"", "story_points"=>"", "sprint"=>"#<Sprint:0x007fe1f1daf7e8>", "deadline(1i)"=>"2015", "deadline(2i)"=>"4", "deadline(3i)"=>"7"}, "commit"=>"Create Task", "project_id"=>"1", "sprint_id"=>"2"}
+  [1m[35mSprint Load (0.2ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: sprint
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (17.2ms)[0m  [1mINSERT INTO "tasks" ("title", "description", "status", "priority", "deadline", "sprint_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["status", ""], ["priority", ""], ["deadline", "2015-04-07"], ["sprint_id", 2], ["created_at", "2015-04-07 19:45:58.141936"], ["updated_at", "2015-04-07 19:45:58.141936"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/1/sprints/2/tasks
+Completed 302 Found in 31ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/projects/1/sprints/2/tasks" for ::1 at 2015-04-07 21:45:58 +0200
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"2"}
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?  ORDER BY deadline ASC  [["sprint_id", 2]]
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 438ms (Views: 436.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:46:01 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (1.6ms)
+  [1m[36mUser Load (14.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 472ms (Views: 433.9ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:46:06 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 403ms (Views: 401.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:46:24 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 455ms (Views: 454.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:46:40 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (1.3ms)
+  [1m[35mUser Load (15.0ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 471ms (Views: 439.2ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:46:43 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 385ms (Views: 383.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:47:02 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 406ms (Views: 404.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:47:03 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 416ms (Views: 414.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:49:47 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:         <td><%= user.email %></td>
+    18:         <td><%= link_to 'Show', user %></td>
+    19:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    20:           <% if @task.id != nil %>
+    21:         <td><%= link_to 'Add Task to User', {:controller => 'users', :action => 'add_task_to_user',:user_id => user.id, :task_id => @task} %></td>
+    22:         <% end %>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb__883456479996371676_70304197036400'
+  app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__883456479996371676_70304197036400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (43.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (69.0ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:53:00 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 669ms (Views: 667.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users?id=4" for ::1 at 2015-04-07 21:57:25 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/_search.html.erb (1.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 619ms (Views: 616.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 21:57:34 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 455ms (Views: 453.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 21:57:36 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 400ms (Views: 398.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 21:57:38 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 410ms (Views: 408.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-07 21:57:41 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 471ms (Views: 436.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 21:57:45 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 392ms (Views: 391.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=1" for ::1 at 2015-04-07 21:57:48 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:78:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (42.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (63.3ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=1" for ::1 at 2015-04-07 21:57:49 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:78:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (91.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.2ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=1" for ::1 at 2015-04-07 21:57:49 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:78:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.5ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 21:58:04 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 395ms (Views: 394.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-07 21:58:14 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 392ms (Views: 391.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-07 21:58:16 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 395ms (Views: 394.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-07 21:59:04 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/_search.html.erb (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (111.3ms)
+Completed 500 Internal Server Error in 119ms
+
+ActionView::Template::Error (undefined method `task_id' for nil:NilClass):
+    17:         <td><%= user.email %></td>
+    18:         <td><%= link_to 'Show', user %></td>
+    19:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    20:           <% if @task.task_id != nil %>
+    21:         <td><%= link_to 'Add Task to User', {:controller => 'users', :action => 'add_task_to_user',:user_id => user.id, :task_id => @task} %></td>
+    22:         <% end %>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb__883456479996371676_70304211454740'
+  app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__883456479996371676_70304211454740'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (33.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (146.3ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-07 21:59:25 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 401ms (Views: 400.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-07 22:01:54 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/_search.html.erb (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 508ms (Views: 506.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:01:58 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 397ms (Views: 395.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:02:00 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 390ms (Views: 389.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:02:01 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 417ms (Views: 416.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:02:02 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 393ms (Views: 391.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:02:03 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 414ms (Views: 413.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:02:03 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 413ms (Views: 411.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-07 22:07:49 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 587ms (Views: 584.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-04-08 01:08:27 +0200
+Processing by UsersController#index as HTML
+  Rendered users/_search.html.erb (6.3ms)
+  [1m[35mUser Load (64.1ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 1159ms (Views: 1014.1ms | ActiveRecord: 64.1ms)

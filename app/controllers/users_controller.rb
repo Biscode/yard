@@ -2,9 +2,10 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 # GET /users
   # GET /users.json
+  #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
-    if @task
+    if @task!=nil
     @task = Task.find(params[:id])
   end
 end 
@@ -65,13 +66,14 @@ def new
     @users = User.search params[:search]
   end
 
+#it add the task to the user and then redirects to the project page
   def add_task_to_user
     user_id = params[:user_id]
     @user = User.find(user_id)
     task_id = params[:task_id]
     @task = Task.find(task_id)
     @user.tasks << @task 
-
+     flash[:notice] = "Task was successfully added"
     redirect_to(:controller => 'projects', :action => 'index')
 
   end

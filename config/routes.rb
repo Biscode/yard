@@ -32,13 +32,7 @@ resources :projects do
   end
 end
 
-#resources :tasks do
- #     resources :users do
-     #   member do
-  #        get 'add_task_to_user'
-   #     end
-      # end
-    #end
+# to route to the add_task_to_user
   match 'add_task_to_user_task_user' => 'users#add_task_to_user', :as =>'add_task_to_user',via: [:get, :post]
 
 
