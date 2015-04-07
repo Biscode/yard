@@ -66,11 +66,11 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_task
       @task = Task.find(params[:id])
-      @project = Project.find(params[:project_id])
+@project = Project.where(id: params[:id]).first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:title, :description, :status, :priority, :story_points, :deadline)
+      params.require(:task).permit(:title, :description, :status, :priority, :story_points, :deadline )
     end
 end
