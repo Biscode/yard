@@ -19,7 +19,11 @@ class TasksController < ApplicationController
      end
 
     if @sortType == "status"
-      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY LENGTH(status) DESC")
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY CASE status
+                                                            WHEN '' THEN 1 
+                                                            WHEN 'in progress' THEN 2
+                                                            WHEN 'reviewing' THEN 3
+                                                            WHEN 'done' THEN 4 END")
     end
 
     if @sortType == "description"
