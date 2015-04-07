@@ -1,4 +1,4 @@
- <%= form_tag  task_users_path(:id , :search => params[:search]), :method => 'get' do %>
+ <%= form_tag users_path(@task, :search => params[:search]), :method => 'get' do %>
       <%= label_tag(:search, "Search for:") %>
 
       <%= text_field_tag :search, params[:search], :id => 'search_field' %>
