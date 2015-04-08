@@ -36,6 +36,8 @@ gem 'email_validator'
 gem 'foundation-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'public_activity'
+gem "rails-erd"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,8 +45,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'simplecov', '~> 0.9.0'
-  gem 'public_activity'  
-  
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
