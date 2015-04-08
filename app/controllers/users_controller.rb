@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /users
+# GET /users
   # GET /users.json
   def index
     if params[:search]
@@ -10,37 +9,27 @@ class UsersController < ApplicationController
       @users = User.order("created_at DESC")
     end
   end
-
   # GET /users/1
   # GET /users/1.json
   def show
   end
 
-  # GET /users/new
-
+# GET /users/new
   def edit
   end
-
-
-
-
-def new
+#to make a new user
+  def new
   @user = User.new
-end
-
-def create
-@user = User.new(user_params)
-  if @user.save
-    redirect_to root_url, :notice => "Signed up!"
-  else
-    render "new"
   end
-end
-
-
-
-
-
+# create a user based on specefic params
+  def create
+     @user = User.new(user_params)
+    if @user.save
+        redirect_to root_url, :notice => "Signed up!"
+    else
+         render "new"
+    end
+  end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -88,16 +77,14 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
+  def set_user
       @user = User.find(params[:id])
-    end
-
+   end
     # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
+   def user_params
       params.require(:user).permit(:email)
-    end
-
-     def user_params
+   end
+  def user_params
       params.require(:user).permit( :email, :password, :password_confirmation)
-    end
+  end
 end

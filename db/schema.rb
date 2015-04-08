@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406175713) do
+ActiveRecord::Schema.define(version: 20150408204330) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20150406175713) do
     t.date     "deadline"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "references"
     t.integer  "project_id"
     t.float    "total_points"
   end
