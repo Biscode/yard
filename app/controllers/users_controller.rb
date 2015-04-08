@@ -5,10 +5,8 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
-    if @task!=nil
     @task = Task.find(params[:id])
   end
-end 
 
   # GET /users/1
   # GET /users/1.json
