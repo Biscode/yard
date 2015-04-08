@@ -12854,3 +12854,253 @@ Processing by UsersController#index as HTML
   [1m[35mUser Load (64.1ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
   Rendered users/index.html.erb within layouts/application (108.4ms)
 Completed 200 OK in 1159ms (Views: 1014.1ms | ActiveRecord: 64.1ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-08 02:45:09 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/_search.html.erb (1.8ms)
+  [1m[36mUser Load (26.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email like '%%')[0m
+  Rendered users/index.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 1004ms (Views: 914.7ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=2" for ::1 at 2015-04-08 02:45:12 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 17ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:77:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (106.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (67.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (91.5ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=2" for ::1 at 2015-04-08 02:45:13 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:77:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (72.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (87.0ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-08 02:45:32 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (4.2ms)
+  Rendered projects/show.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 512ms (Views: 490.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/1/sprints/3" for ::1 at 2015-04-08 02:45:35 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"3"}
+  [1m[35mSprint Load (0.2ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?[0m  [["sprint_id", 3]]
+  Rendered tasks/_task.html.erb (1.5ms)
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 553ms (Views: 550.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects/1/sprints/3/tasks" for ::1 at 2015-04-08 02:45:39 +0200
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ue9er/zbePOFtuBSQxQUMPfVjXbvpHXZgBJUclLjBCJAgbZ6uQZfHoTe37PC4Ih3A8GSoKxxIU0F6V/GlNh2Og==", "task"=>{"title"=>"", "description"=>"", "status"=>"", "priority"=>"", "story_points"=>"", "sprint"=>"#<Sprint:0x007fe1f32fcbf0>", "deadline(1i)"=>"2015", "deadline(2i)"=>"4", "deadline(3i)"=>"8"}, "commit"=>"Create Task", "project_id"=>"1", "sprint_id"=>"3"}
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: sprint
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (25.4ms)[0m  INSERT INTO "tasks" ("title", "description", "status", "priority", "deadline", "sprint_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", ""], ["description", ""], ["status", ""], ["priority", ""], ["deadline", "2015-04-08"], ["sprint_id", 3], ["created_at", "2015-04-08 00:45:39.409681"], ["updated_at", "2015-04-08 00:45:39.409681"]]
+  [1m[36m (34.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1/sprints/3/tasks
+Completed 302 Found in 69ms (ActiveRecord: 60.2ms)
+
+
+Started GET "/projects/1/sprints/3/tasks" for ::1 at 2015-04-08 02:45:39 +0200
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"3"}
+  [1m[35mSprint Load (0.1ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?  ORDER BY deadline ASC[0m  [["sprint_id", 3]]
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 424ms (Views: 422.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users?id=2" for ::1 at 2015-04-08 02:45:41 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"2"}
+  Rendered users/_search.html.erb (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 440ms (Views: 438.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=2" for ::1 at 2015-04-08 02:45:45 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:77:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (25.3ms)
+
+
+Started GET "/add_task_to_user_task_user?user_id=2" for ::1 at 2015-04-08 02:45:45 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 97ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:77:in `add_task_to_user'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.1ms)
+
+
+Started GET "/projects/1/sprints/3/tasks" for ::1 at 2015-04-08 02:46:45 +0200
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"3"}
+  [1m[36mSprint Load (0.2ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.6ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?  ORDER BY deadline ASC  [["sprint_id", 3]]
+  Rendered tasks/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 506ms (Views: 479.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-08 02:46:47 +0200
+
+SyntaxError (/Users/HAAKS/Desktop/yard/app/controllers/users_controller.rb:111: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/users_controller.rb:111: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (33.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (51.6ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-08 02:46:48 +0200
+
+SyntaxError (/Users/HAAKS/Desktop/yard/app/controllers/users_controller.rb:111: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/users_controller.rb:111: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.8ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-08 02:47:18 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/_search.html.erb (1.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 509ms (Views: 464.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users?id=3" for ::1 at 2015-04-08 02:47:47 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/_search.html.erb (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email like '%%')
+  Rendered users/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 405ms (Views: 403.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_task_to_user_task_user?task_id=3&user_id=1" for ::1 at 2015-04-08 02:47:49 +0200
+Processing by UsersController#add_task_to_user as HTML
+  Parameters: {"task_id"=>"3", "user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (36.1ms)[0m  UPDATE "tasks" SET "user_id" = ?, "updated_at" = ? WHERE "tasks"."id" = ?  [["user_id", 1], ["updated_at", "2015-04-08 00:47:49.143105"], ["id", 3]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 37.8ms)
+
+
+Started GET "/" for ::1 at 2015-04-08 02:47:49 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 531ms (Views: 483.2ms | ActiveRecord: 0.7ms)
