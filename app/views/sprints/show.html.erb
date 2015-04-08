@@ -16,10 +16,14 @@
 </div>
 </div>
 
-<%= link_to 'Edit', edit_sprint_path(@sprint) %> |
+<strong>Total Points:</strong>
+<%= @sprint.totalPoints %>
+</p>
+
+<%= link_to 'Edit', edit_sprint_path(@sprint) %>
 <%= link_to 'Back', sprints_path %>
 
-<%= render @sprint.tasks %> 
+<%= render @sprint.tasks %>
 
 <h4>New Task</h4>
 
@@ -44,10 +48,6 @@
 <div class="field">
   <%= f.label :story_points %><br>
   <%= f.text_field :story_points %>
-</div>
-<div class="field">
-  <%= f.label :sprint %><br>
-  <%= f.text_field :sprint %>
 </div>
 <div class="field">
   <%= f.label :deadline %><br>

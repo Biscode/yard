@@ -42,9 +42,11 @@ ActiveRecord::Schema.define(version: 20150406175713) do
   create_table "sprints", force: :cascade do |t|
     t.integer  "number"
     t.date     "deadline"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "references"
     t.integer  "project_id"
+    t.float    "total_points"
   end
 
   add_index "sprints", ["project_id"], name: "index_sprints_on_project_id"
