@@ -48547,3 +48547,760 @@ Processing by ProjectsController#index as HTML
   Rendered projects/index.html.erb within layouts/application (0.3ms)
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 256ms (Views: 254.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-09 01:07:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 387ms (Views: 374.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-04-09 01:07:25 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (15.1ms)
+  Rendered projects/new.html.erb within layouts/application (17.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 256ms (Views: 252.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2015-04-09 01:07:29 +0200
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d+jNnSc5AsIKx3gjMb6yebOm1wDiiERVeuzo3dh7nTmbAg05hWqtbYUYmyNa3HWwSWw30JwlSkIYfEyUx/crCQ==", "project"=>{"title"=>"aliasdasdasd", "description"=>"", "deadline(1i)"=>"2015", "deadline(2i)"=>"4", "deadline(3i)"=>"8"}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "projects" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "aliasdasdasd"], ["description", ""], ["deadline", "2015-04-08"], ["created_at", "2015-04-08 23:07:29.474322"], ["updated_at", "2015-04-08 23:07:29.474322"]]
+  [1m[36m (89.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 93ms (ActiveRecord: 89.4ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-09 01:07:29 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (9.1ms)
+  Rendered projects/show.html.erb within layouts/application (42.1ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `totalPoints' for #<Sprint:0x007ff4a5aee268>):
+     8: </div>
+     9: <div class="field">
+    10:   <%= f.label :total_Points %><br>
+    11:   <%= f.text_field :totalPoints %>
+    12: </div>
+    13: <div class="field">
+    14:   <%= f.label :deadline %><br>
+  app/views/sprints/_new.html.erb:11:in `block in _app_views_sprints__new_html_erb__1501918867410569175_70344364211280'
+  app/views/sprints/_new.html.erb:3:in `_app_views_sprints__new_html_erb__1501918867410569175_70344364211280'
+  app/views/projects/show.html.erb:54:in `_app_views_projects_show_html_erb__1439025436964734521_70344356026680'
+
+
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (10.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (21.7ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-09 01:08:47 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (5.7ms)
+  Rendered projects/show.html.erb within layouts/application (9.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 231ms (Views: 229.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects/1/sprints" for 127.0.0.1 at 2015-04-09 01:09:02 +0200
+Processing by SprintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtImuMZW21iZheB9Oin2Wn9lEnHH43BibtlQGWJVDdsqOOYcZAV09xZaA31RSzGTha/yoblOfnUMSfRQfdm76w==", "sprint"=>{"number"=>"1", "total_points"=>"", "deadline(1i)"=>"2015", "deadline(2i)"=>"4", "deadline(3i)"=>"8"}, "commit"=>"Create Sprint", "project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: total_points
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sprints" ("number", "deadline", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number", 1], ["deadline", "2015-04-08"], ["project_id", 1], ["created_at", "2015-04-08 23:09:02.068117"], ["updated_at", "2015-04-08 23:09:02.068117"]]
+  [1m[35m (155.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 161ms (ActiveRecord: 156.1ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-04-09 01:09:02 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSprint Load (0.1ms)[0m  SELECT "sprints".* FROM "sprints" WHERE "sprints"."project_id" = ?  [["project_id", 1]]
+  Rendered sprints/_new.html.erb (3.0ms)
+  Rendered projects/show.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 226ms (Views: 225.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/1/sprints/1" for 127.0.0.1 at 2015-04-09 01:09:04 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mSprint Load (0.2ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `totalPoints' for #<Sprint:0x00000005a35318>):
+    17: </div>
+    18: 
+    19: <strong>Total Points:</strong>
+    20: <%= @sprint.totalPoints %>
+    21: </p>
+    22: 
+    23: <%= link_to 'Edit', edit_sprint_path(@sprint) %>
+  app/views/sprints/show.html.erb:20:in `_app_views_sprints_show_html_erb___2950316792741950016_47196860'
+
+
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.9ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (9.9ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (21.0ms)
+
+
+Started GET "/projects/1/sprints/1" for 127.0.0.1 at 2015-04-09 01:09:04 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `totalPoints' for #<Sprint:0x007ff4a4b5d5d8>):
+    17: </div>
+    18: 
+    19: <strong>Total Points:</strong>
+    20: <%= @sprint.totalPoints %>
+    21: </p>
+    22: 
+    23: <%= link_to 'Edit', edit_sprint_path(@sprint) %>
+  app/views/sprints/show.html.erb:20:in `_app_views_sprints_show_html_erb___2950316792741950016_70344361852000'
+
+
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (10.6ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (28.9ms)
+
+
+Started GET "/projects/1/sprints/1" for 127.0.0.1 at 2015-04-09 01:09:22 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mSprint Load (0.1ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?[0m  [["sprint_id", 1]]
+  Rendered collection (0.0ms)
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (20.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 240ms (Views: 238.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/foundation_and_overrides-cec58e2d1a39ab1996a24f03f1354f53.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/notifications-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/projects-8c21e007dc7481ecf34ec274fae1857b.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/scaffolds-fa58a6428bd51963e5d1da12743103bc.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/sprints-c948e8098b35d749d4b8eb5af4adaf52.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/application-e2444e5504db5f606717d3d8e01654c6.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/notifications-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started GET "/assets/application-883470935c1fbd5a02c492375519c7a2.js?body=1" for 127.0.0.1 at 2015-04-09 01:09:23 +0200
+
+
+Started POST "/projects/1/sprints/1/tasks" for 127.0.0.1 at 2015-04-09 01:09:31 +0200
+
+SyntaxError (/home/ahmedsaleh/projects/se/yard/app/controllers/tasks_controller.rb:126: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/tasks_controller.rb:126: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (10.1ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (22.1ms)
+
+
+Started GET "/projects/1/sprints/1/tasks" for 127.0.0.1 at 2015-04-09 01:11:27 +0200
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"1"}
+  [1m[35mTask Load (0.4ms)[0m  SELECT * FROM tasks ORDER BY CASE status
+                                                            WHEN '' THEN 1
+                                                            WHEN 'in progress' THEN 2
+                                                            WHEN 'reviewing' THEN 3
+                                                            WHEN 'done' THEN 4 END
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 233ms (Views: 229.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/foundation_and_overrides-cec58e2d1a39ab1996a24f03f1354f53.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/notifications-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/projects-8c21e007dc7481ecf34ec274fae1857b.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/scaffolds-fa58a6428bd51963e5d1da12743103bc.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/tasks-e22678db0d8806d9c295827ccb18ee14.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/sprints-c948e8098b35d749d4b8eb5af4adaf52.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/application-e2444e5504db5f606717d3d8e01654c6.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/notifications-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/assets/application-883470935c1fbd5a02c492375519c7a2.js?body=1" for 127.0.0.1 at 2015-04-09 01:11:28 +0200
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2015-04-09 01:11:35 +0200
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template tasks/new, application/new with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ahmedsaleh/projects/se/yard/app/views"
+  * "/home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/foundation-rails-5.5.1.0/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (17.4ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (10.1ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (22.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2015-04-09 01:11:35 +0200
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template tasks/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ahmedsaleh/projects/se/yard/app/views"
+  * "/home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/foundation-rails-5.5.1.0/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ahmedsaleh/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (18.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (9.9ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/ahmedsaleh/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.1/lib/web_console/templates/index.html (21.1ms)
+
+
+Started GET "/projects/1/sprints/1/tasks" for 127.0.0.1 at 2015-04-09 01:11:38 +0200
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"1"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT * FROM tasks ORDER BY CASE status
+                                                            WHEN '' THEN 1
+                                                            WHEN 'in progress' THEN 2
+                                                            WHEN 'reviewing' THEN 3
+                                                            WHEN 'done' THEN 4 END
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 229ms (Views: 227.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects/1/sprints/1/tasks" for 127.0.0.1 at 2015-04-09 01:11:46 +0200
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ce0mNjx/fsyd+v7+aH8FCnfUs3Q7iRXVtncaJbDATmKdB+aSnizRYxIlHf4DHcLDjR5TpEUkG8LU575sr0z4Ug==", "task"=>{"title"=>"task 1", "description"=>"", "status"=>"", "priority"=>"", "story_points"=>"", "deadline(1i)"=>"2015", "deadline(2i)"=>"4", "deadline(3i)"=>"8"}, "commit"=>"Create Task", "project_id"=>"1", "sprint_id"=>"1"}
+  [1m[35mSprint Load (0.4ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("title", "description", "status", "priority", "deadline", "sprint_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "task 1"], ["description", ""], ["status", ""], ["priority", ""], ["deadline", "2015-04-08"], ["sprint_id", 1], ["created_at", "2015-04-08 23:11:46.651535"], ["updated_at", "2015-04-08 23:11:46.651535"]]
+  [1m[35m (78.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/1/sprints/1
+Completed 302 Found in 104ms (ActiveRecord: 79.9ms)
+
+
+Started GET "/projects/1/sprints/1" for 127.0.0.1 at 2015-04-09 01:11:46 +0200
+Processing by SprintsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?  [["sprint_id", 1]]
+  Rendered tasks/_task.html.erb (1.0ms)
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (9.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 239ms (Views: 237.9ms | ActiveRecord: 0.5ms)

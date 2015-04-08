@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks
   # GET /tasks.json
-  
+
   # tasks are sorted by their status by default.
   # added some extra sorting features, you can sort by title, priority.....etc
   # If a specific sprint is chosen, only the tasks in this sprint will appear
@@ -48,7 +48,6 @@ class TasksController < ApplicationController
                                                               WHEN 'medium' THEN 3
                                                               WHEN 'low' THEN 4 END")
     end
-  end
   end
 
   # GET /tasks/1
