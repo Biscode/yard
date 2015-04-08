@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="text-center">
+  		<div class= "profile-picture"><%= image_tag('logo.png', width:'75', height:'75' ) %></div>
+  		<br><br><br><br>
+
+<h4><%= @user.name %></h4> <br>
+		<h4><i><%= @user.name %></i></h4><br>
+  		<h4><i><%= @user.email %></i></h4><br>
+		<h4><%= @user.birthday %></h4><br>	
+  		<h4><%= @user.country %></h4><br>
+  			
+  			<div class="row">	
+  				<%= link_to 'Edit', edit_user_path(@user) %> |				
+				<%= link_to 'Back', users_path %>
+			</div>
+ </div>
+</div>
