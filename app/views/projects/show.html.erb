@@ -1,20 +1,29 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
 
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Title:</strong>
   <%= @project.title %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Deadline:</strong>
   <%= @project.deadline %>
 </p>
-
+</div>
+</div>
 <%= form_for([@project, @project.teams.build]) do |f| %>
 <div class="field">
   <%= f.label :name %><br>
