@@ -10,34 +10,36 @@
       </ul>
     </div>
   <% end %>
+<p>  
+   	 <%= f.file_field :image %>  
+  </p>  
+  <p>  
+    		<%= f.label :remote_image_url, "or image URL" %>  
+    		<%= f.text_field :remote_image_url %>  
+  </p>  
+  
+  <div class="field">
+ 		   <%= f.label :fname %><br>
+ 		   <%= f.text_field :name %>
+  </div>
+	
+  <div class="field">
+ 		   <%= f.label :fname %><br>
+ 		   <%= f.text_field :name %>
+  </div>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+ 		   <%= f.label :email %><br>
+ 		   <%= f.text_field :email %>
   </div>
  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
+ 		   <%= f.label :country %><br>
+ 		   <%= f.text_field :country %>
   </div>
-
- <div class="field">
-    <%= f.label :Gender %><br>
-    <%= f.text_field :Gender %>
+<div class="field">
+ 		   <%= f.label :Birthday %><br>
+ 		   <%= f.text_field :Birthday %>
   </div>
- <div class="field">
-    <%= f.label :projects %><br>
-    <%= f.text_field :projects %>
-  </div>
- <div class="field">
-    <%= f.label :Achievments %><br>
-    <%= f.text_field :Achievments %>
-  </div>
-
-
 
   <div class="actions">
     <%= f.submit %>
