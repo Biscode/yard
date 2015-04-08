@@ -13,10 +13,7 @@ end
 
   # GET /users/1
   # GET /users/1.json
- # def show
-  #      @users = User.search(params[:search])
 
-  # end
 
   # GET /users/new
  
