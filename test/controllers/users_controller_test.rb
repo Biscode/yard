@@ -46,4 +46,10 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to users_path
   end
+
+  test "should add user to task" do
+    get (:add_task_to_user,{'id' => "12"},{'user_id' => 5})
+    assert_response :success
+    assert_redirected_to projects_path
+   end
 end
