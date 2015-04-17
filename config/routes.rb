@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :announcements
+
 root 'projects#index'
 
 get "log_out" => "sessions#destroy", :as => "log_out"

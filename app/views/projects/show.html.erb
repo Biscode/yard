@@ -30,6 +30,20 @@
   <%= f.text_field :name %>
 </div>
 
+<h1>New Announcement</h1>
+
+<%= form_for([@project, @project.announcement.build]) do |f| %>
+
+<div class="field">
+  <%= f.label :announcement %><br>
+  <%= f.text_field :text %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+
+
 <div class="actions">
   <%= f.submit %>
 </div>
@@ -51,4 +65,6 @@
   </div>
 </div>
 
+<%= render @announcements.projects %>
 <%= render 'sprints/new' %>
+
