@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
+
 ActiveRecord::Schema.define(version: 20150405202631) do
-=======
 ActiveRecord::Schema.define(version: 20150417093027) do
+ActiveRecord::Schema.define(version: 20150417120314) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150417093027) do
     t.text     "announcement"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "project_ID"
   end
 >>>>>>> e0bcea2a4a05fa33e4e4757796305a9c57cbb2f5
 
@@ -109,3 +110,4 @@ ActiveRecord::Schema.define(version: 20150417093027) do
   end
 
 end
+
