@@ -1,44 +1,34 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /users
+# GET /users
   # GET /users.json
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
     @task = Task.find(params[:id])
   end
-
   # GET /users/1
   # GET /users/1.json
 
 
-  # GET /users/new
- 
+# GET /users/new
   def edit
   end
 
-def search 
-end
-  
 
-def new
+#to make a new user
+  def new
   @user = User.new
-end
-
-def create
-@user = User.new(user_params)
-  if @user.save
-    redirect_to root_url, :notice => "Signed up!"
-  else
-    render "new"
   end
-end
-
-
-
-
-
+# create a user based on specefic params
+  def create
+     @user = User.new(user_params)
+    if @user.save
+        redirect_to root_url, :notice => "Signed up!"
+    else
+         render "new"
+    end
+  end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -88,7 +78,12 @@ end
     @team = Team.find(team_id)
     @user = User.find(user_id)
 
-    @team.users << @user  
+    @team.users << @user
+
+    ## Ahmed Saleh
+    ## Here we create an activity/notification everytime a user is added to a team
+    ## and we set a special parameter :subject_id to team_id
+    @user.create_activity :create, owner: current_user, parameters: {subject_id: team_id}
 
     redirect_to :back
   end
@@ -97,16 +92,14 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
+  def set_user
       @user = User.find(params[:id])
-    end
-
+   end
     # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
+   def user_params
       params.require(:user).permit(:email)
-    end
-
-     def user_params
+   end
+  def user_params
       params.require(:user).permit( :email, :password, :password_confirmation)
-    end
+  end
 end

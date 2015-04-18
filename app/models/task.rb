@@ -4,4 +4,5 @@ class Task < ActiveRecord::Base
 	validates_presence_of :deadline
 	belongs_to :user
 
+
 end

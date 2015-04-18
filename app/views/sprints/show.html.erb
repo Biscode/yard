@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
-
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Number:</strong>
   <%= @sprint.number %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Deadline:</strong>
   <%= @sprint.deadline %>
 </p>
+</div>
+</div>
 
-<%= link_to 'Edit', edit_sprint_path(@sprint) %> |
+<strong>Total Points:</strong>
+<%= @sprint.total_points %>
+</p>
+
+<%= link_to 'Edit', edit_sprint_path(@sprint) %>
 <%= link_to 'Back', sprints_path %>
 
-<%= render @sprint.tasks %> 
+<%= render @sprint.tasks %>
 
 <h4>New Task</h4>
 
@@ -38,10 +48,6 @@
 <div class="field">
   <%= f.label :story_points %><br>
   <%= f.text_field :story_points %>
-</div>
-<div class="field">
-  <%= f.label :sprint %><br>
-  <%= f.text_field :sprint %>
 </div>
 <div class="field">
   <%= f.label :deadline %><br>

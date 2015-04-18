@@ -15,11 +15,11 @@ class ProjectsController < ApplicationController
       @projects.each do |project|
      tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }
       @criticaltasks += tempproject if tempproject
-    end
+      end
     @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
-else
-  @sentence = "Yaaay you have no critical tasks"
-  end
+    else
+     @sentence = "Yaaay you have no critical tasks"
+    end
 end
 
   # GET /projects/1

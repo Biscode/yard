@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
-<h1>Listing Tasks</h1>
+<h1> Tasks</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Status</th>
-      <th>Priority</th>
-      <th>Story points</th>
-      <th>Deadline</th>
+      <th><%= link_to("Title", {:sort => 'title'}) %></th>
+      <th><%= link_to("Description", {:sort => 'description'}) %></th>
+      <th><%= link_to("Status", {:sort => 'status'}) %></th>
+      <th><%= link_to("Priority", {:sort => 'priority'}) %></th>
+      <th><%= link_to("Story points", {:sort => 'story_points'}) %></th>
+      <th><%= link_to("Deadline", {:sort => 'deadline'}) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

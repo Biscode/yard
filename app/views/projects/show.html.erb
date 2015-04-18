@@ -1,26 +1,48 @@
-<!--displays the project that you clicked and dislplays its information-->
 <p id="notice"><%= notice %></p>
+<div class="row">
 
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Title:</strong>
   <%= @project.title %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Deadline:</strong>
   <%= @project.deadline %>
 </p>
-
+</div>
+</div>
 <%= form_for([@project, @project.teams.build]) do |f| %>
 <div class="field">
   <%= f.label :name %><br>
   <%= f.text_field :name %>
 </div>
+
+<h1>New Announcement</h1>
+
+<%= form_for([@project, @project.announcement.build]) do |f| %>
+
+<div class="field">
+  <%= f.label :announcement %><br>
+  <%= f.text_field :text %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+
 
 <div class="actions">
   <%= f.submit %>
@@ -30,9 +52,19 @@
 <%= link_to 'Edit', edit_project_path(@project) %>
 
 <div class="row">
-  <% @project.sprints.each do |sprint| %>
-      <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
-        <% end %>
+  <div class="sprint">
+    <ul>
+      <% @project.sprints.each do |sprint| %>
+        <li>
+          <a>
+            <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
+<%= render @announcements.projects %>
 <%= render 'sprints/new' %>
+
