@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 20150417120314) do
     t.datetime "updated_at",   null: false
     t.integer  "project_ID"
   end
->>>>>>> e0bcea2a4a05fa33e4e4757796305a9c57cbb2f5
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
