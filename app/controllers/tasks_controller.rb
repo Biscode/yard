@@ -18,7 +18,7 @@ class TasksController < ApplicationController
 
     if @sortType == "title"
     @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY title ASC")
-     end
+    end
 
     if @sortType == "status"
       @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY CASE status

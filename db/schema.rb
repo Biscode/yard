@@ -11,9 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150405202631) do
-ActiveRecord::Schema.define(version: 20150417093027) do
 ActiveRecord::Schema.define(version: 20150417120314) do
 
   create_table "activities", force: :cascade do |t|
@@ -38,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150417120314) do
     t.text     "announcement"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "project_ID"
+    t.integer  "project_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -109,4 +106,3 @@ ActiveRecord::Schema.define(version: 20150417120314) do
   end
 
 end
-
