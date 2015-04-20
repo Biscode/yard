@@ -13,3 +13,21 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<hr></hr>
+ <div class="row">
+  <div class="large-4 columns"><div> <%= link_to  user_omniauth_authorize_path  (:facebook) do %>
+                <i class="fa fa-facebook-square fa-5x"></i>
+              <% end %></div></div>
+
+ <div class="large-4 columns"><div> <%= link_to  user_omniauth_authorize_path(:twitter) do %>
+                <i class="fa fa-twitter-square fa-5x"></i>
+              <% end %></div></div> 
+              
+ <div class="large-4 columns"><div> <%= link_to  user_omniauth_authorize_path(:google_oauth2) do %>
+                <i class="fa fa-google-plus-square fa-5x"></i>
+              <% end %></div></div>
+</div>
+
+
+
+  

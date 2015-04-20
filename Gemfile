@@ -31,7 +31,10 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'omniauth'
+gem 'omniauth-facebook' 
+gem'omniauth-twitter'
+gem 'omniauth-google-oauth2' 
 ## our gems
 gem 'foundation-rails'
 gem "font-awesome-rails"
