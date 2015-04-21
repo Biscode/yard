@@ -3,22 +3,26 @@ class UsersController < ApplicationController
 # GET /users
   # GET /users.json
   def index
-    if params[:search]
-      @users = User.search(params[:search]).order("created_at DESC")
-    else
-      @users = User.order("created_at DESC")
-    end
+    @users = User.search(params[:search])
+    @task = Task.find(params[:id])
   end
   # GET /users/1
   # GET /users/1.json
-  def show
-  end
+ # def show
+  #      @users = User.search(params[:search])
+
+  # end
 
 # GET /users/new
   def edit
   end
 #to make a new user
-  def new
+
+def search 
+end
+  
+
+def new
   @user = User.new
   end
 # create a user based on specefic params
@@ -74,6 +78,17 @@ class UsersController < ApplicationController
 
     redirect_to :back
   end
+
+  def add_task_to_user
+    user_id = params[:user_id]
+    @user = User.find(user_id)
+
+    @user.tasks << @task 
+
+    redirect_to(:controller => 'tasks', :action => 'index')
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

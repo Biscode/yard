@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
-
+  has_many :tasks
+    
 
   attr_accessor :password
   before_save :encrypt_password
@@ -23,6 +24,15 @@ class User < ActiveRecord::Base
   end
 
   #it encrypt the password before it saves it for more secuity
+def self.search(search)
+  if search
+      find(:all, :conditions => ['name LIKE?', "%#{:search}%"])
+    else
+      find(:all).order("created_at DESC")
+    end
+  end
+
+  
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt

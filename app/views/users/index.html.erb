@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>List Users</h1>
+<h1>Listing Users</h1>
+<%= render 'search' %>
 
 <table>
   <thead>
@@ -16,6 +17,7 @@
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Add Task to User', {:action => 'add_task_to_user',:id => task.id, :user_id => user.id} %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

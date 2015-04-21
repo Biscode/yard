@@ -2,10 +2,16 @@ Rails.application.routes.draw do
 
 root 'projects#index'
 
+  root 'projects#index'
+
+
+ # root 'projects#index'
+get 'projects/index'
+#match ':users(/:search(/:))'
 get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
-
+#get "users/search"
 resources :users
 resources :sessions
 resources :teams
@@ -25,6 +31,15 @@ resources :projects do
     end
   end
 end
+
+resources :tasks do
+      resources :users do
+        member do
+          get 'add_task_to_user'
+        end
+      end
+    end
+    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

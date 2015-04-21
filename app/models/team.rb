@@ -9,4 +9,9 @@ class Team < ActiveRecord::Base
   def self.find_team(team_id)
     Team.find(team_id).name
   end
+
+
 end
+
+
+
