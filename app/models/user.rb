@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
   end
 
   #it encrypt the password before it saves it for more secuity
+
+
 def self.search(search)
   if search
       find(:all, :conditions => ['name LIKE?', "%#{:search}%"])

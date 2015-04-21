@@ -4,8 +4,11 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.search(params[:search])
+    if @task
     @task = Task.find(params[:id])
   end
+end 
+
   # GET /users/1
   # GET /users/1.json
  # def show
@@ -62,6 +65,17 @@ def new
     @users = User.search params[:search]
   end
 
+  def add_task_to_user
+    user_id = params[:user_id]
+    @user = User.find(user_id)
+    task_id = params[:task_id]
+    @task = Task.find(task_id)
+    @user.tasks << @task 
+
+    redirect_to(:controller => 'projects', :action => 'index')
+
+  end
+
   def add_user_to_team
     team_id = params[:team_id]
     user_id = params[:id]
@@ -79,15 +93,6 @@ def new
     redirect_to :back
   end
 
-  def add_task_to_user
-    user_id = params[:user_id]
-    @user = User.find(user_id)
-
-    @user.tasks << @task 
-
-    redirect_to(:controller => 'tasks', :action => 'index')
-
-  end
 
 
   private
