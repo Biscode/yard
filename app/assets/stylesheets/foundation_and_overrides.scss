@@ -124,7 +124,7 @@ $include-html-global-classes: $include-html-classes;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-$body-bg: #255E69 !important;
+$body-bg: #28ABE3 !important;
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -1373,7 +1373,7 @@ $topbar-margin-bottom: 50px;
 
 // Controlling the styles for the title in the top bar
 $topbar-title-weight: 600 !important;
-$topbar-title-font-size: rem-calc(26) !important;
+$topbar-title-font-size: rem-calc(24) !important;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
@@ -1394,7 +1394,7 @@ $topbar-link-color-hover: #6A959D !important;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-$topbar-link-bg-color-hover: #012C34 !important;
+$topbar-link-bg-color-hover: $topbar-bg-color !important;
 // $topbar-link-bg-hover: $oil;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
