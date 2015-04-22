@@ -1,3 +1,43 @@
+<div class="row">
+  <div class="small-6 medium-8 large-8 small-center large-centered columns">
+    <div class="container-box">
+      <!-- left part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            text text text
+          </h4>
+        </div>
+        <% @project.tasks.each do |task| %>
+        <ul class="text-center">
+          <li class="small-box">
+            <h4><%= link_to task.title %></h4>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+      <!-- end of left part -->
+      <!-- right part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            text text text
+          </h4>
+        </div>
+        <div class="text-center">
+          <h4>Task info should be displayed here ..</h4>
+        </div>
+        <div id="task-view" class="text-center" style="display:none;">aa</div>
+
+      </div>
+      <!-- end of right part -->
+    </div>
+  </div>
+</div>
+
+
+<!-- fuck ye self -->
+
 <p id="notice"><%= notice %></p>
 <div class="row">
 
