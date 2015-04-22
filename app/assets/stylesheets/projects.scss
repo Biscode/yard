@@ -1,26 +1,28 @@
-.project ul {
-  font: 20px "Helvetica Neue", Helvetica;
+.container-box {
+  background: white;
+  // a { color: black; }
+  height: 500px;
+  width: 300px;
+}
+
+.small-box {
+  width: 300px;
+  height: 45px;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 8px;
+  background: #e74c3c;
+  border: 0.5px solid #fff;
 }
 
-.project a {
-  background:  #7575A3;
-  color: #fff;
-  padding: 0.5px;
+.small-box a {
   display: block;
-  border-width: 1px;
-  border-style: solid;
-  border-color:#ffhh44 !important;
 }
 
-.project a:hover {
-  color: #111;
-  background: #fff;
-  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, .3);
-}
-
-.notice {
-  color:#fff !important;
+.utility-box {
+  height: 45px;
+  background: #FAFAFA;
+  a {
+    color: black;
+    font-size: 14px;
+  }
 }
