@@ -4,8 +4,12 @@
     <div class="container-box">
       <!-- left part -->
       <div class="object-box">
-        <div class="utility-box">
-          <h4><%= link_to 'New Project', new_project_path %></h4>
+        <div class="utility-box text-center">
+          <h4>
+            <%= link_to new_project_path do %>
+            Add Project <i class="fa fa-plus-circle"></i>
+            <% end %>
+          </h4>
         </div>
         <% @projects.each do |project| %>
         <ul class="text-center">
