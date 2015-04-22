@@ -1,8 +1,9 @@
-.container-box {
+.container-box .object-box {
   background: white;
-  // a { color: black; }
   height: 500px;
   width: 300px;
+  float: left;
+  margin: 0;
 }
 
 .small-box {
