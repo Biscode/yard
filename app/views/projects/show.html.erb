@@ -2,6 +2,9 @@
 <div class="row">
 
   <div class="small-10 large-8 columns">
+<strong><%= @sentence %></strong>
+
+<% if @showProject %>
 <p>
   <strong>Title:</strong>
   <%= @project.title %>
@@ -52,3 +55,4 @@
 </div>
 
 <%= render 'sprints/new' %>
+<% end %>

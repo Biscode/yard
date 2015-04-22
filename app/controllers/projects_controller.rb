@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
+  include ProjectsHelper
   # GET /projects
   # GET /projects.json
 
@@ -9,7 +10,19 @@ class ProjectsController < ApplicationController
   #then they are all appended in a list *of critical tasks* to be sorted according to deadline
   # You retrieve All the the projects, so the 'Index' view can use them.
   def index
-    @projects = Project.all
+    @projects = []
+    for project in Project.all do
+      if project.isPrivate
+        if current_user != nil
+          if isAdmin(current_user) or canView(current_user, project)
+            @projects.push(project)
+          end
+        end
+      else
+        @projects.push(project)
+      end
+    end
+
     @criticaltasks = []
     if @projects != nil
       @projects.each do |project|
@@ -26,6 +39,14 @@ end
   # GET /projects/1.json
   # veiws a single project that was clicked on.
   def show
+    @showProject = true
+
+    if @project.isPrivate
+      if current_user == nil or !(isAdmin(current_user) or canView(current_user, project))
+        @sentence = "You don't have permissions to view this project"
+        @showProject = false
+      end
+    end
   end
 
   # GET /projects/new
@@ -90,6 +111,6 @@ end
 
     # those parameters are the ones that the user can enter.
     def project_params
-      params.require(:project).permit(:title, :description, :deadline)
+      params.require(:project).permit(:title, :description, :deadline, :isPrivate)
     end
 end
