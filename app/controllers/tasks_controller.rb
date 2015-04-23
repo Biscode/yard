@@ -53,8 +53,6 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    @sprint = Sprint.find(params[:sprint_id])
-    @project = Project.find(params[:project_id])
   end
 
   # GET /tasks/new
@@ -70,13 +68,12 @@ class TasksController < ApplicationController
   # POST /tasks.json
   # Create a new task in a certain sprint inside a project.
   def create
-    @sprint = Sprint.find(params[:sprint_id])
     @project = Project.find(params[:project_id])
-    @task = @sprint.tasks.new(task_params)
+    @task = @project.tasks.new(task_params)
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to project_sprint_path(@project, @sprint), notice: 'Task was successfully created.' }
+        format.html { redirect_to project_path(@project), notice: 'Task was successfully created.' }
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new }
@@ -116,7 +113,6 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
   def set_task
     @task = Task.find(params[:id])
-    @sprint = Sprint.find(params[:sprint_id])
   end
 
     # Never trust parameters from the scary internet, only allow the white list through.

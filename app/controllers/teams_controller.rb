@@ -5,8 +5,8 @@ class TeamsController < ApplicationController
   # GET /teams.json
   # lists all the teams and finds the project by id.
   def index
-    @teams = Team.all
     @project = Project.find(params[:project_id])
+    @teams = @project.teams
   end
 
   # GET /teams/1
@@ -31,7 +31,6 @@ class TeamsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @team = @project.teams.new(team_params)
-
 
     respond_to do |format|
       if @team.save
