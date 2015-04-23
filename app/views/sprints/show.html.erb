@@ -1,23 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @sprint.number %>
-</p>
+  <h3>Number:</h3>
+  <h4><%= @sprint.number %></h4>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @sprint.deadline %>
-</p>
+  <h3>Deadline:</h3>
+  <h4><%= @sprint.deadline %></h4>
 
-<strong>Total Points:</strong>
-<%= @sprint.totalPoints %>
-</p>
 
-<%= link_to 'Edit', edit_sprint_path(@sprint) %>
-<%= link_to 'Back', sprints_path %>
+  <h3>Total Points:</h3>
+  <h4><%= @sprint.total_points %></h4>
 
-<%= render @sprint.tasks %>
+  <br>
+
+  <h5><%= (@sprint.deadline - Date.today).to_i%></h5>  <h5> days left</h5>
+  <br><br>
+
+<div class ="sprint">
+<a><%= link_to 'Edit', edit_sprint_path(@sprint) %></a>
+</div>
+
+<br>
+
+<h3><%= render @sprint.tasks %></h3>
 
 <h4>New Task</h4>
 
