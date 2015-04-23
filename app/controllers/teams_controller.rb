@@ -18,11 +18,13 @@ class TeamsController < ApplicationController
 
   # GET /teams/new
   def new
-    @team = Team.new
+    @project = Project.find(params[:project_id])
+    @team = @project.teams.build
   end
 
   # GET /teams/1/edit
   def edit
+    @project = Project.find(params[:project_id])
   end
 
   # POST /teams
@@ -34,7 +36,7 @@ class TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to project_path (@project), notice: 'Team was successfully created.' }
+        format.html { redirect_to @project, notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else
         format.html { render :new }
@@ -47,9 +49,11 @@ class TeamsController < ApplicationController
   # PATCH/PUT /teams/1.json
   # updates the team.
   def update
+    @project = Project.find(params[:project_id])
+
     respond_to do |format|
       if @team.update(team_params)
-        format.html { redirect_to @team, notice: 'Team was successfully updated.' }
+        format.html { redirect_to @project, notice: 'Team was successfully updated.' }
         format.json { render :show, status: :ok, location: @team }
       else
         format.html { render :edit }
@@ -62,9 +66,10 @@ class TeamsController < ApplicationController
   # DELETE /teams/1.json
   # Delete the team.
   def destroy
+    @project = Project.find(params[:project_id])
     @team.destroy
     respond_to do |format|
-      format.html { redirect_to teams_url, notice: 'Team was successfully destroyed.' }
+      format.html { redirect_to @project, notice: 'Team was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -73,7 +78,6 @@ class TeamsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_team
       @team = Team.find(params[:id])
-      @project = Project.find(params[:project_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
