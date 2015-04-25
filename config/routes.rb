@@ -21,6 +21,7 @@ resources :notifications
 
 resources :tasks
 resources :projects do
+ resources :announcements
   resources :sprints do
     resources :tasks
   end
