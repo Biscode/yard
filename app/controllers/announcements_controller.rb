@@ -5,6 +5,7 @@ class AnnouncementsController < ApplicationController
   # GET /announcements.json
   def index
     @announcements = Announcement.all
+	@project = Project.find(params[:project_id])
   end
 
   # GET /announcements/1
@@ -24,7 +25,9 @@ class AnnouncementsController < ApplicationController
   # POST /announcements
   # POST /announcements.json
   def create
-    @announcement = Announcement.new(announcement_params)
+	@announcement = project.find(params[:project_id])
+    @project = @project.announcements.create(announcement_params)
+    redirect_to project_path(@project)
 
     respond_to do |format|
       if @announcement.save

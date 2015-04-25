@@ -34,6 +34,19 @@
   <%= f.submit %>
 </div>
 <% end %>
+<%= form_for([@project, @project.announcements.build]) do |f| %>
+  <p>
+    <%= f.label :announcement %><br>
+    <%= f.text_field :announcement %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_project_path(@project) %>
 
