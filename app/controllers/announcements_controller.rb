@@ -25,13 +25,12 @@ class AnnouncementsController < ApplicationController
   # POST /announcements
   # POST /announcements.json
   def create
-	@announcement = project.find(params[:project_id])
-    @project = @project.announcements.create(announcement_params)
-    redirect_to project_path(@project)
+	@project = Project.find(params[:project_id])
+    @announcement = @project.announcements.new(announcement_params)
 
     respond_to do |format|
       if @announcement.save
-        format.html { redirect_to @announcement, notice: 'Announcement was successfully created.' }
+        format.html { redirect_to project_path(@project), notice: 'Announcement was successfully created.' }
         format.json { render :show, status: :created, location: @announcement }
       else
         format.html { render :new }
