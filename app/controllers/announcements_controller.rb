@@ -4,8 +4,8 @@ class AnnouncementsController < ApplicationController
   # GET /announcements
   # GET /announcements.json
   def index
-    @announcements = Announcement.all
 	@project = Project.find(params[:project_id])
+	@announcements = @project.announcements
   end
 
   # GET /announcements/1
