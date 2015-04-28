@@ -20,7 +20,7 @@ resources :teams
 resources :sprints
 resources :notifications
 
-resources :tasks
+# resources :tasks
 resources :projects do
   resources :sprints do
     resources :tasks

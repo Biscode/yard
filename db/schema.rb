@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417120314) do
+ActiveRecord::Schema.define(version: 20150426163027) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 20150417120314) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "project_id"
+  end
+
+  create_table "dtasks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "pid"
+    t.integer  "snum"
+    t.float    "story_points"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "projects", force: :cascade do |t|

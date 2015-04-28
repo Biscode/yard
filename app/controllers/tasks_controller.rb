@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     @sortType = params[:sort]
 
     if @sortType == "title"
-    @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY title ASC")
+      @tasks = Task.find_by_sql("SELECT * FROM tasks ORDER BY title ASC")
     end
 
     if @sortType == "status"
@@ -48,6 +48,9 @@ class TasksController < ApplicationController
                                                               WHEN 'medium' THEN 3
                                                               WHEN 'low' THEN 4 END")
     end
+    @project = Project.find(params[:project_id])
+    @sprint = Sprint.find(params[:sprint_id])
+    
   end
 
   # GET /tasks/1
@@ -104,6 +107,8 @@ class TasksController < ApplicationController
   # DELETE /tasks/1.json
   # Delete an unwanted task.
   def destroy
+    @sprint = Sprint.find(params[:sprint_id])
+    @project = Project.find(params[:project_id])
     @task.destroy
     respond_to do |format|
       format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }

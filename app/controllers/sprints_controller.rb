@@ -12,8 +12,6 @@ class SprintsController < ApplicationController
   # GET /sprints/1
   # GET /sprints/1.json
    def show
-    @sprint = Sprint.find(params[:id])
-    @points = @sprint.tasks.sum(:story_points)
    end
 
   # GET /sprints/new
