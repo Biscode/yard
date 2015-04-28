@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @users = User.search(params[:search])
     @task = Task.find(params[:id])
   end
+
   # GET /users/1
   # GET /users/1.json
 
@@ -17,7 +18,12 @@ class UsersController < ApplicationController
 
 
 #to make a new user
-  def new
+
+def search 
+end
+  
+
+def new
   @user = User.new
   end
 # create a user based on specefic params
