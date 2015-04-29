@@ -84,7 +84,7 @@ class UsersController < ApplicationController
 
     @user.tasks << @task 
   
-    flash[:notice] = "Task was added, you now have #{@mytask} points left."
+    flash[:notice] = "Task was added, you now have #{@mytask} point(s) left."
     else
     
     @user.dtasks.where(:pid => @proid).where(:snum => @spNumber).where(:story_points => @newD).destroy_all
