@@ -50,7 +50,6 @@ class TasksController < ApplicationController
     end
     @project = Project.find(params[:project_id])
     @sprint = Sprint.find(params[:sprint_id])
-    
   end
 
   # GET /tasks/1
