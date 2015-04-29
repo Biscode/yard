@@ -10,16 +10,6 @@ class ProjectsController < ApplicationController
   # You retrieve All the the projects, so the 'Index' view can use them.
   def index
     @projects = Project.all
-    @criticaltasks = []
-    if @projects != nil
-      @projects.each do |project|
-     tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }
-      @criticaltasks += tempproject if tempproject
-      end
-    @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
-    else
-     @sentence = "Yaaay you have no critical tasks"
-    end
 end
 
   # GET /projects/1

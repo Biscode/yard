@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
-    @task = Task.find(params[:id])
   end
 
   # GET /users/1
@@ -19,9 +18,9 @@ class UsersController < ApplicationController
 
 #to make a new user
 
-def search 
+def search
 end
-  
+
 
 def new
   @user = User.new
@@ -71,9 +70,9 @@ def new
     @user = User.find(user_id)
     @task = Task.find(task_id)
 
-    @user.tasks << @task 
+    @user.tasks << @task
     flash[:notice] = "Task was successfully added"
-    
+
     redirect_to(:controller => 'projects', :action => 'index')
   end
 

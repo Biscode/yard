@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
 <div class="row">
+
 
   <div class="small-10 large-8 columns">
 <p>
@@ -46,25 +46,73 @@
 
 <div class="actions">
   <%= f.submit %>
-</div>
-<% end %>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
+  <div class="large-6 large-left columns">
+    <h2><%= @project.title %> <small><%= @project.description %></small></h2>
+    <h5><%= @project.deadline.strftime('Deadline:  %d %b %y, %I:%M %p')  %></h5>
+    <%= link_to 'Edit', edit_project_path %>
+  </div>
+  <div class="large-4 large-right columns ">
+    <h5>
+      Teams:
+      <% @project.teams.each do |team| %>
+        <%= link_to team.name, project_team_path(@project, team) %> |
+      <% end %>
+      <%= link_to 'Add', new_project_team_path(@project) %>
+    </h5>
+    <h5>
+      Sprints:
+      <% @project.sprints.each do |sprint| %>
+        <%= link_to sprint.number, project_sprint_path(@project, sprint) %> |
+      <% end %>
+      <%= link_to 'Add', new_project_sprint_path(@project) %>
+    </h5>
+  </div>
+
+</div>
+
+<hr/>
 
 <div class="row">
-  <div class="sprint">
-    <ul>
-      <% @project.sprints.each do |sprint| %>
-        <li>
-          <a>
-            <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
-          </a>
-        </li>
-      <% end %>
-    </ul>
+  <div class="small-6 medium-8 large-8 small-centered large-centered columns">
+    <div class="container-box">
+      <!-- left part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            <%= link_to new_project_task_path(@project) do %>
+            Add task <i class="fa fa-plus-circle"></i>
+            <% end %>
+          </h4>
+        </div>
+        <% @project.tasks.each do |task| %>
+        <ul class="text-center">
+          <li class="small-box">
+            <h4><%= link_to task.title, project_task_path(@project, task) %></h4>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+      <!-- end of left part -->
+      <!-- right part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            text text text
+          </h4>
+        </div>
+        <div class="text-center">
+          <h4>Task info should be displayed here ..</h4>
+        </div>
+        <div id="task-view" class="text-center" style="display:none;">aa</div>
+
+      </div>
+      <!-- end of right part -->
+    </div>
   </div>
 </div>
 
 <%= render @announcements.projects %>
 <%= render 'sprints/new' %>
 
+<% end %>
