@@ -6,9 +6,12 @@ class UsersController < ApplicationController
   def index
     @users = User.search(params[:search])
     @task = Task.find(params[:id])
+
     @sprint = Sprint.find(params[:sprint])
     @project = Sprint.find(params[:project]) 
+
   end
+
   # GET /users/1
   # GET /users/1.json
 
@@ -19,7 +22,12 @@ class UsersController < ApplicationController
 
 
 #to make a new user
-  def new
+
+def search 
+end
+  
+
+def new
   @user = User.new
   end
 # create a user based on specefic params
@@ -59,13 +67,16 @@ class UsersController < ApplicationController
     @users = User.search params[:search]
   end
 
+
 #it adds the task to the user according to his/her sprint points and then redirects to the project page
+
   def add_task_to_user
     user_id = params[:user_id]
     task_id = params[:task_id]
 
     @user = User.find(user_id)
     @task = Task.find(task_id)
+
     @sp = Sprint.find(params[:sprint]).tsp
 
     @proid = Project.find(params[:project])
@@ -91,6 +102,7 @@ class UsersController < ApplicationController
       
     flash[:notice] = "Task was not added, you cant exceed your limit."
     end
+
     redirect_to(:controller => 'projects', :action => 'index')
   end
 

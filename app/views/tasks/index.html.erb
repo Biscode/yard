@@ -28,6 +28,7 @@
         <td><%= link_to 'Destroy',  project_sprint_task_path(@project, @sprint, task), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Assign Task', {:controller => 'users', :action => 'index', :id => task.id, :sprint => @sprint.id, :project => @project.id} %></td>
 
+
       </tr>
     <% end %>
   </tbody>
