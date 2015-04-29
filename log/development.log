@@ -57808,3 +57808,2162 @@ ActionView::Template::Error (undefined method `announcement' for #<Project:0x007
   Rendered /home/omaromar/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.2ms)
   Rendered /home/omaromar/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.1/lib/web_console/templates/index.html (20.9ms)
 >>>>>>> 1161e3ae1b885502313e54651fdbb49a79aa575e
+
+
+Started GET "/" for ::1 at 2015-04-28 22:02:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (45.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (60.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (115.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateActivities (20150404085203)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /Users/HAAKS/Desktop/yard/db/migrate/20150404085203_create_activities.rb:12)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trackable_id" integer, "trackable_type" varchar, "owner_id" integer, "owner_type" varchar, "key" varchar, "parameters" text, "recipient_id" integer, "recipient_type" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (20.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_activities_on_trackable_id_and_trackable_type" ON "activities" ("trackable_id", "trackable_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_activities_on_owner_id_and_owner_type" ON "activities" ("owner_id", "owner_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_activities_on_recipient_id_and_recipient_type" ON "activities" ("recipient_id", "recipient_type")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404085203"]]
+  [1m[35m (18.7ms)[0m  commit transaction
+Migrating to RemoveSprintFromTask (20150404155842)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TEMPORARY TABLE "atasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "status" varchar, "priority" varchar, "story_points" float, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "sprint_id" integer, "team_id" integer, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_atasks_on_team_id" ON "atasks" ("team_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_atasks_on_sprint_id" ON "atasks" ("sprint_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_atasks_on_project_id" ON "atasks" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "tasks"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (1, '', '', '', '', NULL, '2015-04-04', '2015-04-04 23:51:17.171826', '2015-04-04 23:51:17.171826', NULL, 3, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (2, 'Temp Task', 'Temp', 'Temp', 'High', 13.0, '2015-04-05', '2015-04-05 00:19:53.598615', '2015-04-07 14:09:53.190823', NULL, 3, NULL, 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (3, 'Temp task', 'Here it is', 'what?', 'High', 10.0, '2015-04-07', '2015-04-07 11:48:00.626334', '2015-04-15 20:52:20.650082', NULL, 3, NULL, 2)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (4, '', '', '', '', NULL, '2015-04-07', '2015-04-07 19:45:58.141936', '2015-04-07 19:45:58.141936', NULL, 2, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (5, '', '', '', '', NULL, '2015-04-08', '2015-04-08 00:45:39.409681', '2015-04-08 00:45:39.409681', NULL, 3, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (6, '', '', '', '', NULL, '2015-04-15', '2015-04-15 20:51:59.798280', '2015-04-15 20:51:59.798280', NULL, 3, NULL, NULL)[0m
+  [1m[35m (30.4ms)[0m  DROP TABLE "tasks"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "status" varchar, "priority" varchar, "story_points" float, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "sprint_id" integer, "team_id" integer, "user_id" integer) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_project_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_tasks_on_sprint_id" ON "tasks" ("sprint_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_tasks_on_team_id" ON "tasks" ("team_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "atasks"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (1, '', '', '', '', NULL, '2015-04-04', '2015-04-04 23:51:17.171826', '2015-04-04 23:51:17.171826', NULL, 3, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (2, 'Temp Task', 'Temp', 'Temp', 'High', 13.0, '2015-04-05', '2015-04-05 00:19:53.598615', '2015-04-07 14:09:53.190823', NULL, 3, NULL, 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (3, 'Temp task', 'Here it is', 'what?', 'High', 10.0, '2015-04-07', '2015-04-07 11:48:00.626334', '2015-04-15 20:52:20.650082', NULL, 3, NULL, 2)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (4, '', '', '', '', NULL, '2015-04-07', '2015-04-07 19:45:58.141936', '2015-04-07 19:45:58.141936', NULL, 2, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (5, '', '', '', '', NULL, '2015-04-08', '2015-04-08 00:45:39.409681', '2015-04-08 00:45:39.409681', NULL, 3, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (6, '', '', '', '', NULL, '2015-04-15', '2015-04-15 20:51:59.798280', '2015-04-15 20:51:59.798280', NULL, 3, NULL, NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "atasks"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404155842"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveProjectFromSprint (20150404160117)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "sprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "sprints"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "asprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "asprints"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404160117"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Migrating to RemoveProjectfromSprints (20150404160545)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404160545"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddTotalPointsToSprints (20150404161431)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (29.5ms)[0m  [1mALTER TABLE "sprints" ADD "totalPoints" varchar[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "sprints" ADD "integer" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404161431"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Migrating to RemoveInteger (20150404161542)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "totalPoints" varchar, "integer" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints","integer") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints","integer") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints","integer") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL, NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "totalPoints" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404161542"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Migrating to RemovetotalPoints (20150404162323)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "totalPoints" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "sprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "sprints"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "asprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "asprints"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404162323"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to AddTotalPointsToSprint (20150404162416)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "sprints" ADD "totalPoints" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404162416"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddSubjectIdToActivities (20150406175713)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "activities" ADD "subject_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150406175713"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to ChangePointsName (20150408204259)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150408204259"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to ChangePointsType (20150408204330)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" float) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150408204330"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnnouncements (20150417093027)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "announcements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "announcement" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150417093027"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddprojectId (20150417120314)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "announcements" ADD "project_id" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150417120314"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_teams_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_teams_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_team_relationships_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_team_relationships_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_team_relationships_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_team_relationships_on_team_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2015-04-28 22:03:21 +0300
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 9205ms (Views: 8930.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/announcements-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/scaffolds-15c24a2bc746610aa5a176fbb21b2c29.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation_and_overrides-ed970baebc56aba894f0d872e6dae376.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/projects-e3b4d3bb7375d9828cda0156cf5e2fcc.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/notifications-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/sprints-20393ace337ff6f623ee5a59e971ae23.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/tasks-794b3e74ec8203b228927ca667320a4b.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/application-4b7455da8dfa144f6df911f2c0ff97b3.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/vendor/modernizr-ab036539ab2eac66b636accb8d06d77b.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/font-awesome-f1f64beee85cc8d3badf3f4a4c68cc61.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/teams-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation-013a9ecfcbd0d277665f83c66e076e18.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.abide-cecd3b8dfdb9535c145e3160cca57cae.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.accordion-07d483c126d868809345e4abbcfd54a5.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.alert-e54c2d9000574a39e07b2e6ede6ae0f6.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.clearing-b0828edefaad3278cd85c2faf6fd20ef.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.dropdown-c6b22cf8e5474c59dc0bc19e2d290da5.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.interchange-adf4ca4cb9a1f36677701d7d06489ead.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.joyride-7f23c30298ef55f2db505f357bd4a799.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.magellan-8cd3c13f48f6d78fb172bb5200551918.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.orbit-925ec65dcf6be03dd5c7a1d472845b27.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.offcanvas-0c2112e52f2de840e27058c4912dd869.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.reveal-7bd8d9ca180151af16ff7678033f8212.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.slider-66a6fcccc01097ba84b9e9fb84a429ef.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.tab-0d9dd6504af28bc75bdb999fbb120872.js?body=1" for ::1 at 2015-04-28 22:03:30 +0300
+
+
+Started GET "/assets/foundation/foundation.tooltip-5214a0ecffb0be84dc9247c31455ef50.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/foundation/foundation.topbar-ba04adaaf787a047a2bc9195842bb938.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/foundation/foundation.equalizer-b93ba11c4146c58dd7d95ba14769e640.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/foundation-cf9c2be01a146b330f05b712f6779903.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/announcements-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/notifications-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/sprints-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/teams-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/application-673f7a04631a30d52e9427ac6ecd0277.js?body=1" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/assets/fontawesome-webfont-bdd5fe963cf9a6bcf9c449166e2e5a57.woff2?v=4.3.0" for ::1 at 2015-04-28 22:03:31 +0300
+
+
+Started GET "/projects/1" for ::1 at 2015-04-28 22:03:34 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (198.5ms)
+Completed 500 Internal Server Error in 270ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a8466318>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (16.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (35.5ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-28 22:03:35 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a81dce58>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (25.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 22:03:41 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 360ms (Views: 357.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notifications" for ::1 at 2015-04-28 22:03:43 +0300
+Processing by NotificationsController#index as HTML
+  [1m[36mPublicActivity::Activity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" IS NULL  ORDER BY created_at desc[0m
+  Rendered notifications/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 464ms (Views: 357.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notifications" for ::1 at 2015-04-28 22:03:46 +0300
+Processing by NotificationsController#index as HTML
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" IS NULL  ORDER BY created_at desc
+  Rendered notifications/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 344ms (Views: 342.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notifications" for ::1 at 2015-04-28 22:03:47 +0300
+Processing by NotificationsController#index as HTML
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" IS NULL  ORDER BY created_at desc[0m
+  Rendered notifications/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 342ms (Views: 341.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-04-28 22:03:53 +0300
+Processing by UsersController#index as HTML
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 43ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  app/controllers/users_controller.rb:8:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (12.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.9ms)
+
+
+Started GET "/tasks/1/user" for ::1 at 2015-04-28 22:04:01 +0300
+
+ActionController::RoutingError (No route matches [GET] "/tasks/1/user"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (55.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (84.3ms)
+
+
+Started GET "/tasks/1/users" for ::1 at 2015-04-28 22:04:04 +0300
+
+ActionController::RoutingError (No route matches [GET] "/tasks/1/users"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (18.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (31.7ms)
+
+
+Started GET "/tasks/users" for ::1 at 2015-04-28 22:04:09 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"users"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=users):
+  app/controllers/tasks_controller.rb:118:in `set_task'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (66.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (12.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.8ms)
+
+
+Started GET "/task/1/users" for ::1 at 2015-04-28 22:04:14 +0300
+
+ActionController::RoutingError (No route matches [GET] "/task/1/users"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (31.9ms)
+
+
+Started GET "/announcements" for ::1 at 2015-04-28 22:04:26 +0300
+Processing by AnnouncementsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=):
+  app/controllers/announcements_controller.rb:7:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (15.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (32.7ms)
+
+
+Started GET "/sprints" for ::1 at 2015-04-28 22:04:44 +0300
+Processing by SprintsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=):
+  app/controllers/sprints_controller.rb:8:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (15.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.6ms)
+
+
+Started GET "/sprints/2" for ::1 at 2015-04-28 22:04:54 +0300
+Processing by SprintsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSprint Load (0.2ms)[0m  SELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."sprint_id" = ?[0m  [["sprint_id", 2]]
+  Rendered tasks/_task.html.erb (1.5ms)
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sprints/show.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 535ms (Views: 477.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 22:04:59 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 410ms (Views: 407.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 22:05:45 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 370ms (Views: 367.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-28 22:05:50 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a81bca40>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.6ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-28 22:05:51 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a82190d8>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (25.3ms)
+
+
+Started GET "/projects/new" for ::1 at 2015-04-28 22:06:00 +0300
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (4.7ms)
+  Rendered projects/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 409ms (Views: 407.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for ::1 at 2015-04-28 22:06:06 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCGiAJ10ZlNHOLnYAv7vgxKEYsZoYKb78j4MYhCJurP8tkRqxFPWkUCWE1wsfJO5OU6HfxOoZQULPZlEIJaiDA==", "project"=>{"title"=>"", "description"=>"", "deadline(1i)"=>"2017", "deadline(2i)"=>"5", "deadline(3i)"=>"28"}, "commit"=>"Create Project"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered projects/_form.html.erb (4.2ms)
+  Rendered projects/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 443ms (Views: 437.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/projects" for ::1 at 2015-04-28 22:06:17 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wLDtG87lRwCeFhY64J6guGUbW9VLHHVnA5nkliIcI0S8Jwtxl8L3wpm4vL7OHNyCTtG+bDDUtpn6mnGwEgM7+w==", "project"=>{"title"=>"j", "description"=>"", "deadline(1i)"=>"2017", "deadline(2i)"=>"5", "deadline(3i)"=>"28"}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "projects" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "j"], ["description", ""], ["deadline", "2017-05-28"], ["created_at", "2015-04-28 19:06:17.256793"], ["updated_at", "2015-04-28 19:06:17.256793"]]
+  [1m[36m (27.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 33ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/projects/2" for ::1 at 2015-04-28 22:06:17 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a8106f10>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (14.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.7ms)
+
+
+Started GET "/notifications" for ::1 at 2015-04-28 22:35:15 +0300
+Processing by NotificationsController#index as HTML
+  [1m[36mPublicActivity::Activity Load (19.4ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" IS NULL  ORDER BY created_at desc[0m
+  Rendered notifications/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 804ms (Views: 777.3ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/projects1" for ::1 at 2015-04-28 22:35:21 +0300
+
+ActionController::RoutingError (No route matches [GET] "/projects1"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (33.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (76.2ms)
+
+
+Started GET "/projects/1/sprints/3/tasks" for ::1 at 2015-04-28 22:35:30 +0300
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"3"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT * FROM tasks ORDER BY CASE status
+                                                            WHEN '' THEN 1
+                                                            WHEN 'in progress' THEN 2
+                                                            WHEN 'reviewing' THEN 3
+                                                            WHEN 'done' THEN 4 END
+  Rendered tasks/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 362ms (Views: 360.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/log_in" for ::1 at 2015-04-28 22:36:11 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 389ms (Views: 387.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:36:13 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3CY01x5Je881CJJC3/FixOrxC4ewrgX5qGeho/mgb86gsdK9R27LDTKmOMbxcx7+wTvuPstmxgdRZDSFyb93cQ==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (11.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 474ms (Views: 352.4ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:36:15 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZJmGRCljps5br4yb5QMm7Kqozndwd6T+x6uqMqk50A4YDmAucEQWDFwBJh/LgVrWgWIrzgu/ZwA+qD8UmSbIsQ==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 493ms (Views: 411.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:36:16 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5zldLaDfOIVC/ThNrzYOCwI1eFjGVX6xvoazGrhO0vSbrrtH+fiIR0VTksmBtHIxKf+d4b2dvU9HhSY8iFHKSw==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 439ms (Views: 362.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:36:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"opaVlEYE4eRbDB9ABfjaZDhtXlQQBz1GPZ9udLWNndDeAXP+HyNRJlyitcQreqZeE6e77WvP/rjEnPtShZKFbw==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 460ms (Views: 385.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notifications" for ::1 at 2015-04-28 22:36:18 +0300
+Processing by NotificationsController#index as HTML
+  [1m[36mPublicActivity::Activity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" IS NULL  ORDER BY created_at desc[0m
+  Rendered notifications/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 432ms (Views: 431.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notifications" for ::1 at 2015-04-28 22:36:27 +0300
+Processing by NotificationsController#index as HTML
+  [1m[35mPublicActivity::Activity Load (0.7ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."trackable_id" IS NULL  ORDER BY created_at desc
+  Rendered notifications/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 426ms (Views: 424.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:36:30 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/+w4Qxq2sT6HPyqijhgUKj6JzEF92fXHQEqgTfrMR8PaFaLVU1qBv2yVi6kuhxqgzDCiH4/pCnkAr+nB/QpoA==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 489ms (Views: 409.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:36:32 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lwBtkiHTq5/ARrs9H/LrcPsd08Z3ejyOSRp6Yhj/V4Hrl4v4ePQbXcfoEbkxcJdK0Nc2fwyy/3CwGe9EKOBPPg==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 449ms (Views: 363.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions" for ::1 at 2015-04-28 22:36:36 +0300
+
+AbstractController::ActionNotFound (The action 'index' could not be found for SessionsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (12.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (29.6ms)
+
+
+Started GET "/projects/1/sprints/3/tasks" for ::1 at 2015-04-28 22:36:40 +0300
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1", "sprint_id"=>"3"}
+  [1m[36mTask Load (0.9ms)[0m  [1mSELECT * FROM tasks ORDER BY CASE status
+                                                            WHEN '' THEN 1
+                                                            WHEN 'in progress' THEN 2
+                                                            WHEN 'reviewing' THEN 3
+                                                            WHEN 'done' THEN 4 END[0m
+  Rendered tasks/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 426ms (Views: 421.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/2" for ::1 at 2015-04-28 22:36:42 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sprint with 'id'=):
+  app/controllers/tasks_controller.rb:119:in `set_task'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (24.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2015-04-28 22:36:43 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sprint with 'id'=):
+  app/controllers/tasks_controller.rb:119:in `set_task'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (14.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.4ms)
+
+
+Started GET "/projects/1/users" for ::1 at 2015-04-28 22:41:12 +0300
+
+ActionController::RoutingError (No route matches [GET] "/projects/1/users"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.9ms)
+
+
+Started DELETE "/tasks/5" for ::1 at 2015-04-28 22:41:41 +0300
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lDM7fr/9T1hbeHNTSYua0dY/+HRwkcc1o8GrXXDAQ/LopN0U5tr/mlzW2ddnCebr/fUdzQtZBMtawj57QN9bTQ==", "id"=>"5"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSprint Load (0.1ms)[0m  [1mSELECT  "sprints".* FROM "sprints" WHERE "sprints"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sprint with 'id'=):
+  app/controllers/tasks_controller.rb:119:in `set_task'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (12.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.8ms)
+
+
+Started GET "/profile" for ::1 at 2015-04-28 22:41:56 +0300
+
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (14.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (33.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 22:41:59 +0300
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 441ms (Views: 437.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-04-28 22:43:03 +0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (506.5ms)
+Completed 200 OK in 888ms (Views: 887.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-04-28 22:43:11 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mQnLqyQjJYbzm3XDX3CIJbWLsiQdl7GgkGTRivFigSu88FE9bc8VBxgx1Mj/74avRzLceu+nTh7QgZgG9qSuw==", "user"=>{"email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (24.1ms)[0m  INSERT INTO "users" ("email", "password_salt", "password_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "heba.salama18@gmail.com"], ["password_salt", "$2a$10$lj0t1zAwdawoSAzi5q4ji."], ["password_hash", "$2a$10$lj0t1zAwdawoSAzi5q4ji.CK0wPzYOt8BG6nU4Pgl/Dy/vytNVFSC"], ["created_at", "2015-04-28 19:43:11.531918"], ["updated_at", "2015-04-28 19:43:11.531918"]]
+  [1m[36mSQL (16.6ms)[0m  [1mINSERT INTO "activities" ("parameters", "key", "trackable_id", "trackable_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["parameters", nil], ["key", "user.create"], ["trackable_id", 3], ["trackable_type", "User"], ["created_at", "2015-04-28 19:43:11.647903"], ["updated_at", "2015-04-28 19:43:11.647903"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 219ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 22:43:11 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 414ms (Views: 410.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/log_in" for ::1 at 2015-04-28 22:43:17 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 415ms (Views: 414.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:43:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"APKhssidfUqtHiJ3I+gOhRnEP/K3+n0k29mgPqt9U/J8ZUfYkbrNiKqwiPMNanK/Mg7aS8wyvtoi2jUYm2JLTQ==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 432ms (Views: 350.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:43:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dq2VCZKUOA1bZFS8/HcZZRHZ72kCZ/Ad42ducZEQEgZyOnNjy7OIz1zK/jjS9WVfOhMK0HmvM+MaZPtXoQ8KuQ==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 441ms (Views: 357.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:43:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hxb9l3fPgw7okzw5CH9kS+DCDwUgbIRNb84SB7LWoeRjgRv9LugzzO89lr0m/RhxywjqvFukR7OWzYchgsm5Ww==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 442ms (Views: 370.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 22:43:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGMBVGvS1tVg455iLX3j+V7t0KJlQ4yFpC2AorgH2fN09Oc+MvVmF2dNNOYD/5/DdSc1Gx6LT3tdLhWEiBjBTA==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 427ms (Views: 351.8ms | ActiveRecord: 0.1ms)
+  [1m[36mTask Load (26.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:30:57 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5TWwh8SN3jAejPsZpKOhiwgq6xsIXxWvtiUZEqczmvDAzCoRjWHusfUmWhIEPK8B+pOFRfpv6hH2wFCeoPW1A==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 835ms (Views: 745.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:31:02 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKDc584Ab/CyNkSRGvt0ALMDCypVjcjmtuByW/CJdXt8NzqNlyffMrWY7hU0eQg6mMnuky5FCxhP4+d9wJZtxA==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 470ms (Views: 394.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:31:09 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bY81C+hvC08HU30mqY1yHStQVWfDsVk+L/gO15kMghgRGNNhsUi7jQD916KHDw4nAJqw3rh5msDW+5vxqROapw==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 461ms (Views: 380.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-04-28 23:31:11 +0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 423ms (Views: 422.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:31:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLkB6ilCp1iu630It2+MEYFI/s5M+OyGsbDReYV0gnvsLueAcGUXmqlF14yZ7fArqoIbdzcwL3hIs0RftWuaxA==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 415ms (Views: 342.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-04-28 23:31:22 +0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 449ms (Views: 447.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-04-28 23:31:28 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dM6kS5kVYkV9PuBl1oXIWWsoorsavq67vR2YEZbmfCtRNz7d0PlSxJaUQW52GsbTmZHM5eiOUQX9+NGdkSBTw==", "user"=>{"email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (24.0ms)[0m  [1mINSERT INTO "users" ("email", "password_salt", "password_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "heba.salama18@gmail.com"], ["password_salt", "$2a$10$bfjUY9rr7FKTwhW48VdLRO"], ["password_hash", "$2a$10$bfjUY9rr7FKTwhW48VdLRO9pjNJdSsBleEcKCJGWIpiplTIGESc22"], ["created_at", "2015-04-28 20:31:28.348945"], ["updated_at", "2015-04-28 20:31:28.348945"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "activities" ("parameters", "key", "trackable_id", "trackable_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["parameters", nil], ["key", "user.create"], ["trackable_id", 4], ["trackable_type", "User"], ["created_at", "2015-04-28 20:31:28.383001"], ["updated_at", "2015-04-28 20:31:28.383001"]]
+  [1m[36m (20.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 135ms (ActiveRecord: 44.7ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 23:31:28 +0300
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 410ms (Views: 407.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/log_in" for ::1 at 2015-04-28 23:31:30 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 365ms (Views: 364.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:31:34 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YBuNlOhgpVyXoO9tvHZO0P2cl+wh5XDV1+nUSSk/xqgcjGv+sUcVnpAORemS9DLq1lZyVVotsysu6kFvGSDeFw==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 468ms (Views: 393.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:31:38 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sb87UY8tz4CwNMF4Mm4QIA8nwqeeTAoe1ORD090eHNbNKN071gp/Qreaa/wc7GwaJO0nHuWEyeAt59b17QEEaQ==", "email"=>"heba.salama18@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "heba.salama18@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 548ms (Views: 472.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-04-28 23:31:44 +0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 359ms (Views: 358.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-04-28 23:31:53 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UpINTHyuzxyg/Bqa9EtYuWUsq6CdyJEHUYHhKz5ZkGouBesmJYl/3qdSsB7aySSDTuZOGeYAUvmognQNDkaI1Q==", "user"=>{"email"=>"email@email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 395ms (Views: 390.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2015-04-28 23:32:01 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JX3wGWzy5VFsM4DpKhQ0ezLuEIjkYhv5efoO164JCPtZ6hZzNdVVk2udKm0ElkhBGST1MZ+q2AeA+ZvxnhYQRA==", "user"=>{"email"=>"email@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_salt", "password_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "email@email.com"], ["password_salt", "$2a$10$0JZ0KCvrJBUjyWN/IB9bYO"], ["password_hash", "$2a$10$0JZ0KCvrJBUjyWN/IB9bYOGzCl2E5A9qhUSZNvtFKdz.L5lxPgovG"], ["created_at", "2015-04-28 20:32:01.356726"], ["updated_at", "2015-04-28 20:32:01.356726"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "activities" ("parameters", "key", "trackable_id", "trackable_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["parameters", nil], ["key", "user.create"], ["trackable_id", 5], ["trackable_type", "User"], ["created_at", "2015-04-28 20:32:01.363416"], ["updated_at", "2015-04-28 20:32:01.363416"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 23:32:01 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 379ms (Views: 375.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-04-28 23:32:04 +0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 427ms (Views: 425.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for ::1 at 2015-04-28 23:32:06 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 366ms (Views: 365.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-04-28 23:32:15 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YPkWL3oiz6B4QcPn4yBscCnJZieNXV26S05ool99hE8cbvBFIwV/Yn/vaWPNohBKAgODnvaVnkSyTf2Eb2Kc8A==", "email"=>"email@email.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "email@email.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 23:32:15 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 379ms (Views: 376.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-04-29 10:35:43 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (49.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?  [["project_id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 1162ms (Views: 1055.9ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-29 10:35:49 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a9099d88>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (30.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (65.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-29 10:35:50 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a8275720>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (11.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (28.0ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-29 10:35:51 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a3e0fc20>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (29.4ms)
+
+
+Started GET "/projects/2" for ::1 at 2015-04-29 10:35:54 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a93c02c8>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (16.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.6ms)
+
+
+Started GET "/projects/2" for ::1 at 2015-04-29 10:35:54 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (63.3ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a86570a0>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (61.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (12.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-29 10:47:16 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (63.6ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (102.8ms)
+Completed 500 Internal Server Error in 311ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a37ac798>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (28.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (57.6ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-04-29 10:47:18 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a8157758>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200503252920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (15.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.2ms)
+
+
+Started GET "/projects/2" for ::1 at 2015-04-29 10:47:18 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (32.3ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `announcement' for #<Project:0x007fb1a923b308>):
+    32: 
+    33: <h1>New Announcement</h1>
+    34: 
+    35: <%= form_for([@project, @project.announcement.build]) do |f| %>
+    36: 
+    37: <div class="field">
+    38:   <%= f.label :announcement %><br>
+  app/views/projects/show.html.erb:35:in `block in _app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+  app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__3570155000889487792_70200504558400'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (12.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddprojectId (20150417120314)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TEMPORARY TABLE "aannouncements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "announcement" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) 
+  [1m[36m (19.5ms)[0m  [1mSELECT * FROM "announcements"[0m
+  [1m[35m (21.1ms)[0m  DROP TABLE "announcements"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "announcements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "announcement" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aannouncements"
+  [1m[36m (19.2ms)[0m  [1mDROP TABLE "aannouncements"[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150417120314"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_teams_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_teams_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_team_relationships_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_team_relationships_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_team_relationships_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_team_relationships_on_team_id' AND type='index'
+[0m
