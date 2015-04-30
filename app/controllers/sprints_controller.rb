@@ -6,20 +6,23 @@ class SprintsController < ApplicationController
   # Get the sprints of a specific project.
    def index
     @project = Project.find(params[:project_id])
-   @sprints = @project.sprints
+    @sprints = @project.sprints
    end
 
   # GET /sprints/1
   # GET /sprints/1.json
+  # shows the sprint
    def show
    end
 
   # GET /sprints/new
+  # makes a new sprint 
    def new
     @sprint = Sprint.new
-  end
+   end
 
   # GET /sprints/1/edit
+  # editing anything is the chosen sprint
    def edit
    end
 
@@ -79,7 +82,7 @@ class SprintsController < ApplicationController
     params.require(:sprint).permit(:number, :deadline)
    end
     # List all the sprints in a project.
-  def list_project_sprintss
-   @project_sprints = Project.find(params[:id]).sprints
+   def list_project_sprintss
+    @project_sprints = Project.find(params[:id]).sprints
    end
   end
