@@ -1,13 +1,13 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :statistics]
 
   # GET /projects
   # GET /projects.json
 
   #No users yet ,so sorting is done project wises
   #First a sort of all the critical tasks is done in the project individually "tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }"
-  #then they are all appended in a list *of critical tasks* to be sorted according to deadline
-  # You retrieve All the the projects, so the 'Index' view can use them.
+  # #then they are all appended in a list *of critical tasks* to be sorted according to deadline
+  # # You retrieve All the the projects, so the 'Index' view can use them.
   def index
     @projects = Project.all
 end
@@ -70,6 +70,12 @@ end
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def statistics
+    @done_tasks = @project.tasks.where(status: 'Done').count 
+    @left_tasks = @project.tasks.where.not(status: 'Done').count
+    
   end
 
   private

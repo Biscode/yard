@@ -13,6 +13,9 @@ resources :projects do
     end
   end
   resources :users
+  member do
+    get 'statistics'
+  end
 end
 
 resources :tasks
