@@ -21,7 +21,8 @@
 </p>
 
 <%= link_to 'Edit', edit_sprint_path(@sprint) %>
-<%= link_to 'Back', sprints_path %>
+
+<h5><%= (@sprint.deadline - Date.today).to_i%></h5>  <h5> days left</h5>
 
 <%= render @sprint.tasks %>
 
@@ -39,7 +40,7 @@
 </div>
 <div class="field">
   <%= f.label :status %><br>
-  <%= f.text_field :status %>
+  <%= f.select :status, options_for_select(%w[New In-Progress Done]) %>
 </div>
 <div class="field">
   <%= f.label :priority %><br>
