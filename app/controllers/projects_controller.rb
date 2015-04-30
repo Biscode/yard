@@ -26,18 +26,19 @@ class ProjectsController < ApplicationController
     @criticaltasks = []
     if @projects != nil
       @projects.each do |project|
-     tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }
+      tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }
       @criticaltasks += tempproject if tempproject
-      end
-    @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
-    else
-     @sentence = "Yaaay you have no critical tasks"
     end
-end
+      @criticaltasks = @criticaltasks.sort { |a,b| a.deadline <=> b.deadline }
+    else
+      @sentence = "Yaaay you have no critical tasks"
+    end
+  end
 
   # GET /projects/1
   # GET /projects/1.json
-  # veiws a single project that was clicked on.
+  # views a project that was clicked on only if the project is not private or if the user is the admin or logged in.
+  # otherwise it prints a  message "you don't have permissions to view this project" 
   def show
     @showProject = true
 
@@ -64,9 +65,8 @@ end
   # POST /projects.json
   # takes the information that you wrote on the form and uses it to create a project and saves it in the Database.
   def create
-    @project = Project.new(project_params)
-
-    respond_to do |format|
+      @project = Project.new(project_params)
+      respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
@@ -96,8 +96,8 @@ end
   # DELETE /projects/1.json
   # you delete the project from the Database.
   def destroy
-    @project.destroy
-    respond_to do |format|
+      @project.destroy
+      respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
@@ -105,12 +105,13 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_project
+  def set_project
       @project = Project.find(params[:id])
-    end
+  end
 
     # those parameters are the ones that the user can enter.
-    def project_params
+    # added the :isPrivate parameter to specify if the project is private or not.
+  def project_params
       params.require(:project).permit(:title, :description, :deadline, :isPrivate)
-    end
+  end
 end
