@@ -13,7 +13,7 @@ attr_accessor :name
 
 
 #for auth with facebook
-def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
+ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
       return user
@@ -31,7 +31,7 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
       end    end
   end
 #for auth with titter
-def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
+ def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
       return user
@@ -52,7 +52,7 @@ def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
     end
   end
   #for auth with google
-def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+ def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
     user = User.where(:provider => access_token.provider, :uid => access_token.uid ).first
     if user
@@ -72,7 +72,7 @@ def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
    end
 end
 #for the search in the forum
-def self.search(search)
+ def self.search(search)
   if search
       find(:all, :conditions => ['name LIKE?', "%#{:search}%"])
     else
@@ -80,16 +80,16 @@ def self.search(search)
     end
   end
 
-def self.search(query)
+ def self.search(query)
     # where(:email, query) -> This would return an exact match of the query
     where("email like ?", "%#{query}%")
-end
+ end
 
 ## Ahmed Saleh
 ## takes a user_id and returns the user email
-def self.find_user(user_id)
+ def self.find_user(user_id)
     User.find(user_id).email
-end
+ end
 
 end
 
