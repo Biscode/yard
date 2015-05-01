@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+  
+
+  
+ 
+resources :comments
+resources :tasks do
+resources :comments
+end
+=======
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
+
+  resources :announcements
 
 root 'projects#index'
 
@@ -7,6 +20,7 @@ root 'projects#index'
  # root 'projects#index'
 get 'projects/index'
 #match ':users(/:search(/:))'
+
 get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
@@ -17,11 +31,11 @@ resources :teams
 resources :sprints
 resources :notifications
 
-resources :tasks
+# resources :tasks
+
 resources :projects do
-  resources :sprints do
-    resources :tasks
-  end
+  resources :tasks
+  resources :sprints
   resources :teams do
     resources :users do
       member do
@@ -29,14 +43,29 @@ resources :projects do
       end
     end
   end
+<<<<<<< HEAD
+root 'projects#index'
+=======
+  resources :users
 end
+
+resources :tasks
+resources :sprints
+resources :teams
+resources :users
+resources :notifications
+resources :sessions
+
+get "log_out" => "sessions#destroy", :as => "log_out"
+get "log_in" => "sessions#new", :as => "log_in"
+get "sign_up" => "users#new", :as => "sign_up"
 
 # to route to the add_task_to_user
   match 'add_task_to_user_task_user' => 'users#add_task_to_user', :as =>'add_task_to_user',via: [:get, :post]
 
 
 
-
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

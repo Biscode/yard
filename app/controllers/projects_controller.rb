@@ -35,7 +35,11 @@
       end
     end
 
-    # GET /projects/1
+  #No users yet ,so sorting is done project wises
+  #First a sort of all the critical tasks is done in the project individually "tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }"
+  #then they are all appended in a list *of critical tasks* to be sorted according to deadline
+  # You retrieve All the the projects, so the 'Index' view can use them.
+  # GET /projects/1
     # GET /projects/1.json
     # views a project that was clicked on only if the project is not private or if the user is the admin or logged in.
     # otherwise it prints a  message "you don't have permissions to view this project" 

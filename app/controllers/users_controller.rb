@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
+
     @task = Task.find(params[:id])
+
+    @sprint = Sprint.find(params[:sprint])
+    @project = Sprint.find(params[:project]) 
+
   end
 
   # GET /users/1
@@ -15,11 +20,13 @@ class UsersController < ApplicationController
 # GET /users/new
   def edit
   end
+
+
 #to make a new user
 
-def search 
+def search
 end
-  
+
 
 def new
   @user = User.new
@@ -61,7 +68,9 @@ def new
     @users = User.search params[:search]
   end
 
-#it add the task to the user and then redirects to the project page
+
+#it adds the task to the user according to his/her sprint points and then redirects to the project page
+
   def add_task_to_user
     user_id = params[:user_id]
     task_id = params[:task_id]
@@ -69,9 +78,35 @@ def new
     @user = User.find(user_id)
     @task = Task.find(task_id)
 
+<<<<<<< HEAD
+    @sp = Sprint.find(params[:sprint]).tsp
+
+    @proid = Project.find(params[:project])
+    @spNumber = Sprint.find(params[:sprint])
+    @newD = @task.story_points
+
+    @apps = (@sp / 2).floor # @proid.team.users.count
+
+    @dt = @user.dtasks.new({:pid => @proid.id, :snum => @spNumber.id, :story_points => @newD})
+    @dt.save
+
+    @dd = @user.dtasks.where(:pid => @proid).where(:snum => @spNumber).sum(:story_points)
+
+    @mytask = @apps - @dd
+    if (@mytask >= 0)
+
     @user.tasks << @task 
-    flash[:notice] = "Task was successfully added"
+  
+    flash[:notice] = "Task was added, you now have #{@mytask} point(s) left."
+    else
     
+    @user.dtasks.where(:pid => @proid).where(:snum => @spNumber).where(:story_points => @newD).destroy_all
+      
+    flash[:notice] = "Task was not added, you cant exceed your limit."
+    end
+    @user.tasks << @task
+    flash[:notice] = "Task was successfully added"
+
     redirect_to(:controller => 'projects', :action => 'index')
   end
 

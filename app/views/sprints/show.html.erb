@@ -124,6 +124,11 @@ deadline.displaycountdown("days", formatresults2)
   </div>
 </div>
 
+
+<strong>Total Points:</strong>
+<%= @sprint.tsp %>
+</p>
+
 <div class="row">
   <div class="small-10 large-8 columns">
     <strong>Total Points:</strong>
@@ -131,6 +136,8 @@ deadline.displaycountdown("days", formatresults2)
     <br><br>
   </div>
 </div>
+
+
 
 <%= link_to 'Edit', edit_sprint_path(@sprint) %>
 
@@ -210,3 +217,6 @@ function changeCSS()
   </div>
   <% end %>
 </div>
+
+<%= link_to 'Edit', edit_project_sprint_path %>
+

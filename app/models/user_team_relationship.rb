@@ -13,4 +13,5 @@ class UserTeamRelationship < ActiveRecord::Base
     end
   end
 
+
 end

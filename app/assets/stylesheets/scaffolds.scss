@@ -13,30 +13,30 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #fff !important;
-  padding: 5px;
-  font-size: 6px;
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
 }
 
 a {
-  color: #fff !important;
+  color: #000;
   &:visited {
-    color: #eee!important;
+    color: #666;
   }
   &:hover {
     color: #fff;
-    background-color: #111;
+    background-color: #000;
   }
 }
 
 div {
   &.field, &.actions {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 }
 
 #notice {
-  color: #fff;
+  color: green;
 }
 
 .field_with_errors {
@@ -55,9 +55,9 @@ div {
   h2 {
     text-align: left;
     font-weight: bold;
-    padding: 1px 1px 1px 5px;
+    padding: 5px 5px 5px 15px;
     font-size: 12px;
-    margin: -2px;
+    margin: -7px;
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
