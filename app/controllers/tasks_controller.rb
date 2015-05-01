@@ -54,7 +54,6 @@ class TasksController < ApplicationController
   # GET /tasks/1.json
   def show
     @assignee = Task.finduser(params[:id])
-
   end
 
   # GET /tasks/new

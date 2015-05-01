@@ -18,9 +18,7 @@ resources :sessions
 resources :teams
 resources :sprints
 resources :notifications
-
 resources :tasks
-
 resources :projects do
   resources :tasks
   resources :sprints
@@ -33,8 +31,6 @@ resources :projects do
   end
   resources :users
 end
-
-
 
 # to route to the add_task_to_user
   match 'add_task_to_user_task_user' => 'users#add_task_to_user', :as =>'add_task_to_user',via: [:get, :post]

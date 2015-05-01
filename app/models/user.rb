@@ -1,12 +1,9 @@
 class User < ActiveRecord::Base
   include PublicActivity::Model
   tracked owner: Proc.new { |controller, model| controller.current_user }
-
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
   has_many :tasks
-    
-
   attr_accessor :password
   before_save :encrypt_password
 #validatios for email and password the email uses gem
