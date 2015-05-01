@@ -11,6 +11,11 @@ class Task < ActiveRecord::Base
 
 def self.finduser(taskid)
 getid = Task.find(taskid).user_id
+if getid == nil
+	assignee = "No Assignee"
+else 
 assignee = User.find(getid).username
 end
+end
+
 end

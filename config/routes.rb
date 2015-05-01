@@ -34,12 +34,6 @@ resources :projects do
 end
 
 
-
-
-
-
-
-
 # to route to the add_task_to_user
   match 'add_task_to_user_task_user' => 'users#add_task_to_user', :as =>'add_task_to_user',via: [:get, :post]
 

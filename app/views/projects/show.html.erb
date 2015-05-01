@@ -37,14 +37,14 @@
   <col align="right">
   <tr bgcolor='#939BBA'>
     <td><font color='#FFFFFF'><font size="4">Total Story Points</font></font></td>
-    <td><font color='#FFFFFF'><font size="4">Done Story Points </font></font></td>
+    <!-- <td><font color='#FFFFFF'><font size="4">Done Story Points </font></font></td> -->
     <td><font color='#FFFFFF'><font size="4">Deadline</font></font></td>
   </tr>
   <tr >
-    <td bgcolor='#939BBA'><font size="5"></font></td>
-    <td bgcolor='#939BBA'><font size="5">My first HTML</font></td>
+    <td bgcolor='#939BBA'><font size="5"><%= @user.points %></font></td>
+    <!-- <td bgcolor='#939BBA'><font size="5"></font></td> -->
     <% if @deadline == nil %>
-    <% @deadline = 'No Sprint Deaedlines' %>
+    <% @deadline = 'No Sprint Deadlines' %>
     <% else %>
         <td bgcolor='#939BBA'><font size="5"><%= @deadline %></font></td>
         <% end %>

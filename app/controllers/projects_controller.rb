@@ -17,6 +17,7 @@ end
   # veiws a single project that was clicked on.
   def show
     @deadline = Project.recentdeadline(params[:id])
+    @user = params[:user_id]
   end
 
   # GET /projects/new
