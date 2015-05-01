@@ -1,7 +1,0 @@
- <%= form_tag users_path(@task, :search => params[:search]), :method => 'get' do %>
-      <%= label_tag(:search, "Search for:") %>
-
-      <%= text_field_tag :search, params[:search], :id => 'search_field' %>
-      <%= submit_tag "Search", :name => nil %> 
-     
- <% end %>
