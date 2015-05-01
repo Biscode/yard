@@ -18,7 +18,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to user.username, user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
           <% if !@task.nil? %>
             <td><%= link_to 'Add Task to User', {:controller => 'users', :action => 'add_task_to_user',:user_id => user.id, :task_id => @task} %></td>

@@ -1,52 +1,5 @@
 <div class="row">
 
-
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-</div>
-</div>
-<div class="row">
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-</div>
-</div>
-<div class="row">
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Deadline:</strong>
-  <%= @project.deadline %>
-</p>
-</div>
-</div>
-<%= form_for([@project, @project.teams.build]) do |f| %>
-<div class="field">
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</div>
-
-<h1>New Announcement</h1>
-
-<%= form_for([@project, @project.announcement.build]) do |f| %>
-
-<div class="field">
-  <%= f.label :announcement %><br>
-  <%= f.text_field :text %>
-</div>
-<div class="actions">
-  <%= f.submit %>
-</div>
-<% end %>
-
-
-<div class="actions">
-  <%= f.submit %>
-
   <div class="large-6 large-left columns">
     <h2><%= @project.title %> <small><%= @project.description %></small></h2>
     <h5><%= @project.deadline.strftime('Deadline:  %d %b %y, %I:%M %p')  %></h5>
@@ -68,14 +21,46 @@
       <%= link_to 'Add', new_project_sprint_path(@project) %>
     </h5>
   </div>
-
 </div>
 
 <hr/>
+<div class="row">
+  <div class=" large-8 small-centered columns">
+    <div class ="panel-box" >
+
+</head>
+<body>
+
+<table style="width:100%" cellspacing=0 cellpadding =0>
+  <col align="left">
+  <col align="left">
+  <col align="right">
+  <tr bgcolor='#838383'>
+    <td><font color='#FFFFFF'><font size="4">Total Story Points</font></font></td>
+    <td><font color='#FFFFFF'><font size="4">Done Story Points </font></font></td>
+    <td><font color='#FFFFFF'><font size="4">Deadline</font></font></td>
+  </tr>
+  <tr >
+    <td bgcolor='#838383'><font size="5"></font></td>
+    <td bgcolor='#838383'><font size="5">My first HTML</font></td>
+    <td bgcolor='#838383'><font size="5">$53</font></td>
+  </tr>
+</table>
+     
+<!--       <tr>
+      <th style="padding:0 15px 0 15px"> <font color='#FFFFFF'><font size="4">Total Story Points</font></font></th>
+      <th style="padding:0 15px 0 15px"> <font color='#FFFFFF'><font size="4">Done Story Points </font></font></th>
+      <th style="padding:0 15px 0 15px"><font color='#FFFFFF'><font size="4">Deadline</font></font></th>
+</tr> -->
+
+      </div>
+      </div>
+      </div>
 
 <div class="row">
   <div class="small-6 medium-8 large-8 small-centered large-centered columns">
     <div class="container-box">
+
       <!-- left part -->
       <div class="object-box">
         <div class="utility-box text-center">
@@ -112,7 +97,5 @@
   </div>
 </div>
 
-<%= render @announcements.projects %>
-<%= render 'sprints/new' %>
 
-<% end %>
+<br>

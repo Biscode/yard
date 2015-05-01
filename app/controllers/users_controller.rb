@@ -71,6 +71,7 @@ def new
     @task = Task.find(task_id)
 
     @user.tasks << @task
+    @user.points = @user.points+@task.story_points
     flash[:notice] = "Task was successfully added"
 
     redirect_to(:controller => 'projects', :action => 'index')

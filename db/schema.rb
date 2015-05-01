@@ -11,10 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< viewstatisticalinfo
 
 ActiveRecord::Schema.define(version: 20150405202631) do
 ActiveRecord::Schema.define(version: 20150417093027) do
 ActiveRecord::Schema.define(version: 20150417120314) do
+=======
+ActiveRecord::Schema.define(version: 20150501070635) do
+>>>>>>> local
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -106,6 +110,7 @@ ActiveRecord::Schema.define(version: 20150417120314) do
     t.string   "password_salt"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "points"
   end
 
 end
