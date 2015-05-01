@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150501070635) do
+
+ActiveRecord::Schema.define(version: 20150408204330) do
+
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -31,12 +35,15 @@ ActiveRecord::Schema.define(version: 20150501070635) do
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
 
+<<<<<<< HEAD
   create_table "announcements", force: :cascade do |t|
     t.text     "announcement"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
+=======
+>>>>>>> 872c7996f8222d9171788f8ffac278ea75e4aefa
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -102,7 +109,10 @@ ActiveRecord::Schema.define(version: 20150501070635) do
     t.string   "password_salt"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+<<<<<<< HEAD
     t.integer  "points"
+=======
+>>>>>>> 872c7996f8222d9171788f8ffac278ea75e4aefa
   end
 
 end
