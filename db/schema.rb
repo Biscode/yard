@@ -11,10 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150420105204) do
-=======
+
+
 ActiveRecord::Schema.define(version: 20150407111739) do
 
   create_table "comments", force: :cascade do |t|
@@ -25,14 +23,11 @@ ActiveRecord::Schema.define(version: 20150407111739) do
   end
 
   add_index "comments", ["task_id"], name: "index_comments_on_task_id"
->>>>>>> 0dc7842c64c2bee85f6ae36fd5fe100c777dcbb1
-=======
 
 ActiveRecord::Schema.define(version: 20150426163027) do
 
 # ActiveRecord::Schema.define(version: 20150408204330) do
 
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -57,8 +52,6 @@ ActiveRecord::Schema.define(version: 20150426163027) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "project_id"
-<<<<<<< HEAD
-=======
   end
 
   create_table "dtasks", force: :cascade do |t|
@@ -68,9 +61,7 @@ ActiveRecord::Schema.define(version: 20150426163027) do
     t.float    "story_points"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
   end
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -147,10 +138,5 @@ ActiveRecord::Schema.define(version: 20150426163027) do
     t.string   "uid"
   end
 
-<<<<<<< HEAD
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-=======
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
 end
