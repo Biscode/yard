@@ -1,27 +1,14 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  
 
-  
- 
 resources :comments
 resources :tasks do
 resources :comments
 end
-=======
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
 
 
-<<<<<<< HEAD
 resources :announcements
-=======
-root 'projects#index'
-
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
 
 root 'projects#index'
-
- # root 'projects#index'
 
 #match ':users(/:search(/:))'
 
@@ -46,10 +33,6 @@ resources :projects do
       end
     end
   end
-<<<<<<< HEAD
-root 'projects#index'
-=======
-  resources :users
 end
 
 # to route to the add_task_to_user
@@ -57,7 +40,6 @@ end
 
 
 
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
