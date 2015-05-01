@@ -37,25 +37,24 @@
   <col align="right">
   <tr bgcolor='#939BBA'>
     <td><font color='#FFFFFF'><font size="4">Total Story Points</font></font></td>
-    <!-- <td><font color='#FFFFFF'><font size="4">Done Story Points </font></font></td> -->
+    <td><font color='#FFFFFF'><font size="4"> </font></font></td>
     <td><font color='#FFFFFF'><font size="4">Deadline</font></font></td>
+    <td bgcolor='#939BBA' ></td>
   </tr>
   <tr >
     <td bgcolor='#939BBA'><font size="5"><%= @user.points %></font></td>
-    <!-- <td bgcolor='#939BBA'><font size="5"></font></td> -->
+    <td bgcolor='#939BBA'><font size="5"></font></td>
     <% if @deadline == nil %>
     <% @deadline = 'No Sprint Deadlines' %>
     <% else %>
         <td bgcolor='#939BBA'><font size="5"><%= @deadline %></font></td>
         <% end %>
+             <td bgcolor='#939BBA' ><font color='#FFFFFF'><font size="2">performance -> </font></font></td>
+
   </tr>
+
 </table>
      
-<!--       <tr>
-      <th style="padding:0 15px 0 15px"> <font color='#FFFFFF'><font size="4">Total Story Points</font></font></th>
-      <th style="padding:0 15px 0 15px"> <font color='#FFFFFF'><font size="4">Done Story Points </font></font></th>
-      <th style="padding:0 15px 0 15px"><font color='#FFFFFF'><font size="4">Deadline</font></font></th>
-</tr> -->
 
       </div>
       </div>
