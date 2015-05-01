@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
   has_many :announcements
 
   validates :title, presence: true
+  attr_accessor :sprint_array
+  
 
   # def tasks
   #   tasks_array = []
@@ -12,6 +14,9 @@ class Project < ActiveRecord::Base
   #   tasks_array.flatten
   # end
   def self.recentdeadline(projectid) 
-Sprint_array =Sprint.where(:project_id => projectid).order(:deadline).first
+sprint_array =Sprint.where(:project_id => projectid).order(:deadline).first
+sprint_array = sprint_array.deadline
 end
+
+
 end

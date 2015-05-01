@@ -58628,3 +58628,507 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.erb within layouts/application (3.2ms)
 Completed 200 OK in 498ms (Views: 496.0ms | ActiveRecord: 0.2ms)
 >>>>>>> local
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateActivities (20150404085203)
+  [1m[35m (0.2ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /Users/HAAKS/Desktop/yard/db/migrate/20150404085203_create_activities.rb:12)
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trackable_id" integer, "trackable_type" varchar, "owner_id" integer, "owner_type" varchar, "key" varchar, "parameters" text, "recipient_id" integer, "recipient_type" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_activities_on_trackable_id_and_trackable_type" ON "activities" ("trackable_id", "trackable_type")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_activities_on_owner_id_and_owner_type" ON "activities" ("owner_id", "owner_type")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_activities_on_recipient_id_and_recipient_type" ON "activities" ("recipient_id", "recipient_type")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404085203"]]
+  [1m[35m (56.8ms)[0m  commit transaction
+Migrating to RemoveSprintFromTask (20150404155842)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TEMPORARY TABLE "atasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "status" varchar, "priority" varchar, "story_points" float, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "sprint_id" integer, "team_id" integer, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_atasks_on_team_id" ON "atasks" ("team_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_atasks_on_sprint_id" ON "atasks" ("sprint_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_atasks_on_project_id" ON "atasks" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "tasks"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (1, '', '', '', '', NULL, '2015-04-04', '2015-04-04 23:51:17.171826', '2015-04-04 23:51:17.171826', NULL, 3, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (2, 'Temp Task', 'Temp', 'Temp', 'High', 13.0, '2015-04-05', '2015-04-05 00:19:53.598615', '2015-04-07 14:09:53.190823', NULL, 3, NULL, 1)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (3, 'Temp task', 'Here it is', 'what?', 'High', 10.0, '2015-04-07', '2015-04-07 11:48:00.626334', '2015-04-15 20:52:20.650082', NULL, 3, NULL, 2)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (4, '', '', '', '', NULL, '2015-04-07', '2015-04-07 19:45:58.141936', '2015-04-07 19:45:58.141936', NULL, 2, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (5, '', '', '', '', NULL, '2015-04-08', '2015-04-08 00:45:39.409681', '2015-04-08 00:45:39.409681', NULL, 3, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "atasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (6, '', '', '', '', NULL, '2015-04-15', '2015-04-15 20:51:59.798280', '2015-04-15 20:51:59.798280', NULL, 3, NULL, NULL)[0m
+  [1m[35m (38.5ms)[0m  DROP TABLE "tasks"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "status" varchar, "priority" varchar, "story_points" float, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "sprint_id" integer, "team_id" integer, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_tasks_on_sprint_id" ON "tasks" ("sprint_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_tasks_on_team_id" ON "tasks" ("team_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "atasks"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (1, '', '', '', '', NULL, '2015-04-04', '2015-04-04 23:51:17.171826', '2015-04-04 23:51:17.171826', NULL, 3, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (2, 'Temp Task', 'Temp', 'Temp', 'High', 13.0, '2015-04-05', '2015-04-05 00:19:53.598615', '2015-04-07 14:09:53.190823', NULL, 3, NULL, 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (3, 'Temp task', 'Here it is', 'what?', 'High', 10.0, '2015-04-07', '2015-04-07 11:48:00.626334', '2015-04-15 20:52:20.650082', NULL, 3, NULL, 2)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (4, '', '', '', '', NULL, '2015-04-07', '2015-04-07 19:45:58.141936', '2015-04-07 19:45:58.141936', NULL, 2, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (5, '', '', '', '', NULL, '2015-04-08', '2015-04-08 00:45:39.409681', '2015-04-08 00:45:39.409681', NULL, 3, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "tasks" ("id","title","description","status","priority","story_points","deadline","created_at","updated_at","project_id","sprint_id","team_id","user_id") VALUES (6, '', '', '', '', NULL, '2015-04-15', '2015-04-15 20:51:59.798280', '2015-04-15 20:51:59.798280', NULL, 3, NULL, NULL)
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "atasks"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404155842"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveProjectFromSprint (20150404160117)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "sprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "sprints"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "asprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "asprints"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404160117"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to RemoveProjectfromSprints (20150404160545)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404160545"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddTotalPointsToSprints (20150404161431)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "sprints" ADD "totalPoints" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "sprints" ADD "integer" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404161431"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to RemoveInteger (20150404161542)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "totalPoints" varchar, "integer" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints","integer") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints","integer") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints","integer") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "totalPoints" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404161542"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to RemovetotalPoints (20150404162323)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "totalPoints" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "sprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","totalPoints") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "sprints"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "asprints"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "asprints"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404162323"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to AddTotalPointsToSprint (20150404162416)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "sprints" ADD "totalPoints" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404162416"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddSubjectIdToActivities (20150406175713)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "activities" ADD "subject_id" integer
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150406175713"]]
+  [1m[35m (75.3ms)[0m  commit transaction
+Migrating to ChangePointsName (20150408204259)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150408204259"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to ChangePointsType (20150408204330)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "asprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_asprints_on_project_id" ON "asprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "asprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "sprints"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "sprints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "project_id" integer, "total_points" float) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asprints_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_sprints_on_project_id" ON "sprints" ("project_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asprints"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (1, 0, '2015-04-04', '2015-04-04 22:57:01.992048', '2015-04-04 22:57:01.992048', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (2, 0, '2015-04-04', '2015-04-04 22:57:02.465960', '2015-04-04 22:57:02.465960', 1, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sprints" ("id","number","deadline","created_at","updated_at","project_id","total_points") VALUES (3, 0, '2015-04-04', '2015-04-04 22:57:02.837769', '2015-04-04 22:57:02.837769', 1, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "asprints"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150408204330"]]
+  [1m[36m (17.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnnouncements (20150417093027)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "announcements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "announcement" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150417093027"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddTotalPointToUsers (20150501070635)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "points" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150501070635"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sprints_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_team_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_sprint_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_teams_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_teams_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_team_relationships_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_team_relationships_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_team_relationships_on_team_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_team_relationships_on_team_id' AND type='index'
+[0m
