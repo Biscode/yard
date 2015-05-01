@@ -38,6 +38,7 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'public_activity'
 gem "rails-erd"
+gem 'lazy_high_charts'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
