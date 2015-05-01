@@ -6,7 +6,7 @@ class SprintsController < ApplicationController
   # Get the sprints of a specific project.
    def index
     @project = Project.find(params[:project_id])
-   @sprints = @project.sprints
+    @sprints = @project.sprints
    end
 
   # GET /sprints/1
@@ -16,11 +16,13 @@ class SprintsController < ApplicationController
 
   # GET /sprints/new
    def new
-    @sprint = Sprint.new
+     @project = Project.find(params[:project_id])
+     @sprint = @project.sprints.build
   end
 
   # GET /sprints/1/edit
    def edit
+     @project = Project.find(params[:project_id])
    end
 
   # POST /sprints
@@ -32,7 +34,7 @@ class SprintsController < ApplicationController
 
     respond_to do |format|
       if @sprint.save
-        format.html { redirect_to project_path(@project), notice: 'Sprint was successfully created.' }
+        format.html { redirect_to @project, notice: 'Sprint was successfully created.' }
         format.json { render :show, status: :created, location: @sprint }
       else
         format.html { render :new }
@@ -45,9 +47,11 @@ class SprintsController < ApplicationController
   # PATCH/PUT /sprints/1.json
   # Update the attributes of the sprint.
    def update
+     @project = Project.find(params[:project_id])
+
     respond_to do |format|
       if @sprint.update(sprint_params)
-        format.html { redirect_to @sprint, notice: 'Sprint was successfully updated.' }
+        format.html { redirect_to @project, notice: 'Sprint was successfully updated.' }
         format.json { render :show, status: :ok, location: @sprint }
       else
         format.html { render :edit }
@@ -59,13 +63,15 @@ class SprintsController < ApplicationController
   # DELETE /sprints/1
   # DELETE /sprints/1.json
   # Delete an unwanted sprint.
-   def destroy
+  def destroy
+    @project = Project.find(params[:project_id])
+
     @sprint.destroy
     respond_to do |format|
       format.html { redirect_to sprints_url, notice: 'Sprint was successfully destroyed.' }
       format.json { head :no_content }
      end
-   end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -78,8 +84,4 @@ class SprintsController < ApplicationController
    def sprint_params
     params.require(:sprint).permit(:number, :deadline)
    end
-    # List all the sprints in a project.
-  def list_project_sprintss
-   @project_sprints = Project.find(params[:id]).sprints
-   end
-  end
+end
