@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
 
+<<<<<<< HEAD
 resources :announcements
+=======
+root 'projects#index'
+
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
 
 root 'projects#index'
 
@@ -19,6 +24,7 @@ resources :teams
 resources :sprints
 resources :notifications
 resources :tasks
+
 resources :projects do
   resources :tasks
   resources :sprints

@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
   has_many :tasks
+  has_many :dtasks  
+
   attr_accessor :password
   before_save :encrypt_password
 #validatios for email and password the email uses gem

@@ -5,6 +5,9 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
+    @task = Task.find(params[:id])
+    @sprint = Sprint.find(params[:sprint])
+    @project = Sprint.find(params[:project]) 
   end
 
   # GET /users/1
@@ -62,7 +65,9 @@ def new
     @users = User.search params[:search]
   end
 
-#it add the task to the user and then redirects to the project page
+
+#it adds the task to the user according to his/her sprint points and then redirects to the project page
+
   def add_task_to_user
     user_id = params[:user_id]
     task_id = params[:task_id]
@@ -70,11 +75,42 @@ def new
     @user = User.find(user_id)
     @task = Task.find(task_id)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    @sp = Sprint.find(params[:sprint]).tsp
+
+    @proid = Project.find(params[:project])
+    @spNumber = Sprint.find(params[:sprint])
+    @newD = @task.story_points
+
+    @apps = (@sp / 2).floor # @proid.team.users.count
+
+    @dt = @user.dtasks.new({:pid => @proid.id, :snum => @spNumber.id, :story_points => @newD})
+    @dt.save
+
+    @dd = @user.dtasks.where(:pid => @proid).where(:snum => @spNumber).sum(:story_points)
+
+    @mytask = @apps - @dd
+    if (@mytask >= 0)
+
+    @user.tasks << @task 
+  
+    flash[:notice] = "Task was added, you now have #{@mytask} point(s) left."
+    else
+    
+    @user.dtasks.where(:pid => @proid).where(:snum => @spNumber).where(:story_points => @newD).destroy_all
+      
+    flash[:notice] = "Task was not added, you cant exceed your limit."
+    end
+=======
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
     @user.tasks << @task
 
     @user.points = @user.points+@task.story_points
  
     flash[:notice] = "Task was successfully added"
+>>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
 
     redirect_to(:controller => 'projects', :action => 'index')
   end

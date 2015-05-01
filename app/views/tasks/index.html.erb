@@ -24,11 +24,12 @@
         <td><%= task.priority %></td>
         <td><%= task.story_points %></td>
         <td><%= task.deadline %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Assign Task', {:controller => 'users', :action => 'index', :id => task.id} %></td>
-<% end %>
+
+        <td><%= link_to 'Show', project_sprint_tasks_path(@project, @sprint) %></td>
+        <td><%= link_to 'Edit', edit_project_sprint_task_path(@project, @sprint, task) %></td>
+        <td><%= link_to 'Destroy',  project_sprint_task_path(@project, @sprint, task), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Assign Task', {:controller => 'users', :action => 'index', :id => task.id, :sprint => @sprint.id, :project => @project.id} %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +37,4 @@
 <br>
 
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task', new_project_sprint_task_path %>

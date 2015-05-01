@@ -23,6 +23,7 @@
 </div>
 <hr/>
 
+
 <style style="text/css">
 
 .lcdstyle{
@@ -132,6 +133,27 @@ deadline.displaycountdown("days", formatresults2)
 </script>
 
 
+
+<br><br>
+
+<%= form_for([@project, @project.teams.build]) do |f| %>
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+
+<h1>New Announcement</h1>
+
+   
+
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+
+<br>
+
 <hr/>
 <div class="row">
   <div class=" large-8 small-centered columns">
@@ -164,6 +186,7 @@ deadline.displaycountdown("days", formatresults2)
       </div>
       </div>
       </div>
+
 
 <div class="row">
   <div class="small-6 medium-8 large-8 small-centered large-centered columns">
@@ -205,4 +228,9 @@ deadline.displaycountdown("days", formatresults2)
 </div>
 
 <br>
+
+<br>
+
+<%= render 'sprints/new' %>
+
 

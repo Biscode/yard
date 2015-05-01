@@ -11,16 +11,22 @@ class SprintsController < ApplicationController
 
   # GET /sprints/1
   # GET /sprints/1.json
+  # shows the sprint
    def show
    end
 
   # GET /sprints/new
+  # makes a new sprint 
    def new
+
+    # @sprint = Sprint.new
+
      @project = Project.find(params[:project_id])
      @sprint = @project.sprints.build
-  end
+   end
 
   # GET /sprints/1/edit
+  # editing anything is the chosen sprint
    def edit
      @project = Project.find(params[:project_id])
    end
@@ -84,4 +90,12 @@ class SprintsController < ApplicationController
    def sprint_params
     params.require(:sprint).permit(:number, :deadline)
    end
+<<<<<<< HEAD
+    # List all the sprints in a project.
+   def list_project_sprintss
+    @project_sprints = Project.find(params[:id]).sprints
+   end
+  end
+=======
 end
+>>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
