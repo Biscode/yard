@@ -6,17 +6,19 @@ class Project < ActiveRecord::Base
 
   validates :title, presence: true
   attr_accessor :sprint_array
-  
+
 
   # def tasks
   #   tasks_array = []
   #   tasks_array << sprints.map(&:tasks)
   #   tasks_array.flatten
   # end
+
   def self.recentdeadline(projectid) 
 sprint_array =Sprint.where(:project_id => projectid).order(:deadline).first
 sprint_array = sprint_array.deadline
 end
+
 
 
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   resources :announcements
 
 root 'projects#index'
@@ -20,6 +21,10 @@ resources :notifications
 
 resources :tasks
 
+
+
+
+
 resources :projects do
   resources :tasks
   resources :sprints
@@ -32,6 +37,7 @@ resources :projects do
   end
   resources :users
 end
+
 
 
 # to route to the add_task_to_user

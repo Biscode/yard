@@ -5,6 +5,7 @@ class Task < ActiveRecord::Base
 	validates_presence_of :deadline
 
 
+
 	belongs_to :team
 	belongs_to :user
 	 attr_accessor :assignee
@@ -18,4 +19,5 @@ assignee = User.find(getid).username
 end
 end
 
+	# validates_presence_of :deadline
 end
