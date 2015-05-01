@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
   has_many :tasks
+<<<<<<< HEAD
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauthable
 attr_accessor :name
@@ -17,6 +18,24 @@ attr_accessor :name
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
       return user
+=======
+
+  has_many :dtasks  
+
+
+
+  attr_accessor :password
+  before_save :encrypt_password
+#validatios for email and password the email uses gem
+  validates :email, :email => true
+  validates_confirmation_of :password
+  validates_presence_of :password, :on => :create
+#it authenticate if the email and password are in the data base or not after signing up
+ def self.authenticate(email, password)
+    user = find_by_email(email)
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
     else
       registered_user = User.where(:email => auth.info.email).first
       if registered_user
@@ -80,7 +99,31 @@ end
     end
   end
 
+<<<<<<< HEAD
  def self.search(query)
+=======
+  
+  #it encrypt the password before it saves it for more secuity
+
+
+def self.search(search)
+  if search
+      find(:all, :conditions => ['name LIKE?', "%#{:search}%"])
+    else
+      find(:all).order("created_at DESC")
+    end
+  end
+
+  
+  def encrypt_password
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
+  end
+
+def self.search(query)
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
     # where(:email, query) -> This would return an exact match of the query
     where("email like ?", "%#{query}%")
  end

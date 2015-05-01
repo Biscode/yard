@@ -36,7 +36,7 @@ gem 'omniauth-facebook'
 gem'omniauth-twitter'
 gem 'omniauth-google-oauth2' 
 ## our gems
-gem 'foundation-rails'
+gem 'foundation-rails', '= 5.5.1.0'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'public_activity'

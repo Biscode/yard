@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Yard" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -14,27 +14,20 @@
   </head>
 
   <body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
     <!-- header -->
     <header class="sticky">
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
-          <li class="name">
-            <h1><a href="/">  YARD</a></h1>
+          <li>
+            <h1><a href="/">Yard</a></h1>
           </li>
           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
-
-          <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="center">
-            <li>
-              <%= link_to '#' do %>
-              <i class="fa fa-clock-o fa-2x"></i>
-              <% end %>
-            </li>
-          </ul>
-        </section>
 
         <section class="top-bar-section">
           <!-- Right Nav Section -->
@@ -50,6 +43,7 @@
               <% end %>
             </li>
             <li>
+<<<<<<< HEAD
               <%= link_to destroy_user_session_path , method: :delete do %>
                 <i class="fa fa-power-off fa-2x"></i>
               <% end %>
@@ -58,16 +52,21 @@
             <li>
               <%= link_to '#' do %>
     
+=======
+              <%= link_to '#' do %>
+              <i class="fa fa-power-off fa-2x"></i>
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
               <% end %>
             </li>
           </ul>
 
         </section>
       </nav>
-
     </header>
     <!-- header end -->
+
     <!-- main content -->
+<<<<<<< HEAD
     <div class="row">
       <div class="small-10 medium-10 large-12 small-centered large-centered columns" role="content">
         <article>
@@ -81,6 +80,10 @@
         <%= yield %>
         </article>
       </div>
+=======
+    <div class="row full-min-height">
+      <%= yield %>
+>>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
     </div>
     <!-- main content end -->
 
