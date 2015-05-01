@@ -1,0 +1,40 @@
+.sprint ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sprint li {
+    float: left;
+}
+
+.sprint a:link, a:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #0080FF;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sprint a:hover, a:active {
+    background-color: #7A991A;
+}
+
+
+
+.circle
+{
+width:125px;
+height:125px;
+border-radius:50%;
+font-size:25px;
+color:white;
+line-height:125px;
+text-align:center;
+background:black;
+}
