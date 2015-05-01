@@ -15,6 +15,8 @@ end
   # GET /projects/1
   # GET /projects/1.json
   # veiws a single project that was clicked on.
+  ## Heba
+  ## it gets the most close deadline from all the sprints and shows it
   def show
     @deadline = Project.recentdeadline(params[:id])
     @user = params[:user_id]

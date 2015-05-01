@@ -14,6 +14,8 @@ class Project < ActiveRecord::Base
   #   tasks_array.flatten
   # end
 
+  ## Heba
+## returns the most close deadline of the sprint by tasking the projectid
   def self.recentdeadline(projectid) 
 sprint_array =Sprint.where(:project_id => projectid).order(:deadline).first
 sprint_array = sprint_array.deadline

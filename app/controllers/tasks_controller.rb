@@ -53,10 +53,8 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-<<<<<<< HEAD
     @assignee = Task.finduser(params[:id])
-=======
->>>>>>> 38c06c42118eba5089a615c0b35a92d9f8a9ed01
+
   end
 
   # GET /tasks/new

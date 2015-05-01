@@ -24,7 +24,6 @@ resources :tasks
 
 
 
-
 resources :projects do
   resources :tasks
   resources :sprints
