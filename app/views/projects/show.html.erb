@@ -1,39 +1,201 @@
-<!--displays the project that you clicked and dislplays its information-->
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @project.deadline %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %>
-
 <div class="row">
-  <div class="large-4 columns">
-    <ul>
-      <% @project.tasks.each do |task| %>
-        <li>
-          <%= link_to task.title, project_task_path(@project, task), data: task , remote: true  %>
-        </li>
+  <div class="large-6 large-left columns">
+    <h2><%= @project.title %> <small><%= @project.description %></small></h2>
+    <h5><%= @project.deadline.strftime('Deadline:  %d %b %y, %I:%M %p')  %></h5>
+    <%= link_to 'Edit', edit_project_path %>
+  </div>
+  <div class="large-4 large-right columns ">
+    <h5>
+      Teams:
+      <% @project.teams.each do |team| %>
+        <%= link_to team.name, project_team_path(@project, team) %> |
       <% end %>
-    </ul>
+      <%= link_to 'Add', new_project_team_path(@project) %>
+    </h5>
+    <h5>
+      Sprints:
+      <% @project.sprints.each do |sprint| %>
+        <%= link_to sprint.number, project_sprint_path(@project, sprint) %> |
+      <% end %>
+      <%= link_to 'Add', new_project_sprint_path(@project) %>
+    </h5>
   </div>
 
-  <div class="large-4 columns">
-    <div class="">
-      <div id="task-view" class="text-left" style="display:none;"></div>
+<style style="text/css">
+
+.lcdstyle{
+background-color:black;
+color:yellow;
+font: bold 18px MS Sans Serif;
+padding: 3px;
+}
+
+.lcdstyle sup{
+font-size: 80%
+}
+
+</style>
+
+<script type="text/javascript">
+
+function cdtime(container, targetdate){
+if (!document.getElementById || !document.getElementById(container)) return
+this.container=document.getElementById(container)
+this.currentTime=new Date()
+this.targetdate=new Date(targetdate)
+this.timesup=false
+this.updateTime()
+}
+
+cdtime.prototype.updateTime=function(){
+var thisobj=this
+this.currentTime.setSeconds(this.currentTime.getSeconds()+1)
+setTimeout(function(){thisobj.updateTime()}, 1000)
+}
+
+cdtime.prototype.displaycountdown=function(baseunit, functionref){
+this.baseunit=baseunit
+this.formatresults=functionref
+this.showresults()
+}
+
+cdtime.prototype.showresults=function(){
+var thisobj=this
+
+
+var timediff=(this.targetdate-this.currentTime)/1000
+if (timediff<0){
+this.timesup=true
+this.container.innerHTML=this.formatresults()
+return
+}
+var oneMinute=60
+var oneHour=60*60
+var oneDay=60*60*24
+var dayfield=Math.floor(timediff/oneDay)
+var hourfield=Math.floor((timediff-dayfield*oneDay)/oneHour)
+var minutefield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour)/oneMinute)
+var secondfield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour-minutefield*oneMinute))
+if (this.baseunit=="hours"){
+hourfield=dayfield*24+hourfield
+dayfield="n/a"
+}
+else if (this.baseunit=="minutes"){
+minutefield=dayfield*24*60+hourfield*60+minutefield
+dayfield=hourfield="n/a"
+}
+else if (this.baseunit=="seconds"){
+var secondfield=timediff
+dayfield=hourfield=minutefield="n/a"
+}
+this.container.innerHTML=this.formatresults(dayfield, hourfield, minutefield, secondfield)
+setTimeout(function(){thisobj.showresults()}, 1000)
+}
+
+function formatresults(){
+if (this.timesup==false){
+var displaystring=arguments[0]+" days "+arguments[1]+" hours "+arguments[2]+" minutes "+arguments[3]+" seconds left until the deadline."
+}
+else{
+var displaystring = "The deadline has passed!"
+}
+return displaystring
+}
+
+function formatresults2(){
+if (this.timesup==false){
+var displaystring="<span class='lcdstyle'>"+arguments[0]+" <sup>days</sup> "+arguments[1]+" <sup>hours</sup> "+arguments[2]+" <sup>minutes</sup> "+arguments[3]+" <sup>seconds</sup></span> left until the deadline."
+}
+else{
+var displaystring = "The deadline has passed!"
+alert("The project is due!")
+}
+return displaystring
+}
+
+</script>
+
+<div id="countdowncontainer"></div>
+<br />
+
+<script type="text/javascript">
+
+var year = "<%= h @project.deadline.strftime("%Y") -%>"
+var month = "<%= h @project.deadline.strftime("%-m") -%>"
+var day = "<%= h @project.deadline.strftime("%d") -%>"
+var date = month + " " + day + ", "
+var deadline = new cdtime("countdowncontainer",date + year + " 23:59:59")
+deadline.displaycountdown("days", formatresults2)
+
+</script>
+
+
+
+<br><br>
+
+<%= form_for([@project, @project.teams.build]) do |f| %>
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+
+<h1>New Announcement</h1>
+
+   
+
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+
+<br>
+
+<hr/>
+
+
+<div class="row">
+  <div class="small-6 medium-8 large-8 small-centered large-centered columns">
+    <div class="container-box">
+      <!-- left part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            <%= link_to new_project_task_path(@project) do %>
+            Add task <i class="fa fa-plus-circle"></i>
+            <% end %>
+          </h4>
+        </div>
+        <% @project.tasks.each do |task| %>
+        <ul class="text-center">
+          <li class="small-box">
+            <h4><%= link_to task.title, project_task_path(@project, task) %></h4>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+      <!-- end of left part -->
+      <!-- right part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            text text text
+          </h4>
+        </div>
+        <div class="text-center">
+          <h4>Task info should be displayed here ..</h4>
+        </div>
+        <div id="task-view" class="text-center" style="display:none;">aa</div>
+
+      </div>
+      <!-- end of right part -->
     </div>
   </div>
 </div>
+
+
 <br>
-<%= render 'tasks/new' %>
+
+
+<%= render 'sprints/new' %>
+

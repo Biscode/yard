@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 1.upto(25) do |i|
-  Task.create(title: "task_#{i}", status: 'new', description: "lorem i ps umkdfklsd jfkl sdj fdsjf ksdfj")
+  User.create(email: "user_#{i}")
 end

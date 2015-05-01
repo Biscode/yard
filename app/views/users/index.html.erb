@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Listing Users</h1>
+<%= render 'search' %>
+
 
 <table>
   <thead>
@@ -16,6 +19,9 @@
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <% if !@task.nil? %>
+            <td><%= link_to 'Add Task to User', {:controller => 'users', :action => 'add_task_to_user',:user_id => user.id, :task_id => @task, :sprint => @sprint.id, :project => @project.id} %></td>
+        <% end %>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

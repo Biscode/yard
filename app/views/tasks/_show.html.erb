@@ -1,35 +1,51 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<strong>Title:</strong>
   <%= @task.title %>
 </p>
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 
 <p>
   <strong>Description:</strong>
   <%= @task.description %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Status:</strong>
   <%= @task.status %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Priority:</strong>
   <%= @task.priority %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Story points:</strong>
   <%= @task.story_points %>
 </p>
-
+</div>
+</div>
+<div class="row">
+  <div class="small-10 large-8 columns">
 <p>
   <strong>Deadline:</strong>
   <%= @task.deadline %>
 </p>
-
+</div>
+</div>
+</div>
 <%= link_to 'Edit', edit_project_task_path(@project, @task) %>
   <H4>Comments</H4>
 <div id="comments">
