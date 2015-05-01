@@ -5,14 +5,12 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
-<<<<<<< HEAD
+
     @task = Task.find(params[:id])
 
     @sprint = Sprint.find(params[:sprint])
     @project = Sprint.find(params[:project]) 
 
-=======
->>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
   end
 
   # GET /users/1
@@ -106,10 +104,8 @@ def new
       
     flash[:notice] = "Task was not added, you cant exceed your limit."
     end
-=======
     @user.tasks << @task
     flash[:notice] = "Task was successfully added"
->>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
 
     redirect_to(:controller => 'projects', :action => 'index')
   end

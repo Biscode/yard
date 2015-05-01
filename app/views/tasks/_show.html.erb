@@ -47,3 +47,16 @@
 </div>
 </div>
 <%= link_to 'Edit', edit_project_task_path(@project, @task) %>
+  <H4>Comments</H4>
+<div id="comments">
+<%= render :partial => @task.comments %>
+</div>
+<%= simple_form_for [@task, Comment.new] do |f| %>
+<p>
+
+<%= f.input :body, :label => "New Comment", as: :text, input_html: { rows: "3" } %>
+</p>
+<p><%= f.submit "Add Comment", class: "btn btn-primary" %></p>
+<% end %> 
+</div>
+</div>
