@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150501070635) do
-
 ActiveRecord::Schema.define(version: 20150408204330) do
+ActiveRecord::Schema.define(version: 20150407111739) do
 
-ActiveRecord::Schema.define(version: 20150426163027) do
+  create_table "comments", force: :cascade do |t|
+    t.integer  "task_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["task_id"], name: "index_comments_on_task_id"
+
 
 # ActiveRecord::Schema.define(version: 20150408204330) do
 

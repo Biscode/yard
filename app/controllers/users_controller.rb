@@ -103,14 +103,16 @@ def new
       
     flash[:notice] = "Task was not added, you cant exceed your limit."
     end
+<<<<<<< HEAD
 =======
 >>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
+=======
+>>>>>>> 0dc7842c64c2bee85f6ae36fd5fe100c777dcbb1
     @user.tasks << @task
 
     @user.points = @user.points+@task.story_points
  
     flash[:notice] = "Task was successfully added"
->>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
 
     redirect_to(:controller => 'projects', :action => 'index')
   end
