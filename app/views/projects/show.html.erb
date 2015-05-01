@@ -1,11 +1,11 @@
 <div class="row">
 
-  <div class="large-6 large-left columns">
+  <div class="small-4 small-left columns">
     <h2><%= @project.title %> <small><%= @project.description %></small></h2>
     <h5><%= @project.deadline.strftime('Deadline:  %d %b %y, %I:%M %p')  %></h5>
     <%= link_to 'Edit', edit_project_path %>
   </div>
-  <div class="large-4 large-right columns ">
+  <div class="small-4 small-right columns ">
     <h5>
       Teams:
       <% @project.teams.each do |team| %>

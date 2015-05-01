@@ -11,4 +11,7 @@ class Project < ActiveRecord::Base
   #   tasks_array << sprints.map(&:tasks)
   #   tasks_array.flatten
   # end
+  def self.recentdeadline(projectid) 
+Sprint_array =Sprint.where(:project_id => projectid).order(:deadline).first
+end
 end
