@@ -1,6 +1,26 @@
 Rails.application.routes.draw do
 
+  resources :announcements
+
 root 'projects#index'
+
+
+
+ # root 'projects#index'
+get 'projects/index'
+#match ':users(/:search(/:))'
+
+get "log_out" => "sessions#destroy", :as => "log_out"
+get "log_in" => "sessions#new", :as => "log_in"
+get "sign_up" => "users#new", :as => "sign_up"
+#get "users/search"
+resources :users
+resources :sessions
+resources :teams
+resources :sprints
+resources :notifications
+
+# resources :tasks
 
 resources :projects do
   resources :tasks
