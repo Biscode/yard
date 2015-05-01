@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :announcements
+resources :announcements
 
 root 'projects#index'
 
@@ -20,9 +20,6 @@ resources :sprints
 resources :notifications
 
 resources :tasks
-
-
-
 
 resources :projects do
   resources :tasks
