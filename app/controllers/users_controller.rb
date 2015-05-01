@@ -5,10 +5,10 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
+
     @task = Task.find(params[:id])
     @sprint = Sprint.find(params[:sprint])
     @project = Sprint.find(params[:project]) 
-
 
 
   # GET /users/1

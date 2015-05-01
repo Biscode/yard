@@ -31,10 +31,14 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 gem 'omniauth'
 gem 'omniauth-facebook' 
 gem'omniauth-twitter'
 gem 'omniauth-google-oauth2' 
+
+gem 'simple_form'
+
 ## our gems
 gem 'foundation-rails', '= 5.5.1.0'
 gem "font-awesome-rails"
