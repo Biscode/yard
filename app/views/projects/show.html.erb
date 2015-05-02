@@ -1,54 +1,94 @@
-<p id="notice"><%= notice %></p>
-<div class="row">
+		<p id="notice"><%= notice %></p>
+		<div class="row">
 
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-</div>
-</div>
-<div class="row">
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-</div>
-</div>
-<div class="row">
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Deadline:</strong>
-  <%= @project.deadline %>
-</p>
-</div>
-</div>
-<%= form_for([@project, @project.teams.build]) do |f| %>
-<div class="field">
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</div>
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Title:</strong>
+		  <%= @project.title %>
+		</p>
+		</div>
+		</div>
+		<div class="row">
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Description:</strong>
+		  <%= @project.description %>
+		</p>
+		</div>
+		</div>
+		<div class="row">
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Deadline:</strong>
+		  <%= @project.deadline %>
+		</p>
+		</div>
+		</div>
 
-<div class="actions">
-  <%= f.submit %>
-</div>
-<% end %>
+		<%= link_to 'Edit', edit_project_path(@project) %>
+	
+		<br><br>	
 
-<%= link_to 'Edit', edit_project_path(@project) %>
+		<div class="row">
+		  <div class="sprint">
+			<ul>
+			  <% @project.sprints.each do |sprint| %>
+				<li>
+				  <a>
+				    <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
+				  </a>
+				</li>
+			  <% end %>
+			</ul>
+		  </div>
+		</div>
 
-<div class="row">
-  <div class="sprint">
-    <ul>
-      <% @project.sprints.each do |sprint| %>
-        <li>
-          <a>
-            <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
-          </a>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
+		<br>	
+		<style>
+	.rectangle {
+	  background: #0080FF;
+	  color: white;
+	  display: block;
+	  border-width: 3px;
+	  border-style: solid;
+	  border-color: #0080FF;
+	}
+	h4.white
+	{
+		color: white;
+	}
+	</style>
+		<div class="rectangle">
+			<ul>
+			  <% @project.announcements.each do |announcement| %>
+				<h4 class = "white">   
+				<%= announcement.announcement %>
+				</h4>
+			  <% end %>
+			</ul>
+		</div>
 
-<%= render 'sprints/new' %>
+		<h1> New Team </h1>
+		<%= form_for([@project, @project.teams.build]) do |f| %>
+		<div class="field">
+		  <%= f.label :name %><br>
+		  <%= f.text_field :name %>
+		</div>
+
+		<div class="actions">
+		  <%= f.submit %>
+		</div>
+		<% end %>
+
+		<h1> New Announcement </h1>
+		<%= form_for([@project, @project.announcements.build]) do |f| %>
+		  <p>
+			<%= f.label :announcement %><br>
+			<%= f.text_field :announcement %>
+		  </p>
+		  <p>
+			<%= f.submit %>
+		  </p>
+		<% end %>
+
+		<%= render 'sprints/new' %>
