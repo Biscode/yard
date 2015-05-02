@@ -92,7 +92,6 @@ end
       done_tasks_array << @project.tasks_counter_with_user_id('Done', user)
     end
     
-
     # chart object that holds all the data
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
       f.title({ :text=>"Project Performance"})
