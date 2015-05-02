@@ -73,17 +73,32 @@ end
   end
 
   def statistics
-    @new_tasks = @project.tasks.where.not(status: 'New').count
-    @done_tasks = @project.tasks.where(status: 'Done').count 
-    @in_progress_tasks =  @project.tasks.where.not(status: 'In-Progress').count
+    @new_tasks = @project.tasks_counter('New') 
+    @in_progress_tasks = @project.tasks_counter('In-Progress') 
+    @done_tasks = @project.tasks_counter('Done')
+    
+    users = []
+    new_tasks_array = []
+    in_progress_tasks_array = []
+    done_tasks_array = []
 
+
+    @project.teams.each do |team|
+      team.users.each do |user|
+          users << user.email
+          new_tasks_array << @project.tasks_counter_with_user_id('New', user)
+          in_progress_tasks_array << @project.tasks_counter_with_user_id('In-Progress', user)
+          done_tasks_array << @project.tasks_counter_with_user_id('Done', user)
+      end
+    end
+ 
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
-      f.title({ :text=>"Combination chart"})
-      f.options[:xAxis][:categories] = ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+      f.title({ :text=>"Project Performance"})
+      f.options[:xAxis][:categories] = users
       f.labels(:items=>[:html=>"Tasks Progress", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ])      
-      f.series(:type=> 'column',:name=> 'Jane',:data=> [3, 2, 1, 3, 4])
-      f.series(:type=> 'column',:name=> 'John',:data=> [2, 3, 5, 7, 6])
-      f.series(:type=> 'column', :name=> 'Joe',:data=> [4, 3, 3, 9, 0])
+      f.series(:type=> 'column',:name=> 'New',:data=> new_tasks_array)
+      f.series(:type=> 'column',:name=> 'In-Progress',:data=> in_progress_tasks_array)
+      f.series(:type=> 'column', :name=> 'Done',:data=> done_tasks_array)
       f.series(:type=> 'spline',:name=> 'Average', :data=> [3, 2.67, 3, 6.33, 3.33])
       f.series(:type=> 'pie',:name=> 'Tasks Status', 
         :data=> [

@@ -10,4 +10,12 @@ class Project < ActiveRecord::Base
   #   tasks_array << sprints.map(&:tasks)
   #   tasks_array.flatten
   # end
+
+  def tasks_counter_with_user_id(status, user)
+    tasks.where(status: status, user_id: user).count
+  end
+
+  def tasks_counter(status)
+      tasks.where(status: status).count
+  end
 end
