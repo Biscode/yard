@@ -31,7 +31,7 @@ a:hover {
     font-family: 'Raleway', sans-serif;
   }
   a:hover {
-		background: #fff !important;
+		background: #F1FD08 !important;
 	}
 }
 
@@ -41,13 +41,16 @@ body {
   font-size: 18px;
   h4,h3,h2,h1,h5,p{color: #fff;} 
 }
-
-
 a:hover {
-	color:  #7575A3 !important ;
-	background: #fff !important;
+	color:  #fff !important ;
+	background: #0B3095 !important;
 }
-
+.fa:hover { 
+    color: #0814FD
+}
+.fa:hover { 
+    display: block
+}
 header {
   margin-top: 5px;
   border-bottom: 4px solid  #FFC2E0;
@@ -64,16 +67,19 @@ hr {
   opacity:0.8;
 }
 
-@mixin border-radius($radius) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;
-  -khtml-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
+.title-area {
+  margin-left: 10px !important;
 }
 
+
 .div {
-  background-color: #fff !important;
+  background-color: #F1FD08 !important;
 }
+
 }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none !important;
+}
+
