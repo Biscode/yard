@@ -72,6 +72,10 @@ end
     end
   end
 
+  # Ahmed Saleh
+  # statistics controller action prepares the data 
+  # that gets rendered in /projects/:id/statistics page
+  # it gets this date from project model apparently
   def statistics
     @new_tasks = @project.tasks_counter('New') 
     @in_progress_tasks = @project.tasks_counter('In-Progress') 
