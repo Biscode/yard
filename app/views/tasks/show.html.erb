@@ -48,7 +48,11 @@
   <div class="small-10 large-8 columns">
     <p>
       <strong>User Assigned:</strong>
-      <%= User.find_user(@task.user_id) %>
+      <% if @task.user_id %> 
+          <%= User.find_user(@task.user_id) %>
+      <% else %>
+          Unassigned
+      <% end %>
     </p>
   </div>
 </div>

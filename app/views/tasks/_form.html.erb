@@ -26,7 +26,7 @@
 </div>
 <div class="field">
   <%= f.label :user_id %><br>
-  <%= f.select :user_id, @project.users.map{ |user| [user.email, user.id] } %>
+  <%= f.select :user_id, @project.users.map{ |user| [user.email, user.id] } , include_blank: true%>
 </div>
 <div class="actions">
   <%= f.submit %>
