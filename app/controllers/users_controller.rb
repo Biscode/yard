@@ -7,11 +7,17 @@ class UsersController < ApplicationController
     @users = User.search(params[:search])
 
     @task = Task.find(params[:id])
+<<<<<<< HEAD
 
     @sprint = Sprint.find(params[:sprint])
     @project = Sprint.find(params[:project]) 
 
   end
+=======
+    @sprint = Sprint.find(params[:sprint])
+    @project = Sprint.find(params[:project]) 
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 
   # GET /users/1
   # GET /users/1.json
@@ -79,6 +85,9 @@ def new
     @task = Task.find(task_id)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
     @sp = Sprint.find(params[:sprint]).tsp
 
     @proid = Project.find(params[:project])

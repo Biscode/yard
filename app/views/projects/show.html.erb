@@ -1,3 +1,102 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		<p id="notice"><%= notice %></p>
+		<div class="row">
+
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Title:</strong>
+		  <%= @project.title %>
+		</p>
+		</div>
+		</div>
+		<div class="row">
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Description:</strong>
+		  <%= @project.description %>
+		</p>
+		</div>
+		</div>
+		<div class="row">
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Deadline:</strong>
+		  <%= @project.deadline %>
+		</p>
+		</div>
+		</div>
+
+		<%= link_to 'Edit', edit_project_path(@project) %>
+	
+		<br><br>	
+
+		<div class="row">
+		  <div class="sprint">
+			<ul>
+			  <% @project.sprints.each do |sprint| %>
+				<li>
+				  <a>
+				    <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
+				  </a>
+				</li>
+			  <% end %>
+			</ul>
+		  </div>
+		</div>
+
+		<br>	
+		<style>
+	.rectangle {
+	  background: #0080FF;
+	  color: white;
+	  display: block;
+	  border-width: 3px;
+	  border-style: solid;
+	  border-color: #0080FF;
+	}
+	h4.white
+	{
+		color: white;
+	}
+	</style>
+		<div class="rectangle">
+			<ul>
+			  <% @project.announcements.each do |announcement| %>
+				<h4 class = "white">   
+				<%= announcement.announcement %>
+				</h4>
+			  <% end %>
+			</ul>
+		</div>
+
+		<h1> New Team </h1>
+		<%= form_for([@project, @project.teams.build]) do |f| %>
+		<div class="field">
+		  <%= f.label :name %><br>
+		  <%= f.text_field :name %>
+		</div>
+
+		<div class="actions">
+		  <%= f.submit %>
+		</div>
+		<% end %>
+
+		<h1> New Announcement </h1>
+		<%= form_for([@project, @project.announcements.build]) do |f| %>
+		  <p>
+			<%= f.label :announcement %><br>
+			<%= f.text_field :announcement %>
+		  </p>
+		  <p>
+			<%= f.submit %>
+		  </p>
+		<% end %>
+
+		<%= render 'sprints/new' %>
+=======
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 <div class="row">
   <div class="large-6 large-left columns">
     <h2><%= @project.title %> <small><%= @project.description %></small></h2>
@@ -128,6 +227,7 @@ var deadline = new cdtime("countdowncontainer",date + year + " 23:59:59")
 deadline.displaycountdown("days", formatresults2)
 
 </script>
+<<<<<<< HEAD
 <div class="row">
 
   <div class="small-10 large-8 columns">
@@ -162,6 +262,10 @@ deadline.displaycountdown("days", formatresults2)
 </p>
 </div>
 </div>
+=======
+
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 
 <br><br>
 
@@ -171,6 +275,24 @@ deadline.displaycountdown("days", formatresults2)
   <%= f.text_field :name %>
 </div>
 
+<<<<<<< HEAD
+=======
+<h1>New Announcement</h1>
+
+   
+
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+
+<br>
+
+<hr/>
+
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 <div class="row">
   <div class="small-6 medium-8 large-8 small-centered large-centered columns">
     <div class="container-box">
@@ -210,5 +332,15 @@ deadline.displaycountdown("days", formatresults2)
   </div>
 </div>
 
+<<<<<<< HEAD
 
 <% end %>
+=======
+
+<br>
+
+
+<%= render 'sprints/new' %>
+
+>>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955

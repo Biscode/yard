@@ -108,12 +108,22 @@ class TasksController < ApplicationController
   # Delete an unwanted task.
   def destroy
 <<<<<<< HEAD
+<<<<<<< HEAD
     @sprint = Sprint.find(params[:sprint_id])
     @project = Project.find(params[:project_id])
 =======
     @project = Project.find(params[:project_id])
 
 >>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
+=======
+
+    @sprint = Sprint.find(params[:sprint_id])
+    @project = Project.find(params[:project_id])
+
+    @project = Project.find(params[:project_id])
+
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
     @task.destroy
     respond_to do |format|
       format.html { redirect_to @project, notice: 'Task was successfully destroyed.' }
@@ -125,6 +135,10 @@ class TasksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
     def set_task
       @task = Task.find(params[:id])
 @project = Project.where(id: params[:id]).first
@@ -134,7 +148,11 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:title, :description, :status, :priority, :story_points, :deadline )
     end
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
   def set_task
     @task = Task.find(params[:id])
   end
@@ -143,5 +161,9 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:title, :description, :status, :priority, :story_points, :deadline)
   end
+<<<<<<< HEAD
 >>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
+=======
+
+>>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 end
