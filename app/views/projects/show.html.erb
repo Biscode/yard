@@ -1,3 +1,99 @@
+<<<<<<< HEAD
+		<p id="notice"><%= notice %></p>
+		<div class="row">
+
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Title:</strong>
+		  <%= @project.title %>
+		</p>
+		</div>
+		</div>
+		<div class="row">
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Description:</strong>
+		  <%= @project.description %>
+		</p>
+		</div>
+		</div>
+		<div class="row">
+		  <div class="small-10 large-8 columns">
+		<p>
+		  <strong>Deadline:</strong>
+		  <%= @project.deadline %>
+		</p>
+		</div>
+		</div>
+
+		<%= link_to 'Edit', edit_project_path(@project) %>
+	
+		<br><br>	
+
+		<div class="row">
+		  <div class="sprint">
+			<ul>
+			  <% @project.sprints.each do |sprint| %>
+				<li>
+				  <a>
+				    <%= link_to sprint.number, project_sprint_path(@project, sprint) %>
+				  </a>
+				</li>
+			  <% end %>
+			</ul>
+		  </div>
+		</div>
+
+		<br>	
+		<style>
+	.rectangle {
+	  background: #0080FF;
+	  color: white;
+	  display: block;
+	  border-width: 3px;
+	  border-style: solid;
+	  border-color: #0080FF;
+	}
+	h4.white
+	{
+		color: white;
+	}
+	</style>
+		<div class="rectangle">
+			<ul>
+			  <% @project.announcements.each do |announcement| %>
+				<h4 class = "white">   
+				<%= announcement.announcement %>
+				</h4>
+			  <% end %>
+			</ul>
+		</div>
+
+		<h1> New Team </h1>
+		<%= form_for([@project, @project.teams.build]) do |f| %>
+		<div class="field">
+		  <%= f.label :name %><br>
+		  <%= f.text_field :name %>
+		</div>
+
+		<div class="actions">
+		  <%= f.submit %>
+		</div>
+		<% end %>
+
+		<h1> New Announcement </h1>
+		<%= form_for([@project, @project.announcements.build]) do |f| %>
+		  <p>
+			<%= f.label :announcement %><br>
+			<%= f.text_field :announcement %>
+		  </p>
+		  <p>
+			<%= f.submit %>
+		  </p>
+		<% end %>
+
+		<%= render 'sprints/new' %>
+=======
 <div class="row">
   <div class="large-6 large-left columns">
     <h2><%= @project.title %> <small><%= @project.description %></small></h2>
@@ -199,3 +295,4 @@ deadline.displaycountdown("days", formatresults2)
 
 <%= render 'sprints/new' %>
 
+>>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf

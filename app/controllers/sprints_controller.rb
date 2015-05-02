@@ -90,12 +90,10 @@ class SprintsController < ApplicationController
    def sprint_params
     params.require(:sprint).permit(:number, :deadline)
    end
-<<<<<<< HEAD
+
     # List all the sprints in a project.
    def list_project_sprintss
     @project_sprints = Project.find(params[:id]).sprints
    end
   end
-=======
-end
->>>>>>> 6490ef03a2b6ddba183b111123bb9ab5903ca145
+

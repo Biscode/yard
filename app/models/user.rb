@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
   has_many :tasks
-<<<<<<< HEAD
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauthable
 attr_accessor :name
@@ -18,7 +18,7 @@ attr_accessor :name
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
       return user
-=======
+
 
   has_many :dtasks  
 
@@ -35,7 +35,7 @@ attr_accessor :name
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
+
     else
       registered_user = User.where(:email => auth.info.email).first
       if registered_user
@@ -99,9 +99,9 @@ end
     end
   end
 
-<<<<<<< HEAD
+
  def self.search(query)
-=======
+
   
   #it encrypt the password before it saves it for more secuity
 
@@ -123,7 +123,7 @@ def self.search(search)
   end
 
 def self.search(query)
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
+
     # where(:email, query) -> This would return an exact match of the query
     where("email like ?", "%#{query}%")
  end

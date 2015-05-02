@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
+  resources :announcements
+
+=======
 
   
  
@@ -11,6 +15,7 @@ resources :comments
   resources :announcements
 resources :sessions
 devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+>>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
 root 'projects#index'
 
 
@@ -36,8 +41,15 @@ resources :notifications
 # resources :tasks
 
 resources :projects do
+<<<<<<< HEAD
+ resources :announcements
+  resources :sprints do
+    resources :tasks
+  end
+=======
   resources :tasks
   resources :sprints
+>>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
   resources :teams do
     resources :users do
       member do
