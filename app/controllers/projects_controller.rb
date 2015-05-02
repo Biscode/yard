@@ -77,24 +77,23 @@ end
     @in_progress_tasks = @project.tasks_counter('In-Progress') 
     @done_tasks = @project.tasks_counter('Done')
     
-    users = []
+    all_users = @project.users
+    user_emails = []
     new_tasks_array = []
     in_progress_tasks_array = []
     done_tasks_array = []
+    
+    all_users.each do |user|
+      user_emails << user.email
 
-
-    @project.teams.each do |team|
-      team.users.each do |user|
-          users << user.email
-          new_tasks_array << @project.tasks_counter_with_user_id('New', user)
-          in_progress_tasks_array << @project.tasks_counter_with_user_id('In-Progress', user)
-          done_tasks_array << @project.tasks_counter_with_user_id('Done', user)
-      end
+      new_tasks_array << @project.tasks_counter_with_user_id('New', user)
+      in_progress_tasks_array << @project.tasks_counter_with_user_id('In-Progress', user)
+      done_tasks_array << @project.tasks_counter_with_user_id('Done', user)
     end
- 
+
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
       f.title({ :text=>"Project Performance"})
-      f.options[:xAxis][:categories] = users
+      f.options[:xAxis][:categories] = user_emails
       f.labels(:items=>[:html=>"Tasks Progress", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ])      
       f.series(:type=> 'column',:name=> 'New',:data=> new_tasks_array)
       f.series(:type=> 'column',:name=> 'In-Progress',:data=> in_progress_tasks_array)

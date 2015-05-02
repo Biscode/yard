@@ -20,6 +20,19 @@ class Project < ActiveRecord::Base
   # Ahmed Saleh
   # takes task status and returns number of tasks currently in this status
   def tasks_counter(status)
-      tasks.where(status: status).count
+    tasks.where(status: status).count
+  end
+
+  # Ahmed Saleh
+  # return all users from project
+  def users
+    all_users = []
+    
+    teams.each do |team|
+       team.users.each do |user|
+         all_users << user    
+       end
+    end 
+    return all_users
   end
 end
