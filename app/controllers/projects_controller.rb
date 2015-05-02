@@ -78,19 +78,22 @@ end
     @done_tasks = @project.tasks_counter('Done')
     
     all_users = @project.users
+
     user_emails = []
     new_tasks_array = []
     in_progress_tasks_array = []
     done_tasks_array = []
     
     all_users.each do |user|
-      user_emails << user.email
+      user_emails << user.email     # get user emails. FIXME: use user nicknames later.
 
       new_tasks_array << @project.tasks_counter_with_user_id('New', user)
       in_progress_tasks_array << @project.tasks_counter_with_user_id('In-Progress', user)
       done_tasks_array << @project.tasks_counter_with_user_id('Done', user)
     end
+    
 
+    # chart object that holds all the data
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
       f.title({ :text=>"Project Performance"})
       f.options[:xAxis][:categories] = user_emails
