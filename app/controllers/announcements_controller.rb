@@ -1,7 +1,5 @@
-
 class AnnouncementsController < ApplicationController
   before_action :set_announcement, only: [:show, :edit, :update, :destroy]
-
 
   # GET /announcements
   # GET /announcements.json
@@ -17,9 +15,7 @@ class AnnouncementsController < ApplicationController
 
   # GET /announcements/new
   def new
-
     @announcement = Announcement.new
-
   end
 
   # GET /announcements/1/edit
@@ -82,5 +78,3 @@ end
 		  params.require(:announcement).permit(:announcement)
 		end
 	end
-
- 
