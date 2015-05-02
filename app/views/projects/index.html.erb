@@ -1,32 +1,39 @@
-<p id="notice"><%= notice %></p>
+
 <div class="row">
-      <div class="small-10 medium-10 large-12 small-centered large-centered columns" role="content">
-<div class="project">
-  <% @projects.each do |project| %>
-  <ul>
-    <h3><%= link_to project.title, project %></h3>
-  </ul>
-  <% end %>
+  <div class="small-6 medium-8 large-8 small-center large-centered columns">
+    <div class="container-box">
+      <!-- left part -->
+      <div class="object-box">
+        <div class="utility-box text-center">
+          <h4>
+            <%= link_to new_project_path do %>
+            Add Project <i class="fa fa-plus-circle"></i>
+            <% end %>
+          </h4>
+        </div>
+        <% @projects.each do |project| %>
+        <ul class="text-center">
+          <li class="small-box">
+            <h4><%= link_to project.title, project %></h4>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+      <!-- end of left part -->
+      <!-- right part -->
+      <div class="object-box">
+        <div class="utility-box">
+          <h4><%= link_to 'New Project', new_project_path %></h4>
+        </div>
+        <% @projects.each do |project| %>
+        <ul class="text-center">
+          <li class="small-box">
+            <h4><%= link_to project.title, project %></h4>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+      <!-- end of right part -->
+    </div>
+  </div>
 </div>
-
-<br>
-
-  <tbody>
-    <% if @criticaltasks != nil %>
-    <% @criticaltasks.each do |task| %>
-      <tr>
-        <td><%= task.title %></td>
-        <td><%= task.description %></td>
-        <td><%= task.status %></td>
-        <td><%= task.priority %></td>
-        <td><%= task.story_points %></td>
-        <td><%= task.deadline %></td>
-      </tr>
-      <% end %>
-      <% else %>
-      <%= @sentence %>
-    <% end %>
-   
-  </tbody>
-<br>
-<%= link_to 'New Project', new_project_path %>

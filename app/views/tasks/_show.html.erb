@@ -1,8 +1,5 @@
-<p id="notice"><%= notice %></p>
-<div class="row">
-  <div class="small-10 large-8 columns">
-<p>
-  <strong>Title:</strong>
+
+<strong>Title:</strong>
   <%= @task.title %>
 </p>
 </div>
@@ -50,3 +47,16 @@
 </div>
 </div>
 <%= link_to 'Edit', edit_project_task_path(@project, @task) %>
+  <H4>Comments</H4>
+<div id="comments">
+<%= render :partial => @task.comments %>
+</div>
+<%= simple_form_for [@task, Comment.new] do |f| %>
+<p>
+
+<%= f.input :body, :label => "New Comment", as: :text, input_html: { rows: "3" } %>
+</p>
+<p><%= f.submit "Add Comment", class: "btn btn-primary" %></p>
+<% end %> 
+</div>
+</div>
