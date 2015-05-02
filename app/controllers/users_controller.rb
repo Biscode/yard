@@ -5,12 +5,9 @@ class UsersController < ApplicationController
   #if a task id is detected it takes its parameters
   def index
     @users = User.search(params[:search])
-
     @task = Task.find(params[:id])
-
     @sprint = Sprint.find(params[:sprint])
     @project = Sprint.find(params[:project]) 
-
   end
 
   # GET /users/1
@@ -77,7 +74,6 @@ def new
 
     @user = User.find(user_id)
     @task = Task.find(task_id)
-
     @sp = Sprint.find(params[:sprint]).tsp
 
     @proid = Project.find(params[:project])
@@ -95,7 +91,8 @@ def new
     if (@mytask >= 0)
 
     @user.tasks << @task 
-  
+    @user.points = @user.points+@task.story_points
+
     flash[:notice] = "Task was added, you now have #{@mytask} point(s) left."
     else
     
@@ -103,10 +100,6 @@ def new
       
     flash[:notice] = "Task was not added, you cant exceed your limit."
     end
-    @user.tasks << @task
-    flash[:notice] = "Task was successfully added"
-
-    redirect_to(:controller => 'projects', :action => 'index')
   end
 
   def add_user_to_team

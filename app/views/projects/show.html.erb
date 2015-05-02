@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 		<p id="notice"><%= notice %></p>
 		<div class="row">
 
@@ -95,15 +93,14 @@
 		<% end %>
 
 		<%= render 'sprints/new' %>
-=======
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
+
 <div class="row">
-  <div class="large-6 large-left columns">
+  <div class="small-4 small-left columns">
     <h2><%= @project.title %> <small><%= @project.description %></small></h2>
     <h5><%= @project.deadline.strftime('Deadline:  %d %b %y, %I:%M %p')  %></h5>
     <%= link_to 'Edit', edit_project_path %>
   </div>
-  <div class="large-4 large-right columns ">
+  <div class="small-4 small-right columns ">
     <h5>
       Teams:
       <% @project.teams.each do |team| %>
@@ -119,6 +116,9 @@
       <%= link_to 'Add', new_project_sprint_path(@project) %>
     </h5>
   </div>
+</div>
+<hr/>
+
 
 <style style="text/css">
 
@@ -227,7 +227,7 @@ var deadline = new cdtime("countdowncontainer",date + year + " 23:59:59")
 deadline.displaycountdown("days", formatresults2)
 
 </script>
-<<<<<<< HEAD
+
 <div class="row">
 
   <div class="small-10 large-8 columns">
@@ -262,10 +262,7 @@ deadline.displaycountdown("days", formatresults2)
 </p>
 </div>
 </div>
-=======
 
-
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 
 <br><br>
 
@@ -275,8 +272,7 @@ deadline.displaycountdown("days", formatresults2)
   <%= f.text_field :name %>
 </div>
 
-<<<<<<< HEAD
-=======
+
 <h1>New Announcement</h1>
 
    
@@ -290,12 +286,43 @@ deadline.displaycountdown("days", formatresults2)
 <br>
 
 <hr/>
+<div class="row">
+  <div class=" large-8 small-centered columns">
+    <div class ="panel-box" >
+
+</head>
+<body>
+
+<table style="width:100%" cellspacing=0 cellpadding =0>
+  <col align="left">
+  <col align="left">
+  <col align="right">
+  <tr bgcolor='#939BBA'>
+    <td><font color='#FFFFFF'><font size="4">Total Story Points</font></font></td>
+    <td><font color='#FFFFFF'><font size="4"> </font></font></td>
+    <td><font color='#FFFFFF'><font size="4">Deadline</font></font></td>
+    <td bgcolor='#939BBA' ></td>
+  </tr>
+  <tr >
+    <td bgcolor='#939BBA'><font size="5">< @user.points%></font></td>
+    <td bgcolor='#939BBA'><font size="5"></font></td>
+    <% if @deadline == nil %>
+    <% @deadline = 'No Sprint Deadlines' %>
+    <% else %>
+        <td bgcolor='#939BBA'><font size="5"><%= @deadline %></font></td>
+        <% end %>
+             <td bgcolor='#939BBA' ><font color='#FFFFFF'><font size="2">performance -> </font></font></td>
+  </tr>
+</table>     
+      </div>
+      </div>
+      </div>
 
 
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 <div class="row">
   <div class="small-6 medium-8 large-8 small-centered large-centered columns">
     <div class="container-box">
+
       <!-- left part -->
       <div class="object-box">
         <div class="utility-box text-center">
@@ -325,22 +352,21 @@ deadline.displaycountdown("days", formatresults2)
           <h4>Task info should be displayed here ..</h4>
         </div>
         <div id="task-view" class="text-center" style="display:none;">aa</div>
-
       </div>
       <!-- end of right part -->
     </div>
   </div>
 </div>
 
-<<<<<<< HEAD
+
 
 <% end %>
-=======
+
 
 <br>
 
+<br>
 
 <%= render 'sprints/new' %>
 
->>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
+

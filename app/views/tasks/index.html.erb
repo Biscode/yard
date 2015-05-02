@@ -17,17 +17,18 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
+        <% if task.user_id ==nil %>
         <td><%= task.title %></td>
         <td><%= task.description %></td>
         <td><%= task.status %></td>
         <td><%= task.priority %></td>
         <td><%= task.story_points %></td>
         <td><%= task.deadline %></td>
+
         <td><%= link_to 'Show', project_sprint_tasks_path(@project, @sprint) %></td>
         <td><%= link_to 'Edit', edit_project_sprint_task_path(@project, @sprint, task) %></td>
         <td><%= link_to 'Destroy',  project_sprint_task_path(@project, @sprint, task), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Assign Task', {:controller => 'users', :action => 'index', :id => task.id, :sprint => @sprint.id, :project => @project.id} %></td>
-
 
       </tr>
     <% end %>

@@ -6,5 +6,4 @@ class Sprint < ActiveRecord::Base
   	self.tasks.sum(:story_points)
   end
 
-
 end

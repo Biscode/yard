@@ -3,11 +3,18 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   include PublicActivity::Model
   tracked owner: Proc.new { |controller, model| controller.current_user }
-
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
   has_many :tasks
 
+  has_many :dtasks  
+
+  attr_accessor :password
+  before_save :encrypt_password
+  #validatios for email and password the email uses gem
+  validates :email, :email => true
+  validates_confirmation_of :password
+  validates_presence_of :password, :on => :create
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauthable
 attr_accessor :name
@@ -21,14 +28,7 @@ attr_accessor :name
     end
  end
 
-  has_many :dtasks  
 
-
-
-#validatios for email and password the email uses gem
-  validates :email, :email => true
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
 #it authenticate if the email and password are in the data base or not after signing up
  def self.authenticate(email, password)
     user = find_by_email(email)

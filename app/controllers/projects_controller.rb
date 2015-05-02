@@ -36,12 +36,19 @@
     end
 
   # GET /projects/1
+
+  # GET /projects/1.json
+  # veiws a single project that was clicked on.
+  ## Heba
+  ## it gets the most close deadline from all the sprints and shows it
+
     # GET /projects/1.json
     # views a project that was clicked on only if the project is not private or if the user is the admin or logged in.
     # otherwise it prints a  message "you don't have permissions to view this project" 
     def show
+       @deadline = Project.recentdeadline(params[:id])
+      @user = params[:user_id]
       @showProject = true
-
       if @project.isPrivate
         if current_user == nil or !(isAdmin(current_user) or canView(current_user, project))
           @sentence = "You don't have permissions to view this project"
