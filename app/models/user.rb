@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  include PublicActivity::Model
-  tracked owner: Proc.new { |controller, model| controller.current_user }
+  # FIXME fix this issue of undefined method current_user for nil class.
+  # include PublicActivity::Model
+  # tracked owner: Proc.new { |controller, model| controller.current_user }
 
   has_many :user_team_relationships
   has_many :teams,through: :user_team_relationships
