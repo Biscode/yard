@@ -11,40 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-
-ActiveRecord::Schema.define(version: 20150422221501) do
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150425101735) do
-=======
-
-
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
-ActiveRecord::Schema.define(version: 20150407111739) do
-
-  create_table "comments", force: :cascade do |t|
-    t.integer  "task_id"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "comments", ["task_id"], name: "index_comments_on_task_id"
-
-<<<<<<< HEAD
-
-
 ActiveRecord::Schema.define(version: 20150426163027) do
-
-# ActiveRecord::Schema.define(version: 20150408204330) do
-=======
-ActiveRecord::Schema.define(version: 20150426163027) do
-
-# ActiveRecord::Schema.define(version: 20150408204330) do
-
->>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -66,21 +33,21 @@ ActiveRecord::Schema.define(version: 20150426163027) do
 
   create_table "announcements", force: :cascade do |t|
     t.text     "announcement"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     t.integer  "project_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   add_index "announcements", ["project_id"], name: "index_announcements_on_project_id"
-=======
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "project_id"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "task_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  add_index "comments", ["task_id"], name: "index_comments_on_task_id"
 
   create_table "dtasks", force: :cascade do |t|
     t.integer  "user_id"
@@ -90,10 +57,6 @@ ActiveRecord::Schema.define(version: 20150426163027) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
-<<<<<<< HEAD
-=======
->>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -155,17 +118,6 @@ ActiveRecord::Schema.define(version: 20150426163027) do
   add_index "user_team_relationships", ["user_id"], name: "index_user_team_relationships_on_user_id"
 
   create_table "users", force: :cascade do |t|
-<<<<<<< HEAD
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.boolean  "isAdmin"
-  end
-
-=======
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -180,8 +132,10 @@ ActiveRecord::Schema.define(version: 20150426163027) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.boolean  "isAdmin"
   end
 
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
->>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
 end

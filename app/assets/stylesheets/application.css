@@ -15,13 +15,6 @@
  *= require foundation_and_overrides
  *= require font-awesome
  */
-<<<<<<< HEAD
-=======
- /*
-.body {
-	background-color:#666699
-}
-
 a:hover {
 	color: 	#fff !important ;
 	background:	#0B0B2F !important;
@@ -68,29 +61,13 @@ hr {
   background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
   opacity:0.8;
 }
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 
 .title-area {
   margin-left: 10px !important;
 }
 
-<<<<<<< HEAD
 ul {
   padding: 0;
   margin: 0;
   list-style: none !important;
 }
-=======
-
-.div {
-  background-color: #F1FD08 !important;
-}
-
-}
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none !important;
-}
-
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955

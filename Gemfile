@@ -31,8 +31,6 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-<<<<<<< HEAD
-=======
 
 gem 'omniauth'
 gem 'omniauth-facebook' 
@@ -41,7 +39,6 @@ gem 'omniauth-google-oauth2'
 
 gem 'simple_form'
 
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
 ## our gems
 gem 'foundation-rails', '= 5.5.1.0'
 gem "font-awesome-rails"
