@@ -38,11 +38,19 @@
 </div>
 <div class="row">
   <div class="small-10 large-8 columns">
-<p>
-  <strong>Deadline:</strong>
-  <%= @task.deadline %>
-</p>
+    <p>
+      <strong>Deadline:</strong>
+      <%= @task.deadline %>
+    </p>
+  </div>
 </div>
+<div class="row">
+  <div class="small-10 large-8 columns">
+    <p>
+      <strong>User Assigned:</strong>
+      <%= User.find_user(@task.user_id) %>
+    </p>
+  </div>
 </div>
 <%= link_to 'Edit', edit_project_task_path %>
 </div>

@@ -24,6 +24,10 @@
   <%= f.label :deadline %><br>
   <%= f.date_select :deadline %>
 </div>
+<div class="field">
+  <%= f.label :user_id %><br>
+  <%= f.select :user_id, @project.users.map{ |user| [user.email, user.id] } %>
+</div>
 <div class="actions">
   <%= f.submit %>
 </div>
