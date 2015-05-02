@@ -15,6 +15,52 @@
  *= require foundation_and_overrides
  *= require font-awesome
  */
+a:hover {
+	color: 	#fff !important ;
+	background:	#0B0B2F !important;
+}
+*/
+
+.name {
+  h1 {
+    font-family: 'Raleway', sans-serif;
+  }
+  a:hover {
+		background: #F1FD08 !important;
+	}
+}
+
+body {
+	background:  #7575A3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  h4,h3,h2,h1,h5,p{color: #fff;} 
+}
+a:hover {
+	color:  #fff !important ;
+	background: #0B3095 !important;
+}
+.fa:hover { 
+    color: #0814FD
+}
+.fa:hover { 
+    display: block
+}
+header {
+  margin-top: 5px;
+  border-bottom: 4px solid  #FFC2E0;
+  margin-bottom: 20px;
+}
+
+hr {
+  border:0;
+  height:1px;
+  background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  opacity:0.8;
+}
 
 .title-area {
   margin-left: 10px !important;

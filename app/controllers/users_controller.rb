@@ -74,10 +74,6 @@ def new
 
     @user = User.find(user_id)
     @task = Task.find(task_id)
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     @sp = Sprint.find(params[:sprint]).tsp
 
     @proid = Project.find(params[:project])
@@ -95,7 +91,8 @@ def new
     if (@mytask >= 0)
 
     @user.tasks << @task 
-  
+    @user.points = @user.points+@task.story_points
+
     flash[:notice] = "Task was added, you now have #{@mytask} point(s) left."
     else
     
@@ -103,18 +100,6 @@ def new
       
     flash[:notice] = "Task was not added, you cant exceed your limit."
     end
-<<<<<<< HEAD
-=======
->>>>>>> 5a82131bac7b64ab6648acfb5274a394c7933855
-=======
->>>>>>> 0dc7842c64c2bee85f6ae36fd5fe100c777dcbb1
-    @user.tasks << @task
-
-    @user.points = @user.points+@task.story_points
- 
-    flash[:notice] = "Task was successfully added"
-
-    redirect_to(:controller => 'projects', :action => 'index')
   end
 
   def add_user_to_team

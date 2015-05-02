@@ -6,18 +6,25 @@ resources :comments
 end
 
 
-resources :announcements
+  resources :announcements
+resources :sessions
+devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
 root 'projects#index'
 
 #match ':users(/:search(/:))'
+  devise_scope :user do 
+   # root to: 'static_pages#home'
+    match '/sessions/user', to: 'devise/sessions#create', via: :post
+        match '/sessions/user.new', to: 'devise/sessions#create', via: :post
 
-get "log_out" => "sessions#destroy", :as => "log_out"
-get "log_in" => "sessions#new", :as => "log_in"
-get "sign_up" => "users#new", :as => "sign_up"
+end
+devise_scope :user do
+  get "sign_in", to: "devise/sessions#new"
+end
+
+
 #get "users/search"
-resources :users
-resources :sessions
 resources :teams
 resources :sprints
 resources :notifications
@@ -26,6 +33,10 @@ resources :tasks
 resources :projects do
   resources :tasks
   resources :sprints
+ resources :announcements
+  resources :sprints do
+    resources :tasks
+  end
   resources :teams do
     resources :users do
       member do
@@ -33,6 +44,8 @@ resources :projects do
       end
     end
   end
+
+  resources :users
 end
 
 # to route to the add_task_to_user

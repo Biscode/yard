@@ -25,13 +25,20 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'email_validator'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'devise'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'omniauth'
+gem 'omniauth-facebook' 
+gem'omniauth-twitter'
+gem 'omniauth-google-oauth2' 
+
 gem 'simple_form'
+
 ## our gems
 gem 'foundation-rails', '= 5.5.1.0'
 gem "font-awesome-rails"

@@ -10,10 +10,10 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
   </head>
 
   <body>
-
     <!-- header -->
     <header class="sticky">
       <nav class="top-bar" data-topbar role="navigation">
@@ -39,11 +39,12 @@
               <% end %>
             </li>
             <li>
-              <%= link_to '#' do %>
-              <i class="fa fa-power-off fa-2x"></i>
+              <%= link_to destroy_user_session_path , method: :delete do %>
+                <i class="fa fa-power-off fa-2x"></i>
               <% end %>
             </li>
           </ul>
+
         </section>
       </nav>
     </header>
