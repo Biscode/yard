@@ -13,16 +13,7 @@
 
 <<<<<<< HEAD
 
-ActiveRecord::Schema.define(version: 20150422221501) do
-=======
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150425101735) do
-=======
-
-
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
-ActiveRecord::Schema.define(version: 20150407111739) do
-
   create_table "comments", force: :cascade do |t|
     t.integer  "task_id"
     t.text     "body"
@@ -32,20 +23,11 @@ ActiveRecord::Schema.define(version: 20150407111739) do
 
   add_index "comments", ["task_id"], name: "index_comments_on_task_id"
 
-<<<<<<< HEAD
-
+# ActiveRecord::Schema.define(version: 20150408204330) do
 
 ActiveRecord::Schema.define(version: 20150426163027) do
 
 # ActiveRecord::Schema.define(version: 20150408204330) do
-=======
-ActiveRecord::Schema.define(version: 20150426163027) do
-
-# ActiveRecord::Schema.define(version: 20150408204330) do
-
->>>>>>> 9f2c97bc72af4b61744a89ff44e8832931281faf
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
-
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
     t.string   "trackable_type"
