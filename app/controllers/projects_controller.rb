@@ -35,17 +35,6 @@
       end
     end
 
-  #No users yet ,so sorting is done project wises
-  #First a sort of all the critical tasks is done in the project individually "tempproject = project.tasks.sort { |a,b| a.deadline <=> b.deadline }"
-  #then they are all appended in a list *of critical tasks* to be sorted according to deadline
-  # You retrieve All the the projects, so the 'Index' view can use them.
-<<<<<<< HEAD
-=======
-  def index
-    @projects = Project.all
-end
-
->>>>>>> 2a4e3ffb73c1609b70fcfec2318d759011c7b955
   # GET /projects/1
     # GET /projects/1.json
     # views a project that was clicked on only if the project is not private or if the user is the admin or logged in.

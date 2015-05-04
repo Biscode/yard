@@ -1,22 +1,9 @@
 Rails.application.routes.draw do
- 
- 
-resources :comments
-resources :tasks do
-resources :comments
-end
  resources :announcements
-
-
-
-  
- 
 resources :comments
 resources :tasks do
 resources :comments
 
-
-  resources :announcements
 resources :sessions
 devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 root 'projects#index'
@@ -31,9 +18,6 @@ end
 devise_scope :user do
   get "sign_in", to: "devise/sessions#new"
 end
- # root 'projects#index'
-get 'projects/index'
-#match ':users(/:search(/:))'
 
 get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
@@ -63,7 +47,9 @@ resources :projects do
       end
     end
   end
+
 root 'projects#index'
+
   resources :users
 end
 
@@ -80,7 +66,6 @@ get "sign_up" => "users#new", :as => "sign_up"
 
 # to route to the add_task_to_user
   match 'add_task_to_user_task_user' => 'users#add_task_to_user', :as =>'add_task_to_user',via: [:get, :post]
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
